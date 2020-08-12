@@ -1,0 +1,44 @@
+{
+  "inputBuffers": [
+    {
+      "break": 1,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset*dataset"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "dataset"
+    }
+
+  ],
+  "name": "atax_kernel1",
+  "src": "atax.cl",
+  "globalWorkSize": "[dataset]",
+  "outputBuffers": [],
+  "workDimension": 1,
+  "ioBuffers": [
+
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "dataset"
+    }
+  ],
+
+  "varArguments": [
+    {
+      "type": "int",
+      "pos": 3,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "dataset"
+    }
+  ]
+}

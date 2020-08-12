@@ -1,0 +1,43 @@
+{
+	"src": "Softmax_backward.cl",
+	"name": "softmax_backward",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 2,
+		"size": "6"
+	},
+	{
+		"break": 0,
+		"type": "float",
+		"pos": 3,
+		"size": "6"
+	}
+	],
+	"partition":10,
+	"workDimension": 1,
+	"globalWorkSize": [6],
+	"localWorkSize": [6],
+	"id": 1,
+	"varArguments": [
+		{
+			"type": "int",
+			"pos": 0,
+			"value": "2"
+		},
+		{
+			"type": "int",
+			"pos": 1,
+			"value": "3"
+		}
+		],
+
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 4,
+          "size": "6",
+          "type": "float"
+	  }
+  ]
+}

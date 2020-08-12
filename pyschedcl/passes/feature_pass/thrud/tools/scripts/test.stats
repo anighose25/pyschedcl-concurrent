@@ -1,0 +1,26 @@
+Convolution2D_kernel
+
+Test
+Printing analysis 'Promote Memory to Register' for function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Promote Memory to Register'!
+Printing analysis 'Function Integration/Inlining':
+Printing analysis 'Function Integration/Inlining':
+Pass::print not implemented for pass: 'Function Integration/Inlining'!
+Printing analysis 'Function Integration/Inlining':
+Pass::print not implemented for pass: 'Function Integration/Inlining'!
+Printing analysis 'Structurize the CFG' for region: 'land.lhs.true6 => if.end' in function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Structurize control flow'!
+Printing analysis 'Structurize the CFG' for region: 'land.lhs.true4 => if.end' in function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Structurize control flow'!
+Printing analysis 'Structurize the CFG' for region: 'land.lhs.true => if.end' in function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Structurize control flow'!
+Printing analysis 'Structurize the CFG' for region: 'entry => if.end' in function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Structurize control flow'!
+Printing analysis 'Structurize the CFG' for region: 'entry => <Function Return>' in function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Structurize control flow'!
+Printing analysis 'Assign names to anonymous instructions' for function 'Convolution2D_kernel':
+Pass::print not implemented for pass: 'Assign names to anonymous instructions'!
+Printing analysis 'Collect opencl features' for function 'Convolution2D_kernel':
+Printing analysis 'Function Integration/Inlining':
+Pass::print not implemented for pass: 'Function Integration/Inlining'!
+Printing analysis 'Function Integration/Inlining':

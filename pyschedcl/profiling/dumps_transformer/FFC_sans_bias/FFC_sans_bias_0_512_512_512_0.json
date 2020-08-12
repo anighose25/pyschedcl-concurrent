@@ -1,0 +1,1 @@
+{"FFC_sans_bias0": {"write": {"device_start": -1, "host_queued_start": 1585477526.306431, "device_queued": -1, "device_end": -1, "host_queued_end": 1585477526.306784}, "device": "cpu", "nd_range": {"device_start": 2145300.496435318, "device_end": 2145300.530316799}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

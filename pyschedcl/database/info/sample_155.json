@@ -1,0 +1,36 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 0, 
+      "size": "dataset"
+    }, 
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 1, 
+      "size": "dataset"
+    }
+  ], 
+  "name": "A", 
+  "src": "sample_155.cl", 
+  "globalWorkSize": "[dataset]", 
+  "outputBuffers": [
+    {
+      "break": 0, 
+      "type": "int", 
+      "pos": 2, 
+      "size": "dataset"
+    }
+  ], 
+  "workDimension": 1, 
+  "ioBuffers": [], 
+  "varArguments": [
+    {
+      "type": "int", 
+      "pos": 3, 
+      "value": "dataset"
+    }
+  ]
+}

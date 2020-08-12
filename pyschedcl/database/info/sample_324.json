@@ -1,0 +1,10 @@
+{
+  "inputBuffers": [], 
+  "name": "A", 
+  "src": "sample_324.cl", 
+  "globalWorkSize": null, 
+  "outputBuffers": [], 
+  "workDimension": null, 
+  "ioBuffers": [], 
+  "varArguments": []
+}

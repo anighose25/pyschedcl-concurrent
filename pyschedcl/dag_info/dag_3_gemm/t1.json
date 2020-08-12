@@ -1,0 +1,67 @@
+[
+  {
+    "localWorkSize": [
+      4, 
+      4, 
+      4
+    ], 
+    "inputBuffers": [
+      {
+        "break": 0, 
+        "type": "float", 
+        "pos": 2, 
+        "size": "1024*1024*1024"
+      }
+    ], 
+    "partition": 0, 
+    "name": "naive_kernel", 
+    "src": "stencil.cl", 
+    "globalWorkSize": "[1024,1024,1024]", 
+    "outputBuffers": [
+      {
+        "break": 0, 
+        "type": "float", 
+        "pos": 3, 
+        "size": "1024*1024*1024"
+      }
+    ], 
+    "depends": [], 
+    "task": 1, 
+    "workDimension": 3, 
+    "symbolicVariables": {
+      "localWorkSize": 4, 
+      "n_chunks": 1, 
+      "partition": 0, 
+      "dataset": 1024
+    }, 
+    "id": 0, 
+    "ioBuffers": [], 
+    "varArguments": [
+      {
+        "type": "float", 
+        "pos": 0, 
+        "value": "0.1"
+      }, 
+      {
+        "type": "float", 
+        "pos": 1, 
+        "value": "0.1"
+      }, 
+      {
+        "type": "int", 
+        "pos": 4, 
+        "value": "1024-1"
+      }, 
+      {
+        "type": "int", 
+        "pos": 5, 
+        "value": "1024-1"
+      }, 
+      {
+        "type": "int", 
+        "pos": 6, 
+        "value": "1024-1"
+      }
+    ]
+  }
+]

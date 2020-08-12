@@ -1,0 +1,261 @@
+[{
+	"src": "transpose.cl",
+	"name": "uncoalesced_copy",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}],
+	"workDimension": 2,
+	"globalWorkSize": [4096, 4096],
+	"id": 1,
+	"varArguments": [{
+		"type": "int",
+		"pos": 2,
+		"value": "0"
+	}, {
+		"type": "int",
+		"pos": 3,
+		"value": "4096"
+	}, {
+		"type": "int",
+		"pos": 4,
+		"value": "4096"
+	}]
+}, {
+	"src": "transpose.cl",
+	"name": "uncoalesced_copy",
+	"inputBuffers": [{
+		"break": 0,
+		"from": {
+			"kernel": "1",
+			"pos": 0
+		},
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}],
+	"depends": [1],
+	"workDimension": 2,
+	"globalWorkSize": [4096, 4096],
+	"id": 2,
+	"varArguments": [{
+		"type": "int",
+		"pos": 2,
+		"value": "0"
+	}, {
+		"type": "int",
+		"pos": 3,
+		"value": "4096"
+	}, {
+		"type": "int",
+		"pos": 4,
+		"value": "4096"
+	}]
+}, {
+	"src": "oclReduction_kernel.cl",
+	"name": "reduce5",
+	"inputBuffers": [{
+		"break": 1,
+		"from": {
+			"kernel": "6",
+			"pos": 4
+		},
+		"type": "float",
+		"pos": 0,
+		"size": "4096"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 1,
+		"size": "4096"
+	}],
+	"depends": [6],
+	"workDimension": 1,
+	"localArguments": [{
+		"type": "float",
+		"pos": 3,
+		"size": "4096"
+	}],
+	"globalWorkSize": [4096],
+	"id": 7,
+	"varArguments": [{
+		"type": "uint",
+		"pos": 2,
+		"value": "partition_round(dataset, size_percent)"
+	}]
+}, {
+	"src": "transpose.cl",
+	"name": "uncoalesced_copy",
+	"inputBuffers": [{
+		"break": 0,
+		"from": {
+			"kernel": "2",
+			"pos": 0
+		},
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}],
+	"depends": [2],
+	"workDimension": 2,
+	"globalWorkSize": [4096, 4096],
+	"id": 3,
+	"varArguments": [{
+		"type": "int",
+		"pos": 2,
+		"value": "0"
+	}, {
+		"type": "int",
+		"pos": 3,
+		"value": "4096"
+	}, {
+		"type": "int",
+		"pos": 4,
+		"value": "4096"
+	}]
+}, {
+	"src": "transpose.cl",
+	"name": "uncoalesced_copy",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}],
+	"workDimension": 2,
+	"globalWorkSize": [4096, 4096],
+	"id": 4,
+	"varArguments": [{
+		"type": "int",
+		"pos": 2,
+		"value": "0"
+	}, {
+		"type": "int",
+		"pos": 3,
+		"value": "4096"
+	}, {
+		"type": "int",
+		"pos": 4,
+		"value": "4096"
+	}]
+}, {
+	"inputBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"name": "transpose_naive",
+	"globalWorkSize": [4096, 4096],
+	"partition": 10,
+	"varArguments": [{
+		"type": "int",
+		"pos": 2,
+		"value": "partition_round(dataset, offset_percent)"
+	}, {
+		"type": "int",
+		"pos": 3,
+		"value": "4096"
+	}, {
+		"type": "int",
+		"pos": 4,
+		"value": "4096"
+	}],
+	"workDimension": 2,
+	"ecos": {
+		"8192": 8.0,
+		"1024": 8.0,
+		"4096": 8.0,
+		"2048": 8.0,
+		"128": 8.0,
+		"512": 8.0,
+		"256": 8.0
+	},
+	"id": 5,
+	"src": "transpose.cl",
+	"outputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}]
+}, {
+	"src": "oclMatVecMul.cl",
+	"name": "MatVecMulCoalesced2",
+	"inputBuffers": [{
+		"break": 0,
+		"from": {
+			"kernel": "4",
+			"pos": 0
+		},
+		"type": "float",
+		"pos": 0,
+		"size": "16777216"
+	}, {
+		"break": 0,
+		"from": {
+			"kernel": "4",
+			"pos": 0
+		},
+		"type": "float",
+		"pos": 1,
+		"size": "16777216"
+	}],
+	"partition": 10,
+	"outputBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 4,
+		"size": "4096"
+	}],
+	"depends": [4, 5],
+	"workDimension": 1,
+	"localArguments": [{
+		"type": "float",
+		"pos": 5,
+		"size": "4096"
+	}],
+	"globalWorkSize": [4096],
+	"id": 6,
+	"varArguments": [{
+		"type": "uint",
+		"pos": 2,
+		"value": "4096"
+	}, {
+		"type": "uint",
+		"pos": 3,
+		"value": "partition_round(dataset, size_percent)"
+	}]
+}]

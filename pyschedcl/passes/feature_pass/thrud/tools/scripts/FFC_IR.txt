@@ -1,0 +1,353 @@
+; ModuleID = '<stdin>'
+target datalayout = "e-p:32:32-i64:64-v16:16-v24:32-v32:32-v48:64-v96:128-v192:256-v256:256-v512:512-v1024:1024"
+target triple = "spir"
+
+@FFC.Asub = internal addrspace(3) global [32 x [32 x float]] zeroinitializer, align 4
+@FFC.Bsub = internal addrspace(3) global [32 x [32 x float]] zeroinitializer, align 4
+@FFC_sans_bias.Asub = internal addrspace(3) global [32 x [32 x float]] zeroinitializer, align 4
+@FFC_sans_bias.Bsub = internal addrspace(3) global [32 x [32 x float]] zeroinitializer, align 4
+
+; Function Attrs: nounwind
+define void @FFC(float addrspace(1)* %A, float addrspace(1)* %B, float addrspace(1)* %C, float addrspace(1)* %Bias, i32 %M, i32 %N, i32 %K) #0 {
+bb:
+  %acc = alloca [1 x float], align 4
+  %tmp7 = call i32 @get_local_id(i32 0) #3
+  %tmp8 = call i32 @get_local_id(i32 1) #3
+  %tmp9 = call i32 @get_group_id(i32 0) #3
+  %tmp10 = mul i32 32, %tmp9
+  %tmp12 = add i32 %tmp10, %tmp7
+  %tmp13 = call i32 @get_group_id(i32 1) #3
+  %tmp14 = mul i32 32, %tmp13
+  %tmp16 = add i32 %tmp14, %tmp8
+  br label %bb17
+
+bb17:                                             ; preds = %bb23, %bb
+  %w.0 = phi i32 [ 0, %bb ], [ %tmp25, %bb23 ]
+  %tmp19 = icmp slt i32 %w.0, 1
+  br i1 %tmp19, label %bb20, label %bb26
+
+bb20:                                             ; preds = %bb17
+  %tmp22 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w.0
+  store float 0.000000e+00, float* %tmp22, align 4
+  br label %bb23
+
+bb23:                                             ; preds = %bb20
+  %tmp25 = add nsw i32 %w.0, 1
+  br label %bb17
+
+bb26:                                             ; preds = %bb17
+  %tmp28 = sdiv i32 %K, 32
+  br label %bb29
+
+bb29:                                             ; preds = %bb125, %bb26
+  %t.0 = phi i32 [ 0, %bb26 ], [ %tmp127, %bb125 ]
+  %tmp32 = icmp slt i32 %t.0, %tmp28
+  br i1 %tmp32, label %bb33, label %bb128
+
+bb33:                                             ; preds = %bb29
+  br label %bb34
+
+bb34:                                             ; preds = %bb86, %bb33
+  %w1.0 = phi i32 [ 0, %bb33 ], [ %tmp88, %bb86 ]
+  %tmp36 = icmp slt i32 %w1.0, 1
+  br i1 %tmp36, label %bb37, label %bb89
+
+bb37:                                             ; preds = %bb34
+  %tmp39 = mul nsw i32 32, %t.0
+  %tmp41 = add nsw i32 %tmp39, %tmp7
+  %tmp43 = mul nsw i32 32, %t.0
+  %tmp45 = add nsw i32 %tmp43, %tmp8
+  %tmp50 = mul nsw i32 %w1.0, 32
+  %tmp51 = add nsw i32 %tmp12, %tmp50
+  %tmp53 = mul nsw i32 %tmp51, %K
+  %tmp54 = add nsw i32 %tmp45, %tmp53
+  %tmp56 = getelementptr inbounds float addrspace(1)* %A, i32 %tmp54
+  %tmp57 = load float addrspace(1)* %tmp56, align 4
+  %tmp62 = mul nsw i32 %w1.0, 32
+  %tmp63 = add nsw i32 %tmp7, %tmp62
+  %tmp64 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC.Asub, i32 0, i32 %tmp63
+  %tmp65 = getelementptr inbounds [32 x float] addrspace(3)* %tmp64, i32 0, i32 %tmp8
+  store float %tmp57, float addrspace(3)* %tmp65, align 4
+  %tmp70 = mul nsw i32 %w1.0, 32
+  %tmp71 = add nsw i32 %tmp41, %tmp70
+  %tmp73 = mul nsw i32 %tmp71, %N
+  %tmp74 = add nsw i32 %tmp16, %tmp73
+  %tmp76 = getelementptr inbounds float addrspace(1)* %B, i32 %tmp74
+  %tmp77 = load float addrspace(1)* %tmp76, align 4
+  %tmp82 = mul nsw i32 %w1.0, 32
+  %tmp83 = add nsw i32 %tmp7, %tmp82
+  %tmp84 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC.Bsub, i32 0, i32 %tmp83
+  %tmp85 = getelementptr inbounds [32 x float] addrspace(3)* %tmp84, i32 0, i32 %tmp8
+  store float %tmp77, float addrspace(3)* %tmp85, align 4
+  br label %bb86
+
+bb86:                                             ; preds = %bb37
+  %tmp88 = add nsw i32 %w1.0, 1
+  br label %bb34
+
+bb89:                                             ; preds = %bb34
+  call void @barrier(i32 1) #4
+  br label %bb90
+
+bb90:                                             ; preds = %bb121, %bb89
+  %k.0 = phi i32 [ 0, %bb89 ], [ %tmp123, %bb121 ]
+  %tmp92 = icmp slt i32 %k.0, 32
+  br i1 %tmp92, label %bb93, label %bb124
+
+bb93:                                             ; preds = %bb90
+  br label %bb94
+
+bb94:                                             ; preds = %bb117, %bb93
+  %w2.0 = phi i32 [ 0, %bb93 ], [ %tmp119, %bb117 ]
+  %tmp96 = icmp slt i32 %w2.0, 1
+  br i1 %tmp96, label %bb97, label %bb120
+
+bb97:                                             ; preds = %bb94
+  %tmp102 = mul nsw i32 %w2.0, 32
+  %tmp103 = add nsw i32 %tmp7, %tmp102
+  %tmp104 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC.Asub, i32 0, i32 %tmp103
+  %tmp105 = getelementptr inbounds [32 x float] addrspace(3)* %tmp104, i32 0, i32 %k.0
+  %tmp106 = load float addrspace(3)* %tmp105, align 4
+  %tmp109 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC.Bsub, i32 0, i32 %k.0
+  %tmp110 = getelementptr inbounds [32 x float] addrspace(3)* %tmp109, i32 0, i32 %tmp8
+  %tmp111 = load float addrspace(3)* %tmp110, align 4
+  %tmp112 = fmul float %tmp106, %tmp111
+  %tmp114 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w2.0
+  %tmp115 = load float* %tmp114, align 4
+  %tmp116 = fadd float %tmp115, %tmp112
+  store float %tmp116, float* %tmp114, align 4
+  br label %bb117
+
+bb117:                                            ; preds = %bb97
+  %tmp119 = add nsw i32 %w2.0, 1
+  br label %bb94
+
+bb120:                                            ; preds = %bb94
+  br label %bb121
+
+bb121:                                            ; preds = %bb120
+  %tmp123 = add nsw i32 %k.0, 1
+  br label %bb90
+
+bb124:                                            ; preds = %bb90
+  call void @barrier(i32 1) #4
+  br label %bb125
+
+bb125:                                            ; preds = %bb124
+  %tmp127 = add nsw i32 %t.0, 1
+  br label %bb29
+
+bb128:                                            ; preds = %bb29
+  br label %bb129
+
+bb129:                                            ; preds = %bb164, %bb128
+  %w3.0 = phi i32 [ 0, %bb128 ], [ %tmp166, %bb164 ]
+  %tmp131 = icmp slt i32 %w3.0, 1
+  br i1 %tmp131, label %bb132, label %bb167
+
+bb132:                                            ; preds = %bb129
+  %tmp134 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w3.0
+  %tmp135 = load float* %tmp134, align 4
+  %tmp140 = mul nsw i32 %w3.0, 32
+  %tmp141 = add nsw i32 %tmp12, %tmp140
+  %tmp143 = mul nsw i32 %tmp141, %N
+  %tmp144 = add nsw i32 %tmp16, %tmp143
+  %tmp146 = getelementptr inbounds float addrspace(1)* %C, i32 %tmp144
+  store float %tmp135, float addrspace(1)* %tmp146, align 4
+  %tmp149 = getelementptr inbounds float addrspace(1)* %Bias, i32 %tmp16
+  %tmp150 = load float addrspace(1)* %tmp149, align 4
+  %tmp155 = mul nsw i32 %w3.0, 32
+  %tmp156 = add nsw i32 %tmp12, %tmp155
+  %tmp158 = mul nsw i32 %tmp156, %N
+  %tmp159 = add nsw i32 %tmp16, %tmp158
+  %tmp161 = getelementptr inbounds float addrspace(1)* %C, i32 %tmp159
+  %tmp162 = load float addrspace(1)* %tmp161, align 4
+  %tmp163 = fadd float %tmp162, %tmp150
+  store float %tmp163, float addrspace(1)* %tmp161, align 4
+  br label %bb164
+
+bb164:                                            ; preds = %bb132
+  %tmp166 = add nsw i32 %w3.0, 1
+  br label %bb129
+
+bb167:                                            ; preds = %bb129
+  ret void
+}
+
+; Function Attrs: nounwind readnone
+declare i32 @get_local_id(i32) #1
+
+; Function Attrs: nounwind readnone
+declare i32 @get_group_id(i32) #1
+
+declare void @barrier(i32) #2
+
+; Function Attrs: nounwind
+define void @FFC_sans_bias(float addrspace(1)* %A, float addrspace(1)* %B, float addrspace(1)* %C, i32 %M, i32 %N, i32 %K) #0 {
+bb:
+  %acc = alloca [1 x float], align 4
+  %tmp6 = call i32 @get_local_id(i32 0) #3
+  %tmp7 = call i32 @get_local_id(i32 1) #3
+  %tmp8 = call i32 @get_group_id(i32 0) #3
+  %tmp9 = mul i32 32, %tmp8
+  %tmp11 = add i32 %tmp9, %tmp6
+  %tmp12 = call i32 @get_group_id(i32 1) #3
+  %tmp13 = mul i32 32, %tmp12
+  %tmp15 = add i32 %tmp13, %tmp7
+  br label %bb16
+
+bb16:                                             ; preds = %bb22, %bb
+  %w.0 = phi i32 [ 0, %bb ], [ %tmp24, %bb22 ]
+  %tmp18 = icmp slt i32 %w.0, 1
+  br i1 %tmp18, label %bb19, label %bb25
+
+bb19:                                             ; preds = %bb16
+  %tmp21 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w.0
+  store float 0.000000e+00, float* %tmp21, align 4
+  br label %bb22
+
+bb22:                                             ; preds = %bb19
+  %tmp24 = add nsw i32 %w.0, 1
+  br label %bb16
+
+bb25:                                             ; preds = %bb16
+  %tmp27 = sdiv i32 %K, 32
+  br label %bb28
+
+bb28:                                             ; preds = %bb124, %bb25
+  %t.0 = phi i32 [ 0, %bb25 ], [ %tmp126, %bb124 ]
+  %tmp31 = icmp slt i32 %t.0, %tmp27
+  br i1 %tmp31, label %bb32, label %bb127
+
+bb32:                                             ; preds = %bb28
+  br label %bb33
+
+bb33:                                             ; preds = %bb85, %bb32
+  %w1.0 = phi i32 [ 0, %bb32 ], [ %tmp87, %bb85 ]
+  %tmp35 = icmp slt i32 %w1.0, 1
+  br i1 %tmp35, label %bb36, label %bb88
+
+bb36:                                             ; preds = %bb33
+  %tmp38 = mul nsw i32 32, %t.0
+  %tmp40 = add nsw i32 %tmp38, %tmp6
+  %tmp42 = mul nsw i32 32, %t.0
+  %tmp44 = add nsw i32 %tmp42, %tmp7
+  %tmp49 = mul nsw i32 %w1.0, 32
+  %tmp50 = add nsw i32 %tmp11, %tmp49
+  %tmp52 = mul nsw i32 %tmp50, %K
+  %tmp53 = add nsw i32 %tmp44, %tmp52
+  %tmp55 = getelementptr inbounds float addrspace(1)* %A, i32 %tmp53
+  %tmp56 = load float addrspace(1)* %tmp55, align 4
+  %tmp61 = mul nsw i32 %w1.0, 32
+  %tmp62 = add nsw i32 %tmp6, %tmp61
+  %tmp63 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC_sans_bias.Asub, i32 0, i32 %tmp62
+  %tmp64 = getelementptr inbounds [32 x float] addrspace(3)* %tmp63, i32 0, i32 %tmp7
+  store float %tmp56, float addrspace(3)* %tmp64, align 4
+  %tmp69 = mul nsw i32 %w1.0, 32
+  %tmp70 = add nsw i32 %tmp40, %tmp69
+  %tmp72 = mul nsw i32 %tmp70, %N
+  %tmp73 = add nsw i32 %tmp15, %tmp72
+  %tmp75 = getelementptr inbounds float addrspace(1)* %B, i32 %tmp73
+  %tmp76 = load float addrspace(1)* %tmp75, align 4
+  %tmp81 = mul nsw i32 %w1.0, 32
+  %tmp82 = add nsw i32 %tmp6, %tmp81
+  %tmp83 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC_sans_bias.Bsub, i32 0, i32 %tmp82
+  %tmp84 = getelementptr inbounds [32 x float] addrspace(3)* %tmp83, i32 0, i32 %tmp7
+  store float %tmp76, float addrspace(3)* %tmp84, align 4
+  br label %bb85
+
+bb85:                                             ; preds = %bb36
+  %tmp87 = add nsw i32 %w1.0, 1
+  br label %bb33
+
+bb88:                                             ; preds = %bb33
+  call void @barrier(i32 1) #4
+  br label %bb89
+
+bb89:                                             ; preds = %bb120, %bb88
+  %k.0 = phi i32 [ 0, %bb88 ], [ %tmp122, %bb120 ]
+  %tmp91 = icmp slt i32 %k.0, 32
+  br i1 %tmp91, label %bb92, label %bb123
+
+bb92:                                             ; preds = %bb89
+  br label %bb93
+
+bb93:                                             ; preds = %bb116, %bb92
+  %w2.0 = phi i32 [ 0, %bb92 ], [ %tmp118, %bb116 ]
+  %tmp95 = icmp slt i32 %w2.0, 1
+  br i1 %tmp95, label %bb96, label %bb119
+
+bb96:                                             ; preds = %bb93
+  %tmp101 = mul nsw i32 %w2.0, 32
+  %tmp102 = add nsw i32 %tmp6, %tmp101
+  %tmp103 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC_sans_bias.Asub, i32 0, i32 %tmp102
+  %tmp104 = getelementptr inbounds [32 x float] addrspace(3)* %tmp103, i32 0, i32 %k.0
+  %tmp105 = load float addrspace(3)* %tmp104, align 4
+  %tmp108 = getelementptr inbounds [32 x [32 x float]] addrspace(3)* @FFC_sans_bias.Bsub, i32 0, i32 %k.0
+  %tmp109 = getelementptr inbounds [32 x float] addrspace(3)* %tmp108, i32 0, i32 %tmp7
+  %tmp110 = load float addrspace(3)* %tmp109, align 4
+  %tmp111 = fmul float %tmp105, %tmp110
+  %tmp113 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w2.0
+  %tmp114 = load float* %tmp113, align 4
+  %tmp115 = fadd float %tmp114, %tmp111
+  store float %tmp115, float* %tmp113, align 4
+  br label %bb116
+
+bb116:                                            ; preds = %bb96
+  %tmp118 = add nsw i32 %w2.0, 1
+  br label %bb93
+
+bb119:                                            ; preds = %bb93
+  br label %bb120
+
+bb120:                                            ; preds = %bb119
+  %tmp122 = add nsw i32 %k.0, 1
+  br label %bb89
+
+bb123:                                            ; preds = %bb89
+  call void @barrier(i32 1) #4
+  br label %bb124
+
+bb124:                                            ; preds = %bb123
+  %tmp126 = add nsw i32 %t.0, 1
+  br label %bb28
+
+bb127:                                            ; preds = %bb28
+  br label %bb128
+
+bb128:                                            ; preds = %bb146, %bb127
+  %w3.0 = phi i32 [ 0, %bb127 ], [ %tmp148, %bb146 ]
+  %tmp130 = icmp slt i32 %w3.0, 1
+  br i1 %tmp130, label %bb131, label %bb149
+
+bb131:                                            ; preds = %bb128
+  %tmp133 = getelementptr inbounds [1 x float]* %acc, i32 0, i32 %w3.0
+  %tmp134 = load float* %tmp133, align 4
+  %tmp139 = mul nsw i32 %w3.0, 32
+  %tmp140 = add nsw i32 %tmp11, %tmp139
+  %tmp142 = mul nsw i32 %tmp140, %N
+  %tmp143 = add nsw i32 %tmp15, %tmp142
+  %tmp145 = getelementptr inbounds float addrspace(1)* %C, i32 %tmp143
+  store float %tmp134, float addrspace(1)* %tmp145, align 4
+  br label %bb146
+
+bb146:                                            ; preds = %bb131
+  %tmp148 = add nsw i32 %w3.0, 1
+  br label %bb128
+
+bb149:                                            ; preds = %bb128
+  ret void
+}
+
+attributes #0 = { nounwind "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { nounwind readnone "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #3 = { nobuiltin nounwind readnone }
+attributes #4 = { nobuiltin }
+
+!opencl.kernels = !{!0, !1}
+!llvm.ident = !{!2}
+
+!0 = metadata !{void (float addrspace(1)*, float addrspace(1)*, float addrspace(1)*, float addrspace(1)*, i32, i32, i32)* @FFC}
+!1 = metadata !{void (float addrspace(1)*, float addrspace(1)*, float addrspace(1)*, i32, i32, i32)* @FFC_sans_bias}
+!2 = metadata !{metadata !"clang version 3.5.0 "}

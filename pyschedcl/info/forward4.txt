@@ -1,0 +1,87 @@
+$py(mod='%')
+$py(op='gOutputSize')
+$py(
+def copyLocal_sub(x,S,C):
+    return """
+    int numLoops%d = (N + get_local_size(0) * %d - 1) / get_local_size(0) * %d;
+    for (int loop = 0; loop < numLoops%d; loop++) {
+        int offset%d = loop * get_local_size(0) * %d + get_local_id(0) * %d;
+        if (offset%d < N) {
+            target[offset%d] = source[offset%d];
+        }
+    }
+"""%(x,C,C,x,x,C,C,x,x,x)
+)
+
+$py(
+def forward_4_by_n_outplane_smallercache_sub(x,S,C):
+    return """
+    #define globalId%d get_group_id(0)*get_local_size(0)+(get_local_id(0)/%d)*%d*%d +get_local_id(0)%c%d+%d*%d 
+    #define localId%d get_local_id(0)%c%d+%d*%d 
+    #define workgroupId%d get_group_id(0) 
+    
+    const int effectiveWorkgroupId%d = workgroupId%d / gPixelsPerThread;
+    const int pixel%d = workgroupId%d %c gPixelsPerThread;
+    const int effectiveLocalId%d = localId%d + pixel%d * gWorkgroupSize;
+    const int n%d = effectiveWorkgroupId%d / gNumFilters;
+    const int outPlane%d = effectiveWorkgroupId%d %c gNumFilters;
+
+    const int outputRow%d = effectiveLocalId%d / gOutputSize;
+    const int outputCol%d = effectiveLocalId%d %c gOutputSize;
+
+    float sum%d = 0;
+    for (int upstreamPlane = 0; upstreamPlane < gInputPlanes; upstreamPlane++) {
+        barrier(CLK_LOCAL_MEM_FENCE);
+        copyLocal(_inputPlane, images + (n%d * gInputPlanes + upstreamPlane) * gInputSizeSquared, gInputSizeSquared);
+        copyLocal(_filterPlane, filters + (outPlane%d * gInputPlanes + upstreamPlane) * gFilterSizeSquared, gFilterSizeSquared);
+        barrier(CLK_LOCAL_MEM_FENCE);
+
+        if (effectiveLocalId%d < gOutputSizeSquared) {
+            for (int u = -gHalfFilterSize; u <= gHalfFilterSize - gEven; u++) {
+                #if gPadZeros == 1
+                    #define inputRow%d (outputRow%d + u)
+                #else
+                    #define inputRow%d (outputRow%d + u + gHalfFilterSize)
+                #endif
+                int inputimagerowoffset%d = inputRow%d * gInputSize;
+                int filterrowoffset = (u+gHalfFilterSize) * gFilterSize + gHalfFilterSize;
+                bool rowOk%d = inputRow%d >= 0 && inputRow%d < gInputSize;
+                for (int v = -gHalfFilterSize; v <= gHalfFilterSize - gEven; v++) {
+                    #if gPadZeros == 1
+                        #define inputCol%d (outputCol%d + v)
+                    #else
+                        #define inputCol%d (outputCol%d + v + gHalfFilterSize)
+                    #endif
+                    bool process%d = rowOk%d && inputCol%d >= 0 && inputCol%d < gInputSize;
+                    if (process%d) {
+                            sum%d += _inputPlane[ inputimagerowoffset%d + inputCol%d] * _filterPlane[ filterrowoffset + v ];
+                    }
+                }
+            }
+        }
+    }
+    #define resultIndex%d (( n%d * gNumFilters + outPlane%d) * gOutputSizeSquared + effectiveLocalId%d)
+    if (effectiveLocalId%d < gOutputSizeSquared) {
+        output[resultIndex%d ] = sum%d;
+    }
+""" % (x,S,S,C,mod,S,x,S,x,mod,S,x,S,x ,x,x,x,x,mod,x,x,x,x,x,x,x,mod,x,x,x,x,mod,x,x,x,x,x,x,x,x,x ,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x,x, x,x,x,x,x,x,x)
+)
+$extend(copyLocal_sub)
+$extend(forward_4_by_n_outplane_smallercache_sub)
+void copyLocal(local float *target, global float const *source, int N) {
+$for(x in range(0,1))
+     $copyLocal_sub(x,S,C)
+$endfor
+}
+
+#ifdef gOutputSize
+void kernel forward_4_by_n_outplane_smallercache(const int batchSize,
+      global const float *images, global const float *filters,
+    global float *output,
+    local float *_inputPlane, local float *_filterPlane) {
+$for(x in range(0,C))
+     $forward_4_by_n_outplane_smallercache_sub(x,S,C)
+$endfor
+
+}
+#endif

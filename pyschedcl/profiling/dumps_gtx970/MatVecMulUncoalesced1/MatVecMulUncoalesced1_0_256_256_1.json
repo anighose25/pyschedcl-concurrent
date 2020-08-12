@@ -1,0 +1,1 @@
+{"MatVecMulUncoalesced10": {"write": {"device_start": -1, "host_queued_start": 1586202292.266688, "device_queued": -1, "device_end": -1, "host_queued_end": 1586202292.266961}, "device": "cpu", "nd_range": {"device_start": 2870066.4564517303, "device_end": 2870066.4565416663}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

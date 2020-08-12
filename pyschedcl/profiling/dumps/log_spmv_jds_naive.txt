@@ -1,0 +1,6 @@
+INFO:pyopencl.cache:build program: binary cache miss (key: 2c7ed533ba8b6b7282f339036b9a5e79)
+INFO:pyopencl.cache:build program: start building program from source on <pyopencl.Device 'Tonga' on 'AMD Accelerated Parallel Processing' at 0x20178a0>
+INFO:pyopencl.cache:build program: from-source build complete
+INFO:pyopencl.cache:build program: binary cache miss (key: 72dd2a6f70731f6c493865bfa0643f38)
+INFO:pyopencl.cache:build program: start building program from source on <pyopencl.Device 'Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz' on 'Intel(R) OpenCL' at 0x215f658>
+INFO:pyopencl.cache:build program: from-source build complete

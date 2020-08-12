@@ -1,0 +1,65 @@
+DEBUG:root:Number of GPUs : 1
+DEBUG:root:[<pyopencl.Device 'Tesla K40m' on 'NVIDIA CUDA' at 0x11afa90>]
+DEBUG:root:Number of CPUs : 1
+DEBUG:root:[<pyopencl.Device 'Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz' on 'Intel(R) OpenCL' at 0x18a4988>]
+DEBUG:root:Building Kernel...
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 2ce08d80b1f6daf7bf594c02767b8628)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:pyopencl.cache:build program: binary cache hit (key: fe75dd16208150523b8208c466604f24)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:root:Loading Kernel Data...
+DEBUG:root:Dispatching Kernel...
+DEBUG:root:DISPATCH : Dispatch function call for mm2_kernel1 starts at 2019-02-20 17:03:51.083411
+DEBUG:root:DISPATCH_gpu : Evaluation of kernel arguments for mm2_kernel1 on GPU
+DEBUG:root:DISPATCH_gpu : Creation of buffers for mm2_kernel1 on GPU
+DEBUG:root:PARTITION : Creating Input Buffers gpu
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Create_Input_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Create_Input_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : Creating Output Buffers gpu
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu: mm2_kernel1 Create_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu: mm2_kernel1 Create_Output_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : Creating IO Buffers gpu
+DEBUG:root:DISPATCH_gpu : Setting kernel arguments for mm2_kernel1 on GPU
+DEBUG:root:DISPATCH_gpu :Calling enqueue_write_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Write Buffers gpu
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Write_Input_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Write_Input_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : Number of write buffers 2
+DEBUG:root:DISPATCH_gpu : Calling enqueue_nd_range_kernel for GPU
+DEBUG:root:DISPATCH_gpu : Calling enqueue_read_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Read Buffers gpu
+DEBUG:root:PARTITION : mm2_kernel1 get_slice_values -> Original Buffer Size: 16384
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Read_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : mm2_kernel1 Enqueue_Read_Output_Buffers_number_of_elements : 16384
+DEBUG:root:PARTITION : Number of read buffers 1
+DEBUG:root:DISPATCH : mm2_kernel1 ke.dispatch_end 2019-02-20 17:03:51.086669 
+DEBUG:root:DISPATCH : Evaluation of kernel arguments for mm2_kernel1 
+DEBUG:root:DISPATCH : Number of events 3
+DEBUG:root:DISPATCH : Dispatch function call for mm2_kernel1 ends at 2019-02-20 17:03:51.086824
+DEBUG:root:Waiting for events... 
+
+DEBUG:root:CALLBACK_TRIGGERED : mm2_kernel1 WRITE execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : mm2_kernel1 gpu KERNEL event
+DEBUG:root:CALLBACK_PROBE : mm2_kernel1 gpu READ event
+DEBUG:root:CALLBACK_RESET : mm2_kernel1 Resetting bolt value by gpu WRITE event
+DEBUG:root:CALLBACK_TRIGGERED : mm2_kernel1 KERNEL execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : mm2_kernel1 gpu READ event
+DEBUG:root:CALLBACK_RESET : mm2_kernel1 Resetting bolt value by gpu KERNEL event
+DEBUG:root:CALLBACK_TRIGGERED : mm2_kernel1 READ execution finished for device gpu
+DEBUG:root:CALLBACK : {'create_buf_start': '1550662431.08', 'dispatch_id': '', 'create_buf_end': '1550662431.08', 'dispatch_start': '2019-02-20 17:03:51.083411', 'kernel_id': '6534401c-3503-11e9-85ea-a0000220fe80', 'write_end': '1550662431.09', 'dispatch_end': 'None', 'ndrange_start': '1550662431.09', 'ndrange_end': '1550662431.09', 'kernel_name': 'mm2_kernel1', 'read_end': '1550662431.09', 'read_start': '1550662431.09', 'write_start': '1550662431.09'}
+DEBUG:root:CALLBACK : Pushing info onto gpu0
+DEBUG:root:Releasing buffers of mm2_kernel1 on gpu
+DEBUG:root:Releasing host arrays
+DEBUG:root:CALLBACK_RESET : mm2_kernel1 Resetting bolt value by gpu READ event
+DEBUG:root:HOST_EVENT gpu 0 6534401c-3503-11e9-85ea-a0000220fe80,mm2_kernel1 1550662431.08539009094238281250 1550662431.08823299407958984375 1550662431.08625507354736328125 1550662431.08872103691101074219 1550662431.08639788627624511719 1550662431.08900308609008789062

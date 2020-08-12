@@ -1,0 +1,99 @@
+{
+	"src": "nw.cl",
+	"name": "nw_kernel",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "int",
+		"pos": 0,
+		"size": "(TS+1)*(TS+1)"
+	}
+  ],
+	"ioBuffers": [{
+		"break": 0,
+		"type": "int",
+		"pos": 1,
+		"size": "(TS+1)*(TS+1)"
+	},
+	{
+		"break": 0,
+		"type": "int",
+		"pos": 2,
+		"size": "(TS)"
+	},
+	{
+		"break": 0,
+		"type": "int",
+		"pos": 3,
+		"size": "(TS)"
+	},
+	{
+		"break": 0,
+		"type": "int",
+		"pos": 4,
+		"size": "1"
+	}
+  ],
+  "localArguments": [{
+		"break": 0,
+		"type": "int",
+		"pos": 5,
+		"size": "(TS+1)*(TS+1)"
+	},
+	{
+		"break": 0,
+		"type": "int",
+		"pos": 6,
+		"size": "(TS)*(TS)"
+	}
+  ],
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 7,
+		"value": "TS+1"
+	},
+	{
+		"type": "int",
+		"pos": 8,
+		"value": "10"
+	},
+	{
+		"type": "int",
+		"pos": 9,
+		"value": "1"
+	},
+	{
+		"type": "int",
+		"pos": 10,
+		"value": "16"
+	},
+	{
+		"type": "int",
+		"pos": 11,
+		"value": "TS"
+	},
+	{
+		"type": "int",
+		"pos": 12,
+		"value": "0"
+	},
+	{
+		"type": "int",
+		"pos": 13,
+		"value": "0"
+	}
+  ],
+	"partition":10,
+	"workDimension": 1,
+	"globalWorkSize": "[TS]",
+	"localWorkSize" :"[TS]",
+	"id": 1,
+  "outputBuffers": [
+      
+  ],
+	"macros_values":
+      {
+		"BLOCK_SIZE": "TS"
+	
+	  }
+}

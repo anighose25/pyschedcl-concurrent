@@ -1,0 +1,1 @@
+{"mm3_kernel10": {"write": {"device_start": -1, "host_queued_start": 1586204788.548422, "device_queued": -1, "device_end": -1, "host_queued_end": 1586204788.548706}, "device": "cpu", "nd_range": {"device_start": 2872562.738199328, "device_end": 2872562.750801598}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

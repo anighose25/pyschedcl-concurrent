@@ -1,0 +1,60 @@
+DEBUG:root:Number of GPUs : 1
+DEBUG:root:[<pyopencl.Device 'Tesla K40m' on 'NVIDIA CUDA' at 0x2519ad0>]
+DEBUG:root:Number of CPUs : 1
+DEBUG:root:[<pyopencl.Device 'Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz' on 'Intel(R) OpenCL' at 0x24ef938>]
+DEBUG:root:Building Kernel...
+DEBUG:pyopencl.cache:build program: binary cache hit (key: f31756b1f8f58f37843fe5ba8bcd46db)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 946f5449e7a4ef0cb7f2c376980d35e7)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:root:Loading Kernel Data...
+DEBUG:root:Dispatching Kernel...
+DEBUG:root:DISPATCH : Dispatch function call for Convolution2D_kernel starts at 2019-02-20 16:32:47.413276
+DEBUG:root:DISPATCH_gpu : Evaluation of kernel arguments for Convolution2D_kernel on GPU
+DEBUG:root:DISPATCH_gpu : Creation of buffers for Convolution2D_kernel on GPU
+DEBUG:root:PARTITION : Creating Input Buffers gpu
+DEBUG:root:PARTITION : Convolution2D_kernel get_slice_values -> Original Buffer Size: 16777216
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Create_Input_Buffers_number_of_elements : 16777216
+DEBUG:root:PARTITION : Creating Output Buffers gpu
+DEBUG:root:PARTITION : Convolution2D_kernel get_slice_values -> Original Buffer Size: 16777216
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu: Convolution2D_kernel Create_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu: Convolution2D_kernel Create_Output_Buffers_number_of_elements : 16777216
+DEBUG:root:PARTITION : Creating IO Buffers gpu
+DEBUG:root:DISPATCH_gpu : Setting kernel arguments for Convolution2D_kernel on GPU
+DEBUG:root:DISPATCH_gpu :Calling enqueue_write_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Write Buffers gpu
+DEBUG:root:PARTITION : Convolution2D_kernel get_slice_values -> Original Buffer Size: 16777216
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Enqueue_Write_Input_Buffers_number_of_elements : 16777216
+DEBUG:root:PARTITION : Number of write buffers 1
+DEBUG:root:DISPATCH_gpu : Calling enqueue_nd_range_kernel for GPU
+DEBUG:root:DISPATCH_gpu : Calling enqueue_read_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Read Buffers gpu
+DEBUG:root:PARTITION : Convolution2D_kernel get_slice_values -> Original Buffer Size: 16777216
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Enqueue_Read_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : Convolution2D_kernel Enqueue_Read_Output_Buffers_number_of_elements : 16777216
+DEBUG:root:PARTITION : Number of read buffers 1
+DEBUG:root:DISPATCH : Convolution2D_kernel ke.dispatch_end 2019-02-20 16:32:47.416782 
+DEBUG:root:DISPATCH : Evaluation of kernel arguments for Convolution2D_kernel 
+DEBUG:root:DISPATCH : Number of events 3
+DEBUG:root:DISPATCH : Dispatch function call for Convolution2D_kernel ends at 2019-02-20 16:32:47.416950
+DEBUG:root:Waiting for events... 
+
+DEBUG:root:CALLBACK_TRIGGERED : Convolution2D_kernel WRITE execution finished for device gpu
+DEBUG:root:CALLBACK_RESET : Convolution2D_kernel Resetting bolt value by gpu WRITE event
+DEBUG:root:CALLBACK_TRIGGERED : Convolution2D_kernel KERNEL execution finished for device gpu
+DEBUG:root:CALLBACK_RESET : Convolution2D_kernel Resetting bolt value by gpu KERNEL event
+DEBUG:root:CALLBACK_TRIGGERED : Convolution2D_kernel READ execution finished for device gpu
+DEBUG:root:CALLBACK : {'create_buf_start': '1550660567.41', 'dispatch_id': '', 'create_buf_end': '1550660567.41', 'dispatch_start': '2019-02-20 16:32:47.413276', 'kernel_id': '0e3a953a-34ff-11e9-aa7d-a0000220fe80', 'write_end': '1550660567.42', 'dispatch_end': 'None', 'ndrange_start': '1550660567.42', 'ndrange_end': '1550660567.42', 'kernel_name': 'Convolution2D_kernel', 'read_end': '1550660567.43', 'read_start': '1550660567.42', 'write_start': '1550660567.42'}
+DEBUG:root:CALLBACK : Pushing info onto gpu0
+DEBUG:root:Releasing buffers of Convolution2D_kernel on gpu
+DEBUG:root:Releasing host arrays
+DEBUG:root:CALLBACK_RESET : Convolution2D_kernel Resetting bolt value by gpu READ event
+DEBUG:root:HOST_EVENT gpu 0 0e3a953a-34ff-11e9-aa7d-a0000220fe80,Convolution2D_kernel 1550660567.41549301147460937500 1550660567.41840696334838867188 1550660567.41633701324462890625 1550660567.41869497299194335938 1550660567.41647791862487792969 1550660567.42900395393371582031

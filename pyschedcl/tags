@@ -1,0 +1,546 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+AC	pyschedcl.py	/^AC = ALL_COLORS$/;"	v
+ALL_COLORS	pyschedcl.py	/^ALL_COLORS = ['rgb(31, 119, 180)', 'rgb(255, 127, 14)', 'rgb(44, 160, 44)', 'rgb(214, 39, 40)', 'rgb(148, 103, 189)',$/;"	v
+CLHOST	scheduling/nn_tuner.py	/^CLHOST = fw.host_initialize(int(args.nGPU), int(args.nCPU))$/;"	v
+CLTrainer	pyschedcl.py	/^class CLTrainer:$/;"	c
+CPU_PLATFORM	constant_pyschedcl.py	/^CPU_PLATFORM = ["Intel(R) OpenCL"]$/;"	v
+Conv2DBackwardGradInput	scheduling/nn_tuner.py	/^class Conv2DBackwardGradInput(Transforms):$/;"	c
+Conv2DBackwardGradWeights	scheduling/nn_tuner.py	/^class Conv2DBackwardGradWeights(Transforms):$/;"	c
+Conv2DForward	scheduling/nn_tuner.py	/^class Conv2DForward(Transforms):$/;"	c
+ConvolutionLayer	scheduling/nn_tuner.py	/^class ConvolutionLayer(Layer):$/;"	c
+DEV_NULL	utils/get_optimal_partition.py	/^    DEV_NULL = open(os.devnull, 'w')$/;"	v
+DEV_NULL	utils/run_scheduler.py	/^        DEV_NULL = open(os.devnull, 'w')$/;"	v
+Dags_folder	scheduling/multiple_dag_devices.py	/^    Dags_folder = [(info_file + "\/"+ f) for f in listdir(info_file)]$/;"	v
+Dags_folder	scheduling/multiple_dag_devices.py	/^    Dags_folder = list()$/;"	v
+GPU_PLATFORM	constant_pyschedcl.py	/^GPU_PLATFORM = ["NVIDIA CUDA"]$/;"	v
+HostEvents	pyschedcl.py	/^class HostEvents(object):$/;"	c
+Kernel	pyschedcl.py	/^class Kernel(object):$/;"	c
+Layer	scheduling/nn_tuner.py	/^class Layer(object):$/;"	c
+LeNet	scheduling/nn_tuner.py	/^class LeNet(nn.Module):$/;"	c
+LinearBackwardgradInput	scheduling/nn_tuner.py	/^class LinearBackwardgradInput(Transforms):$/;"	c
+LinearBackwardgradWeight	scheduling/nn_tuner.py	/^class LinearBackwardgradWeight(Transforms):$/;"	c
+LinearForward	scheduling/nn_tuner.py	/^class LinearForward(Transforms):$/;"	c
+LocalController	scheduling/nn_tuner.py	/^class LocalController(object):$/;"	c
+MAX_CPU_ALLOC_SIZE	pyschedcl.py	/^MAX_CPU_ALLOC_SIZE = 0$/;"	v
+MAX_GPU_ALLOC_SIZE	pyschedcl.py	/^MAX_GPU_ALLOC_SIZE = 0$/;"	v
+NN	scheduling/nn_tuner.py	/^    NN = NeuralNetwork("cifar10_data", "LeNet", args)$/;"	v	class:NeuralNetwork
+NUM_CPU_DEVICES	constant_pyschedcl.py	/^NUM_CPU_DEVICES =  1$/;"	v
+NUM_GPU_DEVICES	constant_pyschedcl.py	/^NUM_GPU_DEVICES =  1$/;"	v
+NeuralNetwork	scheduling/nn_tuner.py	/^class NeuralNetwork(object):$/;"	c
+PoolingBackward	scheduling/nn_tuner.py	/^class PoolingBackward(Transforms):$/;"	c
+PoolingForward	scheduling/nn_tuner.py	/^class PoolingForward(Transforms):$/;"	c
+Q	pyschedcl.py	/^    import Queue as Q$/;"	i
+Q	pyschedcl.py	/^    import queue as Q$/;"	i
+RandomForestClassifier	pyschedcl.py	/^            from sklearn.ensemble import RandomForestClassifier$/;"	i
+RandomForestClassifier	pyschedcl.py	/^        from sklearn.ensemble import RandomForestClassifier$/;"	i
+SMOTE	pyschedcl.py	/^        from imblearn.over_sampling import SMOTE$/;"	i
+SOURCE_DIR	constant_pyschedcl.py	/^SOURCE_DIR = "\/home\/anirban\/ResearchTools\/pyschedcl-stable\/pyschedcl\/"$/;"	v
+SOURCE_DIR	pyschedcl.py	/^SOURCE_DIR = cons.SOURCE_DIR$/;"	v
+SelectKBest	pyschedcl.py	/^        from sklearn.feature_selection import SelectKBest$/;"	i
+Skill	pyschedcl.py	/^class Skill(object):$/;"	c
+SoftMaxBackward	scheduling/nn_tuner.py	/^class SoftMaxBackward(Transforms):$/;"	c
+SoftMaxForward	scheduling/nn_tuner.py	/^class SoftMaxForward(Transforms):$/;"	c
+TASK	pyschedcl.py	/^TASK = 0$/;"	v
+Task	pyschedcl.py	/^class Task(object):$/;"	c
+TaskDAG	pyschedcl.py	/^class TaskDAG(object):$/;"	c
+Task_dag	scheduling/multiple_dag_devices.py	/^    Task_dag = dict()$/;"	v
+TensorKernel	scheduling/nn_tuner.py	/^class TensorKernel(object):$/;"	c
+Transforms	scheduling/nn_tuner.py	/^class Transforms(object):$/;"	c
+Transpose	scheduling/nn_tuner.py	/^class Transpose(Transforms):$/;"	c
+VEC_TYPES	pyschedcl.py	/^VEC_TYPES = ['char16', 'char2', 'char3', 'char4', 'char8', 'double16', 'double2', 'double3', 'double4', 'double8',$/;"	v
+__cmp__	pyschedcl.py	/^    def __cmp__(self, other):$/;"	m	class:Skill	file:
+__init__	pyschedcl.py	/^    def __init__(self, ex_map, global_map,filter_list=[],name=None):$/;"	m	class:CLTrainer
+__init__	pyschedcl.py	/^    def __init__(self, kernel):$/;"	m	class:Task
+__init__	pyschedcl.py	/^    def __init__(self, kernel_name='', kernel_id='', dispatch_id='', dispatch_start=None, dispatch_end=None,$/;"	m	class:HostEvents
+__init__	pyschedcl.py	/^    def __init__(self, priority, description, Task_dag,rank):$/;"	m	class:Skill
+__init__	pyschedcl.py	/^    def __init__(self, src, task_dag_object=None, dataset=1024, partition=None, identifier=None):$/;"	m	class:Kernel
+__init__	pyschedcl.py	/^    def __init__(self, srcs, dataset=1024):$/;"	m	class:TaskDAG
+__init__	scheduling/nn_tuner.py	/^    def __init__(self):$/;"	m	class:LeNet
+__init__	scheduling/nn_tuner.py	/^    def __init__(self):$/;"	m	class:LocalController
+__init__	scheduling/nn_tuner.py	/^    def __init__(self):$/;"	m	class:Transforms
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, batch_size, classes, input_features=None):$/;"	m	class:SoftMaxForward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, batch_size, classes, input_features=None, predicted_output=None):$/;"	m	class:SoftMaxBackward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, batch_size, num_in, num_out, gradOutput, weightsT):$/;"	m	class:LinearBackwardgradInput
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, batch_size, num_in, num_out, inputT_features, gradOutput):$/;"	m	class:LinearBackwardgradWeight
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, batch_size, num_in, num_out, input_features, weights):$/;"	m	class:LinearForward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, info, transform):$/;"	m	class:TensorKernel
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, input_features=None, batch_size=32, torch_features=None, torch_w=None, torch_b=None,$/;"	m	class:Layer
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, input_size, info_convolution_forward, info_convolution_backward_gradweights,$/;"	m	class:ConvolutionLayer
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, num_rows, num_cols, input_features=None):$/;"	m	class:Transpose
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, torch_feature, input_size, batch_size, input_features=None, weights=None, bias=None,$/;"	m	class:Conv2DBackwardGradInput
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, torch_feature, input_size, batch_size, input_features=None, weights=None, bias=None,$/;"	m	class:Conv2DBackwardGradWeights
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, torch_feature, input_size, batch_size, input_features=None, weights=None, bias=None,$/;"	m	class:Conv2DForward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, torch_feature, input_size, batch_size, num_planes, input_features=None):$/;"	m	class:PoolingBackward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, torch_feature, input_size, batch_size, num_planes, input_features=None):$/;"	m	class:PoolingForward
+__init__	scheduling/nn_tuner.py	/^    def __init__(self, training_dataset, model, args=None, batch_size=32):$/;"	m	class:NeuralNetwork
+__repr__	pyschedcl.py	/^    def __repr__(self):$/;"	m	class:HostEvents	file:
+__str__	pyschedcl.py	/^    def __str__(self):$/;"	m	class:HostEvents	file:
+accuracy_score	pyschedcl.py	/^        from sklearn.metrics import accuracy_score$/;"	i
+adaptive_bias_select	scheduling/scheduler.py	/^def adaptive_bias_select(kernels, **kwargs):$/;"	f
+add_kernel	pyschedcl.py	/^    def add_kernel(self, kernel_id , kernel):$/;"	m	class:Task
+add_kernels_from_task	pyschedcl.py	/^    def add_kernels_from_task(self, task):$/;"	m	class:Task
+argparse	partition/partition.py	/^import argparse$/;"	i
+argparse	partition/partition_multiple.py	/^import argparse$/;"	i
+argparse	scheduling/multiple_dag_devices.py	/^import argparse$/;"	i
+argparse	scheduling/nn_tuner.py	/^import argparse$/;"	i
+argparse	scheduling/scheduler.py	/^import argparse$/;"	i
+argparse	utils/get_optimal_partition.py	/^import argparse$/;"	i
+argparse	utils/log_parser.py	/^import argparse$/;"	i
+argparse	utils/run_scheduler.py	/^import argparse$/;"	i
+args	partition/partition.py	/^    args=parse_arg(sys.argv[1:])$/;"	v
+args	partition/partition_multiple.py	/^    args = parse_arg(sys.argv[1:])$/;"	v
+args	scheduling/multiple_dag_devices.py	/^    args = parse_arg(sys.argv[1:])$/;"	v
+args	scheduling/nn_tuner.py	/^args = parse_arg(sys.argv[1:])$/;"	v
+args	scheduling/scheduler.py	/^    args = parse_arg(sys.argv[1:])$/;"	v
+args	utils/get_optimal_partition.py	/^    args = parse_arg(sys.argv[1:])$/;"	v
+args	utils/log_parser.py	/^    args = check_arg(sys.argv[1:])$/;"	v
+args	utils/run_scheduler.py	/^    args = parse_arg(sys.argv[1:])$/;"	v
+array	pyschedcl.py	/^import pyopencl.array$/;"	i
+avg_span	utils/get_optimal_partition.py	/^        avg_span = span\/count$/;"	v
+avg_span	utils/run_scheduler.py	/^    avg_span = span\/count$/;"	v
+backward	scheduling/nn_tuner.py	/^    def backward(self):$/;"	m	class:ConvolutionLayer
+backward	scheduling/nn_tuner.py	/^    def backward(self):$/;"	m	class:Layer
+baseline_select	scheduling/scheduler.py	/^def baseline_select(kernels, **kwargs):$/;"	f
+blank_fn	pyschedcl.py	/^def blank_fn(*args, **kwargs):$/;"	f
+blevel	pyschedcl.py	/^def blevel(dag):$/;"	f
+bolt	pyschedcl.py	/^bolt = [0]$/;"	v
+buffer_info	utils/parse_output_dump.py	/^    buffer_info = pickle.load(handle)$/;"	v
+build_kernel	pyschedcl.py	/^    def build_kernel(self, gpus, cpus, ctxs):$/;"	m	class:Kernel
+build_kernel_from_info	pyschedcl.py	/^def build_kernel_from_info(info_file_name, gpus, cpus, ctxs):$/;"	f
+build_kernels	pyschedcl.py	/^    def build_kernels(self, gpus, cpus, ctxs):$/;"	m	class:Task
+c	utils/log_parser.py	/^    c = args.callback$/;"	v
+callback_queue	pyschedcl.py	/^callback_queue = {}$/;"	v
+cb	pyschedcl.py	/^    def cb(status):$/;"	f	function:notify_callback
+cb	pyschedcl.py	/^    def cb(status):$/;"	f	function:notify_callback_dag
+check_arg	utils/log_parser.py	/^def check_arg(args=None):$/;"	f
+chi2	pyschedcl.py	/^        from sklearn.feature_selection import chi2$/;"	i
+cl	pyschedcl.py	/^import pyopencl as cl$/;"	i
+collections	pyschedcl.py	/^import collections$/;"	i
+colorsys	pyschedcl.py	/^    import colorsys$/;"	i
+compare_and_swap	pyschedcl.py	/^def compare_and_swap(testval, newval):$/;"	f
+compile_kernel	scheduling/nn_tuner.py	/^    def compile_kernel(self):$/;"	m	class:TensorKernel
+confusion_matrix	pyschedcl.py	/^        from sklearn.metrics import confusion_matrix$/;"	i
+cons	pyschedcl.py	/^import constant_pyschedcl as cons$/;"	i
+construct_component	pyschedcl.py	/^def construct_component(taskdag , task , width, depth):$/;"	f
+construction_time	pyschedcl.py	/^construction_time = 0$/;"	v
+conv_kernel	scheduling/nn_tuner.py	/^    conv_kernel = TensorKernel(info_convolution_forward, Conv2DForward(torch_feature, (32, 32), 512, None, None, None))$/;"	v	class:NeuralNetwork
+count	pyschedcl.py	/^count = 0$/;"	v
+count	scheduling/multiple_dag_devices.py	/^        count = count +1$/;"	v
+count	scheduling/multiple_dag_devices.py	/^    count  = 0$/;"	v
+count	utils/get_optimal_partition.py	/^                count = count + 1$/;"	v
+count	utils/get_optimal_partition.py	/^        count = 0$/;"	v
+count	utils/run_scheduler.py	/^            count = count + 1$/;"	v
+count	utils/run_scheduler.py	/^    count = 0$/;"	v
+count1	scheduling/multiple_dag_devices.py	/^                    count1 = count1 + 1$/;"	v
+count1	scheduling/multiple_dag_devices.py	/^    count1 = 0$/;"	v
+cpus	partition/partition_multiple.py	/^    cpus = range(int(args.nCPU))$/;"	v
+create_buffers	pyschedcl.py	/^    def create_buffers(self, ctx, obj, size_percent=100, offset_percent=0, **kwargs):$/;"	m	class:Kernel
+create_command_queue_for_each	pyschedcl.py	/^def create_command_queue_for_each(devs, ctx):$/;"	f
+cross_val_score	pyschedcl.py	/^        from sklearn.model_selection import cross_val_score$/;"	i
+cs	pyschedcl.py	/^cs = mutex.mutex()$/;"	v
+csv	scheduling/multiple_dag_devices.py	/^import csv$/;"	i
+csv	scheduling/nn_tuner.py	/^import csv$/;"	i
+ctype	pyschedcl.py	/^def ctype(dtype):$/;"	f
+d	utils/log_parser.py	/^    d = args.dispatch$/;"	v
+d	utils/run_scheduler.py	/^            d = random.choice(dataset)$/;"	v
+dataset	partition/partition.py	/^    dataset = int(args.dataset_size)$/;"	v
+dataset	partition/partition_multiple.py	/^    dataset = int(args.dataset_size)$/;"	v
+dataset	utils/run_scheduler.py	/^        dataset =[128, 256, 512, 1024, 2048, 4096]$/;"	v
+datetime	partition/partition.py	/^import datetime$/;"	i
+datetime	partition/partition_multiple.py	/^import datetime$/;"	i
+datetime	pyschedcl.py	/^import datetime$/;"	i
+datetime	scheduling/multiple_dag_devices.py	/^import datetime$/;"	i
+datetime	scheduling/nn_tuner.py	/^import datetime$/;"	i
+datetime	scheduling/scheduler.py	/^import json, sys, datetime, time, heapq$/;"	i
+datetime	utils/get_optimal_partition.py	/^import json, sys, subprocess, os, datetime$/;"	i
+datetime	utils/run_scheduler.py	/^import json, sys, subprocess, os, datetime$/;"	i
+deepcopy	pyschedcl.py	/^from copy import deepcopy$/;"	i
+deleted_task_dag	scheduling/multiple_dag_devices.py	/^    deleted_task_dag = list()$/;"	v
+device_history	pyschedcl.py	/^device_history = {"gpu": [], "cpu": []}$/;"	v
+dispatch	pyschedcl.py	/^    def dispatch(self, gpu, cpu, ctxs, cmd_qs, dep=None, partition=None, callback=blank_fn, **kwargs):$/;"	m	class:Kernel
+dispatch_all	pyschedcl.py	/^    def dispatch_all(self, dag, gpu, cpu, ctxs, cmd_qs, h ,callback=blank_fn, *args, **kwargs):$/;"	m	class:Task
+dispatch_dag	pyschedcl.py	/^    def dispatch_dag(self,task ,h,  gpu, cpu, ctxs, cmd_qs, dep=None, partition=None, callback=blank_fn):$/;"	m	class:Kernel
+dispatch_kernel	scheduling/nn_tuner.py	/^    def dispatch_kernel(self):$/;"	m	class:TensorKernel
+dispatch_multiple	pyschedcl.py	/^    def dispatch_multiple(self, gpus, cpus, ctxs, cmd_qs, dep=None, partition=None, callback=blank_fn):$/;"	m	class:Kernel
+dispatch_single	pyschedcl.py	/^    def dispatch_single(self,  dag, gpu, cpu, ctxs, cmd_qs, h, callback=blank_fn, *args, **kwargs):$/;"	m	class:Task
+dispatch_single	pyschedcl.py	/^    def dispatch_single(self,priority  ,cmd_qs, ctxs, gpus, cpus ):$/;"	m	class:TaskDAG
+dump	scheduling/nn_tuner.py	/^    def dump(self):$/;"	m	class:TensorKernel
+dump_dev	partition/partition.py	/^    dump_dev=fw.dump_device_history()$/;"	v
+dump_dev	partition/partition_multiple.py	/^    dump_dev = fw.dump_device_history()$/;"	v
+dump_dev	scheduling/scheduler.py	/^        dump_dev = select_main(kernels, select=adaptive_bias_select)$/;"	v
+dump_dev	scheduling/scheduler.py	/^        dump_dev = select_main(kernels, select=baseline_select)$/;"	v
+dump_dev	scheduling/scheduler.py	/^        dump_dev = select_main(kernels, select=look_ahead_select)$/;"	v
+dump_dev	scheduling/scheduler.py	/^    dump_dev =None$/;"	v
+dump_device_history	pyschedcl.py	/^def dump_device_history():$/;"	f
+dump_json	pyschedcl.py	/^    def dump_json(self):$/;"	m	class:Kernel
+dump_output	pyschedcl.py	/^dump_output = False$/;"	v
+dump_taskdag	pyschedcl.py	/^    def dump_taskdag(self):$/;"	m	class:TaskDAG
+duplicate_read	pyschedcl.py	/^duplicate_read = 0$/;"	v
+duplicate_write	pyschedcl.py	/^duplicate_write = 0$/;"	v
+dvc	utils/log_parser.py	/^            dvc = "both"$/;"	v
+dvc	utils/log_parser.py	/^            dvc = "cpu"$/;"	v
+dvc	utils/log_parser.py	/^            dvc = "gpu"$/;"	v
+dvt	utils/log_parser.py	/^    dvt = args.device_type$/;"	v
+enque_read	pyschedcl.py	/^enque_read = 0$/;"	v
+enque_write	pyschedcl.py	/^enque_write = 0$/;"	v
+enqueue_nd_range_kernel	pyschedcl.py	/^    def enqueue_nd_range_kernel(self, queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, **kwargs):$/;"	m	class:Kernel
+enqueue_nd_range_kernel_dag	pyschedcl.py	/^    def enqueue_nd_range_kernel_dag(self,task , h , queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, **kwargs):$/;"	m	class:Kernel
+enqueue_read_buffers	pyschedcl.py	/^    def enqueue_read_buffers(self, queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, callback=blank_fn,$/;"	m	class:Kernel
+enqueue_read_buffers_dag	pyschedcl.py	/^    def enqueue_read_buffers_dag(self,task ,h ,  queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, callback=blank_fn,$/;"	m	class:Kernel
+enqueue_write_buffers	pyschedcl.py	/^    def enqueue_write_buffers(self, queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, **kwargs):$/;"	m	class:Kernel
+enqueue_write_buffers_dag	pyschedcl.py	/^    def enqueue_write_buffers_dag(self, task , h , queue, q_id, obj, size_percent=100, offset_percent=0, deps=None, **kwargs):$/;"	m	class:Kernel
+eval_vargs	pyschedcl.py	/^    def eval_vargs(self, partition=None, size_percent=0, offset_percent=0, reverse=False, exact=-1, total=100):$/;"	m	class:Kernel
+event	scheduling/multiple_dag_devices.py	/^    event = list()$/;"	v
+ex_callback_queue	pyschedcl.py	/^ex_callback_queue = {}$/;"	v
+execute_cmd	utils/get_optimal_partition.py	/^        execute_cmd = "python " + p_path + " -f " + i_path + args.file + " -p " + str(p) + " -d " + args.dataset_size + " > temp.log"$/;"	v
+execute_cmd	utils/run_scheduler.py	/^        execute_cmd = "python " + p_path + " -f " + i_path + file_name + " -s " + args.select + " > temp.log"$/;"	v
+extract_features	database/feature_tests.py	/^def extract_features(test,kernel):$/;"	f
+f_classif	pyschedcl.py	/^        from sklearn.feature_selection import f_classif$/;"	i
+f_path	partition/partition.py	/^        f_path = fw.SOURCE_DIR + 'logs\/' + name + '_debug.log'$/;"	v
+f_path	partition/partition_multiple.py	/^        f_path = fw.SOURCE_DIR + 'logs\/' + name + '_debug.log'$/;"	v
+f_path	scheduling/scheduler.py	/^        f_path = fw.SOURCE_DIR + 'logs\/' + name + '_debug.log'$/;"	v
+faulthandler	scheduling/nn_tuner.py	/^import faulthandler$/;"	i
+feature_selection	pyschedcl.py	/^    def feature_selection(self, num_features = 2):$/;"	m	class:CLTrainer
+ffc_kernel	scheduling/nn_tuner.py	/^    ffc_kernel = TensorKernel(info_ffc_forward, LinearForward(32, 512, 4096, None, None))$/;"	v	class:NeuralNetwork
+file_name	utils/run_scheduler.py	/^        file_name = "Task_" + str(time.time())$/;"	v
+file_name	utils/run_scheduler.py	/^        file_name = args.file.split("\/")[-1]$/;"	v
+filename	partition/partition.py	/^        filename = fw.SOURCE_DIR + 'gantt_charts\/' + name + '.png'$/;"	v
+filename	partition/partition_multiple.py	/^        filename = fw.SOURCE_DIR + 'gantt_charts\/' + name + '.png'$/;"	v
+filename	scheduling/scheduler.py	/^        filename = fw.SOURCE_DIR + 'gantt_charts\/' + name + '.png'$/;"	v
+finishe_ker	pyschedcl.py	/^finishe_ker = list()$/;"	v
+finished_kernels	pyschedcl.py	/^finished_kernels = list()$/;"	v
+finished_task_Dag	scheduling/multiple_dag_devices.py	/^    finished_task_Dag = dict()$/;"	v
+forward	scheduling/nn_tuner.py	/^    def forward(self):$/;"	m	class:Layer
+forward	scheduling/nn_tuner.py	/^    def forward(self, input_features=None):$/;"	m	class:ConvolutionLayer
+forward	scheduling/nn_tuner.py	/^    def forward(self, x):$/;"	m	class:LeNet
+fw	partition/partition.py	/^import pyschedcl as fw$/;"	i
+fw	partition/partition_multiple.py	/^import pyschedcl as fw$/;"	i
+fw	scheduling/multiple_dag_devices.py	/^import pyschedcl as fw$/;"	i
+fw	scheduling/nn_tuner.py	/^import pyschedcl as fw$/;"	i
+fw	scheduling/scheduler.py	/^import pyschedcl as fw$/;"	i
+fw	utils/get_optimal_partition.py	/^import pyschedcl as fw$/;"	i
+fw	utils/log_parser.py	/^import pyschedcl as fw$/;"	i
+fw	utils/run_scheduler.py	/^import pyschedcl as fw$/;"	i
+gantt	scheduling/multiple_dag_devices.py	/^    gantt = 0$/;"	v
+gantt_label	scheduling/multiple_dag_devices.py	/^    gantt_label = [(info_file + f) for f in listdir(info_file)]$/;"	v
+gc	pyschedcl.py	/^import gc$/;"	i
+generate_input_cube	scheduling/nn_tuner.py	/^    def generate_input_cube(self, minibatch_size, input_size, num_channels, padding=0):$/;"	m	class:NeuralNetwork
+generate_unique_id	pyschedcl.py	/^def generate_unique_id():$/;"	f
+get_N_HexCol	pyschedcl.py	/^    def get_N_HexCol(N=5):$/;"	f	function:plot_gantt_chart_graph
+get_N_random_HexColor	pyschedcl.py	/^    def get_N_random_HexColor(N=5):$/;"	f	function:plot_gantt_chart_graph
+get_all_task_dependencies	pyschedcl.py	/^    def get_all_task_dependencies(self):$/;"	m	class:TaskDAG
+get_allowable_partition_percentages	scheduling/nn_tuner.py	/^    def get_allowable_partition_percentages(self, batch_size):$/;"	m	class:NeuralNetwork
+get_buffer	pyschedcl.py	/^    def get_buffer(self, pos):$/;"	m	class:Kernel
+get_buffer_info	pyschedcl.py	/^    def get_buffer_info(self, pos):$/;"	m	class:Kernel
+get_buffer_info_location	pyschedcl.py	/^    def get_buffer_info_location(self, pos):$/;"	m	class:Kernel
+get_data	pyschedcl.py	/^    def get_data(self, pos):$/;"	m	class:Kernel
+get_data_types_and_shapes	pyschedcl.py	/^    def get_data_types_and_shapes(self):$/;"	m	class:Kernel
+get_dataset	scheduling/nn_tuner.py	/^    def get_dataset(self, dataset_folder):$/;"	m	class:NeuralNetwork
+get_device_requirement	pyschedcl.py	/^    def get_device_requirement(self):$/;"	m	class:Kernel
+get_device_requirement	pyschedcl.py	/^    def get_device_requirement(self):$/;"	m	class:Task
+get_filter_cube	scheduling/nn_tuner.py	/^    def get_filter_cube(self, filter_layer_index):$/;"	m	class:NeuralNetwork
+get_finished_tasks	pyschedcl.py	/^    def get_finished_tasks(self):$/;"	m	class:TaskDAG
+get_first_kernel	pyschedcl.py	/^    def get_first_kernel(self):$/;"	m	class:Task
+get_free_kernels	pyschedcl.py	/^    def get_free_kernels(self):$/;"	m	class:TaskDAG
+get_free_tasks	pyschedcl.py	/^    def get_free_tasks(self):$/;"	m	class:TaskDAG
+get_input_cube	scheduling/nn_tuner.py	/^    def get_input_cube(self, minibatch_size, offset=0, padding=0):$/;"	m	class:NeuralNetwork
+get_kernel	pyschedcl.py	/^    def get_kernel(self, kid):$/;"	m	class:TaskDAG
+get_kernel_children	pyschedcl.py	/^    def get_kernel_children(self, kernel_id, dag):$/;"	m	class:Task
+get_kernel_children_ids	pyschedcl.py	/^    def get_kernel_children_ids(self, kid):$/;"	m	class:TaskDAG
+get_kernel_ids	pyschedcl.py	/^    def get_kernel_ids(self):$/;"	m	class:Task
+get_kernel_ids_sorted	pyschedcl.py	/^    def get_kernel_ids_sorted(self, dag):$/;"	m	class:Task
+get_kernel_parent_ids	pyschedcl.py	/^    def get_kernel_parent_ids(self, kid):$/;"	m	class:TaskDAG
+get_kernel_parents	pyschedcl.py	/^    def get_kernel_parents(self, kernel_id, dag):$/;"	m	class:Task
+get_kernels	pyschedcl.py	/^    def get_kernels(self):$/;"	m	class:Task
+get_kernels_sorted	pyschedcl.py	/^    def get_kernels_sorted(self, dag):$/;"	m	class:Task
+get_max	pyschedcl.py	/^    def get_max(device_info_list):$/;"	f	function:plot_gantt_chart_graph
+get_min	pyschedcl.py	/^    def get_min(device_info_list):$/;"	f	function:plot_gantt_chart_graph
+get_minibatch_training_data	scheduling/nn_tuner.py	/^    def get_minibatch_training_data(self, offset, minibatch_size):$/;"	m	class:NeuralNetwork
+get_model	scheduling/nn_tuner.py	/^    def get_model(self, model_name):$/;"	m	class:NeuralNetwork
+get_multiple_devices	pyschedcl.py	/^def get_multiple_devices(platform, dev_type, num_devs):$/;"	f
+get_num_global_work_items	pyschedcl.py	/^    def get_num_global_work_items(self):$/;"	m	class:Kernel
+get_partition_multiples	pyschedcl.py	/^    def get_partition_multiples(self):$/;"	m	class:Kernel
+get_platform	pyschedcl.py	/^def get_platform(vendor_name):$/;"	f
+get_single_device	pyschedcl.py	/^def get_single_device(platform, dev_type):$/;"	f
+get_skeleton_subgraph	pyschedcl.py	/^    def get_skeleton_subgraph(self, kernel_ids):$/;"	m	class:TaskDAG
+get_slice_values	pyschedcl.py	/^    def get_slice_values(self, buffer_info, size_percent, offset_percent, **kwargs):$/;"	m	class:Kernel
+get_some_free_kernel	pyschedcl.py	/^    def get_some_free_kernel(self):$/;"	m	class:Task
+get_span_cmd	utils/get_optimal_partition.py	/^            get_span_cmd = "cat temp.log |grep span_time"$/;"	v
+get_span_cmd	utils/run_scheduler.py	/^        get_span_cmd = "cat temp.log |grep span_time"$/;"	v
+get_sub_devices	pyschedcl.py	/^def get_sub_devices(platform, dev_type, num_devs, total_compute=16):$/;"	f
+get_task_children	pyschedcl.py	/^    def get_task_children(self, task):$/;"	m	class:TaskDAG
+get_task_parents	pyschedcl.py	/^    def get_task_parents(self, task):$/;"	m	class:TaskDAG
+get_tasks	pyschedcl.py	/^    def get_tasks(self):$/;"	m	class:TaskDAG
+get_tasks_sorted	pyschedcl.py	/^    def get_tasks_sorted(self):$/;"	m	class:TaskDAG
+global_kernels_list	utils/run_scheduler.py	/^        global_kernels_list = [f for f in os.listdir(i_path) if f.endswith('.json')]$/;"	v
+gpus	partition/partition_multiple.py	/^    gpus = range(int(args.nGPU))$/;"	v
+he	utils/log_parser.py	/^    he = args.host_event$/;"	v
+heapq	scheduling/nn_tuner.py	/^import heapq$/;"	i
+heapq	scheduling/scheduler.py	/^import json, sys, datetime, time, heapq$/;"	i
+host_initialize	pyschedcl.py	/^def host_initialize(num_gpus=cons.NUM_GPU_DEVICES, num_cpus=cons.NUM_CPU_DEVICES, local=False,$/;"	f
+host_synchronize	pyschedcl.py	/^def host_synchronize(cmd_qs, events):$/;"	f
+i_path	utils/get_optimal_partition.py	/^    i_path = fw.SOURCE_DIR + 'info\/'$/;"	v
+i_path	utils/run_scheduler.py	/^    i_path = fw.SOURCE_DIR + 'info\/'$/;"	v
+info	partition/partition.py	/^    info = json.loads(open(info_file).read())$/;"	v
+info	partition/partition_multiple.py	/^    info = json.loads(open(info_file).read())$/;"	v
+info	scheduling/multiple_dag_devices.py	/^        info = json.loads(open(cc).read())$/;"	v
+info	scheduling/scheduler.py	/^        info = json.loads(open(fw.SOURCE_DIR + "info\/" + task_src).read())$/;"	v
+info_convolution_forward	scheduling/nn_tuner.py	/^    info_convolution_forward = "info\/forward3_double.json"$/;"	v	class:NeuralNetwork
+info_ffc_forward	scheduling/nn_tuner.py	/^    info_ffc_forward = "info\/FFC.json"$/;"	v	class:NeuralNetwork
+info_file	partition/partition.py	/^    info_file = args.file$/;"	v
+info_file	partition/partition_multiple.py	/^    info_file = args.file$/;"	v
+info_file	scheduling/multiple_dag_devices.py	/^    info_file = args.file$/;"	v
+initialize	scheduling/nn_tuner.py	/^    def initialize(self):$/;"	m	class:TensorKernel
+is_finished	pyschedcl.py	/^    def is_finished(self):$/;"	m	class:Task
+is_not_empty	pyschedcl.py	/^    def is_not_empty(self):$/;"	m	class:HostEvents
+is_processed	pyschedcl.py	/^    def is_processed(self):$/;"	m	class:Task
+is_processed	pyschedcl.py	/^    def is_processed(self):$/;"	m	class:TaskDAG
+is_supertask	pyschedcl.py	/^    def is_supertask(self):$/;"	m	class:Task
+isfile	scheduling/multiple_dag_devices.py	/^from os.path import isfile, join$/;"	i
+isfile	scheduling/nn_tuner.py	/^from os.path import isfile, join$/;"	i
+join	scheduling/multiple_dag_devices.py	/^from os.path import isfile, join$/;"	i
+join	scheduling/nn_tuner.py	/^from os.path import isfile, join$/;"	i
+json	partition/partition.py	/^import json$/;"	i
+json	partition/partition_multiple.py	/^import json$/;"	i
+json	pyschedcl.py	/^        import json$/;"	i
+json	pyschedcl.py	/^    import json$/;"	i
+json	scheduling/multiple_dag_devices.py	/^import json$/;"	i
+json	scheduling/nn_tuner.py	/^import json$/;"	i
+json	scheduling/scheduler.py	/^import json, sys, datetime, time, heapq$/;"	i
+json	utils/get_optimal_partition.py	/^import json, sys, subprocess, os, datetime$/;"	i
+json	utils/run_scheduler.py	/^import json, sys, subprocess, os, datetime$/;"	i
+k	utils/log_parser.py	/^            k = ""$/;"	v
+k	utils/log_parser.py	/^    k = args.kernel_name$/;"	v
+ken	pyschedcl.py	/^ken = 0$/;"	v
+kernel	partition/partition.py	/^        kernel = fw.Kernel(info, dataset=dataset)$/;"	v
+kernel	partition/partition.py	/^        kernel = fw.Kernel(info, dataset=dataset, partition=partition)$/;"	v
+kernel	partition/partition_multiple.py	/^        kernel = fw.Kernel(info, dataset=dataset)$/;"	v
+kernel	partition/partition_multiple.py	/^        kernel = fw.Kernel(info, dataset=dataset, partition=partition)$/;"	v
+kernel__data	pyschedcl.py	/^kernel__data = {}$/;"	v
+kernel__data1	pyschedcl.py	/^kernel__data1 = {}$/;"	v
+kernel__name	pyschedcl.py	/^kernel__name = {}$/;"	v
+kernel_buffer	pyschedcl.py	/^kernel_buffer = {}$/;"	v
+kernel_chunkleft	pyschedcl.py	/^kernel_chunkleft = {}$/;"	v
+kernel_data_transfer_size	pyschedcl.py	/^    def kernel_data_transfer_size(self, kernel_r, kernel_s):$/;"	m	class:TaskDAG
+kernel_dataset	pyschedcl.py	/^kernel_dataset = {}$/;"	v
+kernel_hist	pyschedcl.py	/^kernel_hist = {}$/;"	v
+kernels	database/feature_tests.py	/^    kernels = tests[test];$/;"	v
+kernels	scheduling/scheduler.py	/^    kernels = []$/;"	v
+kernels_list	utils/run_scheduler.py	/^        kernels_list = random.sample(global_kernels_list, int(args.tasks))$/;"	v
+l_file	utils/log_parser.py	/^        l_file = path + args.file.split("\/")[-1]$/;"	v
+l_file	utils/log_parser.py	/^        l_file = path + max(os.listdir(path), key=lambda x: x.split("_")[-2])$/;"	v
+l_file	utils/log_parser.py	/^    l_file = ""$/;"	v
+list_from_dev_history	pyschedcl.py	/^    def list_from_dev_history(dev_history):$/;"	f	function:plot_gantt_chart_graph
+list_from_file	pyschedcl.py	/^    def list_from_file(file):$/;"	f	function:plot_gantt_chart_graph
+listdir	scheduling/multiple_dag_devices.py	/^from os import listdir$/;"	i
+listdir	scheduling/nn_tuner.py	/^from os import listdir$/;"	i
+load_data	pyschedcl.py	/^    def load_data(self, data):$/;"	m	class:Kernel
+load_data	scheduling/nn_tuner.py	/^    def load_data(self):$/;"	m	class:TensorKernel
+load_dependent_data_and_buffers	pyschedcl.py	/^    def load_dependent_data_and_buffers(self,dag, kernel_id):$/;"	m	class:Task
+log_data	utils/log_parser.py	/^        log_data = open(l_file, "r")$/;"	v
+log_data	utils/log_parser.py	/^    log_data = open(l_file, "r")$/;"	v
+logging	partition/partition.py	/^import logging$/;"	i
+logging	partition/partition_multiple.py	/^import logging$/;"	i
+logging	pyschedcl.py	/^import logging$/;"	i
+logging	scheduling/multiple_dag_devices.py	/^import logging$/;"	i
+logging	scheduling/nn_tuner.py	/^import logging$/;"	i
+logging	scheduling/scheduler.py	/^import logging$/;"	i
+look_ahead_select	scheduling/scheduler.py	/^def look_ahead_select(kernels, **kwargs):$/;"	f
+make_ctype	pyschedcl.py	/^def make_ctype(dtype):$/;"	f
+make_user_defined_dtype	pyschedcl.py	/^def make_user_defined_dtype(ctxs, name, definition):$/;"	f
+matplotlib	pyschedcl.py	/^    import matplotlib.patches as patches$/;"	i
+matplotlib	pyschedcl.py	/^    import matplotlib.pyplot as plt$/;"	i
+matplotlib	scheduling/multiple_dag_devices.py	/^import matplotlib.pyplot as plt$/;"	i
+matplotlib	scheduling/nn_tuner.py	/^import matplotlib.pyplot as plt$/;"	i
+merge_tasks	pyschedcl.py	/^    def merge_tasks(self, t1, t2):$/;"	m	class:TaskDAG
+model_accuracy	pyschedcl.py	/^    def model_accuracy(self, train_x, test_x, train_y, test_y):$/;"	m	class:CLTrainer
+model_accuracy_with_smote	pyschedcl.py	/^    def model_accuracy_with_smote(self):$/;"	m	class:CLTrainer
+model_cv_accuracy	pyschedcl.py	/^    def model_cv_accuracy(self):$/;"	m	class:CLTrainer
+model_cv_accuracy_with_feature_selection	pyschedcl.py	/^    def model_cv_accuracy_with_feature_selection(self, num_features):$/;"	m	class:CLTrainer
+model_zoo	scheduling/nn_tuner.py	/^import torch.utils.model_zoo as model_zoo$/;"	i
+modify_device_requirement	pyschedcl.py	/^    def modify_device_requirement(self, kernels, op=operator.iadd):$/;"	m	class:Task
+multiple_round	pyschedcl.py	/^def multiple_round(elms, percent, multiples, **kwargs):$/;"	f
+mutex	pyschedcl.py	/^import mutex$/;"	i
+n1	pyschedcl.py	/^    import networkx as n1$/;"	i
+name	partition/partition.py	/^    name = s_name + '_' + str(partition) + '_' + str(dataset) + '_' + str(time.time()).replace(".","")$/;"	v
+name	partition/partition_multiple.py	/^    name = s_name + '_' + str(partition) + '_' + str(dataset) + '_' + str(time.time()).replace(".", "")$/;"	v
+name	scheduling/scheduler.py	/^    name = "scheduling_" + args.select +"_" +str(time.time()).replace(".", "")$/;"	v
+nn	scheduling/nn_tuner.py	/^import torch.nn as nn$/;"	i
+normalise_timestamp	pyschedcl.py	/^    def normalise_timestamp(device_info_list):$/;"	f	function:plot_gantt_chart_graph
+normalize_controllers	scheduling/nn_tuner.py	/^    def normalize_controllers(self):$/;"	m	class:NeuralNetwork
+notify_callback	pyschedcl.py	/^def notify_callback(kernel, device, dev_no, event_type, events, host_event_info, callback=blank_fn):$/;"	f
+notify_callback_dag	pyschedcl.py	/^def notify_callback_dag( kernel, device , dev_no, event_type, events, host_event_info,  callback=blank_fn ):$/;"	f
+np	partition/partition_multiple.py	/^import numpy as np$/;"	i
+np	pyschedcl.py	/^        import numpy as np$/;"	i
+np	pyschedcl.py	/^import numpy as np$/;"	i
+np	scheduling/nn_tuner.py	/^import numpy as np$/;"	i
+np	scheduling/scheduler.py	/^import numpy as np$/;"	i
+np	utils/parse_output_dump.py	/^import numpy as np$/;"	i
+numpy_types	pyschedcl.py	/^numpy_types = {$/;"	v
+nx	pyschedcl.py	/^            import networkx as nx$/;"	i
+nx	pyschedcl.py	/^        import networkx as nx$/;"	i
+nx	scheduling/multiple_dag_devices.py	/^import networkx as nx$/;"	i
+nx	scheduling/nn_tuner.py	/^import networkx as nx$/;"	i
+operator	pyschedcl.py	/^        import operator$/;"	i
+operator	pyschedcl.py	/^    import operator$/;"	i
+os	database/feature_tests.py	/^import os;$/;"	i
+os	partition/partition_multiple.py	/^import os$/;"	i
+os	pyschedcl.py	/^import os$/;"	i
+os	scheduling/nn_tuner.py	/^import os$/;"	i
+os	utils/get_optimal_partition.py	/^import json, sys, subprocess, os, datetime$/;"	i
+os	utils/log_parser.py	/^import os$/;"	i
+os	utils/run_scheduler.py	/^import json, sys, subprocess, os, datetime$/;"	i
+p	utils/log_parser.py	/^    p = args.partition_info$/;"	v
+p	utils/run_scheduler.py	/^            p = random.choice(partition_class)$/;"	v
+p_path	utils/get_optimal_partition.py	/^    p_path = fw.SOURCE_DIR + 'partition\/partition.py'$/;"	v
+p_path	utils/run_scheduler.py	/^    p_path = fw.SOURCE_DIR + 'scheduling\/scheduler.py'$/;"	v
+parse_arg	partition/partition.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	partition/partition_multiple.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	scheduling/multiple_dag_devices.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	scheduling/nn_tuner.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	scheduling/scheduler.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	utils/get_optimal_partition.py	/^def parse_arg(args=None):$/;"	f
+parse_arg	utils/run_scheduler.py	/^def parse_arg(args=None):$/;"	f
+part_round	pyschedcl.py	/^part_round = partition_round$/;"	v
+partition	partition/partition.py	/^        partition = info['partition']$/;"	v
+partition	partition/partition.py	/^        partition = int(args.partition_class)$/;"	v
+partition	partition/partition_multiple.py	/^        partition = info['partition']$/;"	v
+partition	partition/partition_multiple.py	/^        partition = int(args.partition_class)$/;"	v
+partition_class	utils/run_scheduler.py	/^        partition_class = range(11)$/;"	v
+partition_round	pyschedcl.py	/^        def partition_round(elms, percent, exact=exact, total=total):$/;"	f	function:Kernel.eval_vargs
+partition_round	pyschedcl.py	/^def partition_round(elms, percent, exact=-1, total=100, *args, **kwargs):$/;"	f
+patches	pyschedcl.py	/^    import matplotlib.patches as patches$/;"	i
+path	utils/log_parser.py	/^    path = fw.SOURCE_DIR + 'logs\/'$/;"	v
+pickle	pyschedcl.py	/^                        import pickle$/;"	i
+pickle	utils/parse_output_dump.py	/^import pickle$/;"	i
+plot_gantt_chart_graph	pyschedcl.py	/^def plot_gantt_chart_graph(device_history, filename):$/;"	f
+plotly	partition/partition_multiple.py	/^import plotly.plotly as py$/;"	i
+plotly	scheduling/multiple_dag_devices.py	/^import plotly.plotly as py$/;"	i
+plotly	scheduling/nn_tuner.py	/^import plotly.plotly as py$/;"	i
+plt	pyschedcl.py	/^    import matplotlib.pyplot as plt$/;"	i
+plt	scheduling/multiple_dag_devices.py	/^import matplotlib.pyplot as plt$/;"	i
+plt	scheduling/nn_tuner.py	/^import matplotlib.pyplot as plt$/;"	i
+prepare_kernel	pyschedcl.py	/^    def prepare_kernel(self, kid, dag):$/;"	m	class:Task
+prepare_kernels	pyschedcl.py	/^    def prepare_kernels(self, dag):$/;"	m	class:Task
+print_controller_information	scheduling/nn_tuner.py	/^    def print_controller_information(self):$/;"	m	class:NeuralNetwork
+print_model_layer_names	scheduling/nn_tuner.py	/^    def print_model_layer_names(self):$/;"	m	class:NeuralNetwork
+priority	scheduling/multiple_dag_devices.py	/^                priority = fw.q.get()$/;"	v
+process_data	scheduling/nn_tuner.py	/^    def process_data(self):$/;"	m	class:NeuralNetwork
+process_free_task	pyschedcl.py	/^    def process_free_task(self):$/;"	m	class:TaskDAG
+profile_time	utils/get_optimal_partition.py	/^                profile_time = float(span_info.split(" ")[1])$/;"	v
+profile_time	utils/run_scheduler.py	/^            profile_time = float(span_info.split(" ")[1])$/;"	v
+py	partition/partition_multiple.py	/^import plotly.plotly as py$/;"	i
+py	scheduling/multiple_dag_devices.py	/^import plotly.plotly as py$/;"	i
+py	scheduling/nn_tuner.py	/^import plotly.plotly as py$/;"	i
+pyopencl	pyschedcl.py	/^import pyopencl.array$/;"	i
+pyopencl	pyschedcl.py	/^import pyopencl.tools$/;"	i
+q	pyschedcl.py	/^q = Q.PriorityQueue()$/;"	v
+random	pyschedcl.py	/^    import random$/;"	i
+random	utils/run_scheduler.py	/^import random$/;"	i
+random_data	pyschedcl.py	/^    def random_data(self):$/;"	m	class:Task
+random_data	pyschedcl.py	/^    def random_data(self, low=0, hi=4096):$/;"	m	class:Kernel
+rank_calculator	pyschedcl.py	/^def rank_calculator(Taskdag):$/;"	f
+ready_queue	pyschedcl.py	/^ready_queue = {"gpu": collections.deque(), "cpu": collections.deque()}$/;"	v
+refresh_free_kernels	pyschedcl.py	/^    def refresh_free_kernels(self, dag):$/;"	m	class:Task
+release_buffers	pyschedcl.py	/^    def release_buffers(self, obj):$/;"	m	class:Kernel
+release_buffers	pyschedcl.py	/^def release_buffers(unfinished_kernel,task , taskdag):$/;"	f
+release_buffers_dag	pyschedcl.py	/^    def release_buffers_dag(self, obj):$/;"	m	class:Kernel
+release_buffers_io_out_dag	pyschedcl.py	/^    def release_buffers_io_out_dag(self, obj, taskdag , task):$/;"	m	class:Kernel
+release_device	pyschedcl.py	/^release_device = list()$/;"	v
+release_host	pyschedcl.py	/^release_host = list()$/;"	v
+release_host_arrays	pyschedcl.py	/^    def release_host_arrays(self):$/;"	m	class:Kernel
+remove_kernel	pyschedcl.py	/^    def remove_kernel(self, kernel):$/;"	m	class:Task
+resource	pyschedcl.py	/^import resource$/;"	i
+resource	scheduling/scheduler.py	/^import resource, sys$/;"	i
+rqlock	pyschedcl.py	/^rqlock = [0]$/;"	v
+run_kernel	scheduling/nn_tuner.py	/^    def run_kernel(self):$/;"	m	class:TensorKernel
+s_name	partition/partition.py	/^    s_name = src_name[:-5]$/;"	v
+s_name	partition/partition_multiple.py	/^    s_name = src_name[:-5]$/;"	v
+save_png	pyschedcl.py	/^    def save_png(fig, filename):$/;"	f	function:plot_gantt_chart_graph
+sched_end_time	partition/partition.py	/^    sched_end_time = datetime.datetime.now()$/;"	v
+sched_start_time	partition/partition.py	/^    sched_start_time = datetime.datetime.now()$/;"	v
+seconds	partition/partition.py	/^    seconds = (sched_end_time - sched_start_time).total_seconds()$/;"	v
+select_main	scheduling/scheduler.py	/^def select_main(kernels, select=baseline_select):$/;"	f
+set_batch_size	scheduling/nn_tuner.py	/^    def set_batch_size(self, batch):$/;"	m	class:NeuralNetwork
+set_initial_set_points	scheduling/nn_tuner.py	/^    def set_initial_set_points(self):$/;"	m	class:NeuralNetwork
+set_kernel_args	pyschedcl.py	/^    def set_kernel_args(self, obj):$/;"	m	class:Kernel
+set_partition	pyschedcl.py	/^    def set_partition(self, partition):$/;"	m	class:Task
+shortest_path_length	pyschedcl.py	/^def shortest_path_length(G, source=None, target=None, weight=None):$/;"	f
+size	scheduling/multiple_dag_devices.py	/^    size  = len(Task_dag)$/;"	v
+span	utils/get_optimal_partition.py	/^                    span = span + profile_time$/;"	v
+span	utils/get_optimal_partition.py	/^        span = 0$/;"	v
+span	utils/run_scheduler.py	/^                span = span + profile_time$/;"	v
+span	utils/run_scheduler.py	/^    span = 0$/;"	v
+span_info	utils/get_optimal_partition.py	/^            span_info = os.popen(get_span_cmd).read().strip("\\n")$/;"	v
+span_info	utils/run_scheduler.py	/^        span_info = os.popen(get_span_cmd).read().strip("\\n")$/;"	v
+span_times	utils/get_optimal_partition.py	/^    span_times = []$/;"	v
+spantime	pyschedcl.py	/^spantime = 0$/;"	v
+split_dataset	pyschedcl.py	/^    def split_dataset(self, train_percentage):$/;"	m	class:CLTrainer
+split_kernel_from_task	pyschedcl.py	/^    def split_kernel_from_task(self, kernel, task):$/;"	m	class:TaskDAG
+src_name	partition/partition.py	/^    src_name = args.file.split("\/")[-1]$/;"	v
+src_name	partition/partition_multiple.py	/^    src_name = args.file.split("\/")[-1]$/;"	v
+start_time	scheduling/multiple_dag_devices.py	/^    start_time = time.time()$/;"	v
+subprocess	database/feature_tests.py	/^import subprocess;$/;"	i
+subprocess	utils/get_optimal_partition.py	/^import json, sys, subprocess, os, datetime$/;"	i
+subprocess	utils/run_scheduler.py	/^import json, sys, subprocess, os, datetime$/;"	i
+sys	partition/partition.py	/^import sys$/;"	i
+sys	partition/partition_multiple.py	/^import sys$/;"	i
+sys	pyschedcl.py	/^            import sys$/;"	i
+sys	scheduling/multiple_dag_devices.py	/^import sys$/;"	i
+sys	scheduling/nn_tuner.py	/^import sys$/;"	i
+sys	scheduling/scheduler.py	/^import json, sys, datetime, time, heapq$/;"	i
+sys	scheduling/scheduler.py	/^import resource, sys$/;"	i
+sys	utils/get_optimal_partition.py	/^import json, sys, subprocess, os, datetime$/;"	i
+sys	utils/get_optimal_partition.py	/^import sys$/;"	i
+sys	utils/log_parser.py	/^import sys$/;"	i
+sys	utils/parse_output_dump.py	/^import sys$/;"	i
+sys	utils/run_scheduler.py	/^import json, sys, subprocess, os, datetime$/;"	i
+sys	utils/run_scheduler.py	/^import sys$/;"	i
+task_dag_id	scheduling/multiple_dag_devices.py	/^    task_dag_id = 0$/;"	v
+task_dag_object	pyschedcl.py	/^task_dag_object = 0$/;"	v
+task_data_transfer_size	pyschedcl.py	/^    def task_data_transfer_size(self, task_r, task_s):$/;"	m	class:TaskDAG
+task_file	utils/run_scheduler.py	/^        task_file =open(i_path + file_name, "w")$/;"	v
+task_files	scheduling/scheduler.py	/^    task_files = args.file$/;"	v
+taskid	pyschedcl.py	/^    def taskid(self , kernel_id):$/;"	m	class:TaskDAG
+test_and_set	pyschedcl.py	/^def test_and_set(testval, newval):$/;"	f
+tests	database/feature_tests.py	/^tests = {$/;"	v
+thread_coarsen	scheduling/nn_tuner.py	/^    def thread_coarsen(info_file, coarsening_factor, stride):$/;"	m	class:TensorKernel
+threading	partition/partition.py	/^import threading$/;"	i
+threading	partition/partition_multiple.py	/^import threading$/;"	i
+threading	pyschedcl.py	/^import threading$/;"	i
+time	database/feature_tests.py	/^import time;$/;"	i
+time	partition/partition.py	/^import time$/;"	i
+time	partition/partition_multiple.py	/^import time$/;"	i
+time	pyschedcl.py	/^import time$/;"	i
+time	scheduling/multiple_dag_devices.py	/^import time$/;"	i
+time	scheduling/nn_tuner.py	/^import time$/;"	i
+time	scheduling/scheduler.py	/^import json, sys, datetime, time, heapq$/;"	i
+time	utils/get_optimal_partition.py	/^import time$/;"	i
+time	utils/run_scheduler.py	/^import time$/;"	i
+time1	pyschedcl.py	/^time1 = list()$/;"	v
+tools	pyschedcl.py	/^import pyopencl.tools$/;"	i
+torch	scheduling/nn_tuner.py	/^import torch$/;"	i
+torch	scheduling/nn_tuner.py	/^import torch.nn as nn$/;"	i
+torch	scheduling/nn_tuner.py	/^import torch.utils.model_zoo as model_zoo$/;"	i
+torch_feature	scheduling/nn_tuner.py	/^    torch_feature = nn.Conv2d(3, 256, 3, padding=1)$/;"	v	class:NeuralNetwork
+torchvision	scheduling/nn_tuner.py	/^import torchvision$/;"	i
+torchvision	scheduling/nn_tuner.py	/^import torchvision.transforms as transforms$/;"	i
+train_classifier	pyschedcl.py	/^    def train_classifier(self,classifier_name):$/;"	m	class:CLTrainer
+train_test_split	pyschedcl.py	/^        from sklearn.model_selection import train_test_split$/;"	i
+transforms	scheduling/nn_tuner.py	/^import torchvision.transforms as transforms$/;"	i
+update_dependencies	pyschedcl.py	/^    def update_dependencies(self, task):$/;"	m	class:TaskDAG
+update_finished_kernels	pyschedcl.py	/^    def update_finished_kernels(self, kernel, *args, **kwargs):$/;"	m	class:Task
+update_finished_kernels	pyschedcl.py	/^    def update_finished_kernels(self, kernel_id, *args, **kwargs):$/;"	m	class:TaskDAG
+update_finished_tasks	pyschedcl.py	/^    def update_finished_tasks(self, task):$/;"	m	class:TaskDAG
+update_finished_tasks_1	pyschedcl.py	/^    def update_finished_tasks_1(self , task , kernel):$/;"	m	class:TaskDAG
+update_queue	pyschedcl.py	/^def update_queue(Task_dag):$/;"	f
+update_task_info	pyschedcl.py	/^    def update_task_info(self,task_mappings, kernels , total_kernels):$/;"	m	class:Task
+user_defined	pyschedcl.py	/^user_defined = dict()$/;"	v
+utils	scheduling/nn_tuner.py	/^import torch.utils.model_zoo as model_zoo$/;"	i
+uuid	pyschedcl.py	/^    import uuid$/;"	i
+weakref	pyschedcl.py	/^        import weakref$/;"	i

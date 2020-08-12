@@ -1,0 +1,1 @@
+{"naive_transpose0": {"write": {"device_start": -1, "host_queued_start": 1586205687.509803, "device_queued": -1, "device_end": -1, "host_queued_end": 1586205687.510056}, "device": "cpu", "nd_range": {"device_start": 2873461.6995467553, "device_end": 2873461.6996352323}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

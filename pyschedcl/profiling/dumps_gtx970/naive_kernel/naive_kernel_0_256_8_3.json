@@ -1,0 +1,1 @@
+{"naive_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586205480.194975, "device_queued": -1, "device_end": -1, "host_queued_end": 1586205480.195271}, "device": "cpu", "nd_range": {"device_start": 2873254.384758255, "device_end": 2873254.4210143313}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

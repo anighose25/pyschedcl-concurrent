@@ -1,0 +1,1 @@
+{"mm2_kernel10": {"write": {"device_start": -1, "host_queued_start": 1586204433.818121, "device_queued": -1, "device_end": -1, "host_queued_end": 1586204433.818384}, "device": "cpu", "nd_range": {"device_start": 2872208.007872687, "device_end": 2872208.00912324}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

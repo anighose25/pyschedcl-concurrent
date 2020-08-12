@@ -1,0 +1,528 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+BANK_NUMBER	OCLEnv.cpp	/^const int OCLEnv::BANK_NUMBER = 32;$/;"	m	class:OCLEnv	file:
+BANK_WIDTH	OCLEnv.cpp	/^const int OCLEnv::BANK_WIDTH = 4;$/;"	m	class:OCLEnv	file:
+BARRIER	Utils.cpp	/^const char *BARRIER = "barrier";$/;"	v
+BranchExtraction	BranchExtraction.cpp	/^BranchExtraction::BranchExtraction() : FunctionPass(ID) {}$/;"	f	class:BranchExtraction
+CACHELINE_SIZE	OCLEnv.cpp	/^const int OCLEnv::CACHELINE_SIZE = 128;$/;"	m	class:OCLEnv	file:
+CloneDominatorInfo	Utils.cpp	/^void CloneDominatorInfo(BasicBlock *BB, Map &map, DominatorTree *DT) {$/;"	f
+ControlDependenceAnalysis	ControlDependenceAnalysis.cpp	/^ControlDependenceAnalysis::ControlDependenceAnalysis() : FunctionPass(ID) {}$/;"	f	class:ControlDependenceAnalysis
+DIRECTION_NUMBER	NDRange.cpp	/^int NDRange::DIRECTION_NUMBER = 3;$/;"	m	class:NDRange	file:
+DivergentRegion	DivergentRegion.cpp	/^DivergentRegion::DivergentRegion(BasicBlock *header, BasicBlock *exiting) { $/;"	f	class:DivergentRegion
+DivergentRegion	DivergentRegion.cpp	/^DivergentRegion::DivergentRegion(BasicBlock *header, BasicBlock *exiting,$/;"	f	class:DivergentRegion
+DivergentRegion	DivergentRegion.cpp	/^DivergentRegion::DivergentRegion(RegionBounds &bounds)$/;"	f	class:DivergentRegion
+FeatureCollector	FeatureCollector.cpp	/^FeatureCollector::FeatureCollector() {$/;"	f	class:FeatureCollector
+FindBranches	Utils.cpp	/^BranchVector FindBranches(Function &F) {$/;"	f
+GET_GLOBAL_ID	NDRange.cpp	/^std::string NDRange::GET_GLOBAL_ID = "get_global_id";$/;"	m	class:NDRange	file:
+GET_GLOBAL_SIZE	NDRange.cpp	/^std::string NDRange::GET_GLOBAL_SIZE = "get_global_size";$/;"	m	class:NDRange	file:
+GET_GROUPS_NUMBER	NDRange.cpp	/^std::string NDRange::GET_GROUPS_NUMBER = "get_num_groups";$/;"	m	class:NDRange	file:
+GET_GROUP_ID	NDRange.cpp	/^std::string NDRange::GET_GROUP_ID = "get_group_id";$/;"	m	class:NDRange	file:
+GET_LOCAL_ID	NDRange.cpp	/^std::string NDRange::GET_LOCAL_ID = "get_local_id";$/;"	m	class:NDRange	file:
+GET_LOCAL_SIZE	NDRange.cpp	/^std::string NDRange::GET_LOCAL_SIZE = "get_local_size";$/;"	m	class:NDRange	file:
+GetOperandPosition	Utils.cpp	/^unsigned int GetOperandPosition(User *U, Value *value) {$/;"	f
+Graph	Graph.cpp	/^Graph<dataType>::Graph(std::vector<dataType> &nodes)$/;"	f	class:Graph
+HANDLE_INST	FeatureCollector.cpp	130;"	d	file:
+HANDLE_INST	FeatureExtraction.cpp	50;"	d	file:
+HANDLE_INST	LoopFeatureExtraction.cpp	49;"	d	file:
+ID	BranchExtraction.cpp	/^char BranchExtraction::ID = 0;$/;"	m	class:BranchExtraction	file:
+ID	ControlDependenceAnalysis.cpp	/^char ControlDependenceAnalysis::ID = 0;$/;"	m	class:ControlDependenceAnalysis	file:
+ID	DivergenceAnalysis.cpp	/^char MultiDimDivAnalysis::ID = 0;$/;"	m	class:MultiDimDivAnalysis	file:
+ID	DivergenceAnalysis.cpp	/^char SingleDimDivAnalysis::ID = 0;$/;"	m	class:SingleDimDivAnalysis	file:
+ID	FeatureExtraction.cpp	/^char OpenCLFeatureExtractor::ID = 0;$/;"	m	class:OpenCLFeatureExtractor	file:
+ID	LoopFeatureExtraction.cpp	/^char OpenCLLoopFeatureExtractor::ID = 0;$/;"	m	class:OpenCLLoopFeatureExtractor	file:
+ID	NDRange.cpp	/^char NDRange::ID = 0;$/;"	m	class:NDRange	file:
+ID	SymbolicExecution.cpp	/^char SymbolicExecution::ID = 0;$/;"	m	class:SymbolicExecution	file:
+ID	ThreadCoarsening.cpp	/^char ThreadCoarsening::ID = 0;$/;"	m	class:ThreadCoarsening	file:
+IO	YAMLTraits.cpp	/^IO::IO(void *Context) : Ctxt(Context) {$/;"	f	class:IO
+Input	YAMLTraits.cpp	/^Input::Input(StringRef InputContent,$/;"	f	class:Input
+LOCAL_AS	OCLEnv.cpp	/^const unsigned int OCLEnv::LOCAL_AS = 3;$/;"	m	class:OCLEnv	file:
+MappingTraits	FeatureCollector.cpp	/^template <> struct MappingTraits<FeatureCollector> {$/;"	s	namespace:llvm::yaml	file:
+MappingTraits	FeatureCollector.cpp	/^template <> struct MappingTraits<std::pair<float, float> > {$/;"	s	namespace:llvm::yaml	file:
+MappingTraits	SymbolicExecution.cpp	/^template <> struct MappingTraits<SymbolicExecution> {$/;"	s	namespace:llvm::yaml	file:
+MultiDimDivAnalysis	DivergenceAnalysis.cpp	/^MultiDimDivAnalysis::MultiDimDivAnalysis() : FunctionPass(ID) {}$/;"	f	class:MultiDimDivAnalysis
+NDRange	NDRange.cpp	/^NDRange::NDRange() : FunctionPass(ID) {}$/;"	f	class:NDRange
+NDRangePoint	NDRangePoint.cpp	/^NDRangePoint::NDRangePoint(int localX, int localY, int localZ, int groupX,$/;"	f	class:NDRangePoint
+NDRangeSpace	NDRangeSpace.cpp	/^NDRangeSpace::NDRangeSpace(int localSizeX, int localSizeY, int localSizeZ,$/;"	f	class:NDRangeSpace
+OCLEnv	OCLEnv.cpp	/^OCLEnv::OCLEnv(Function &function, const NDRange *ndRange, const NDRangeSpace &ndRangeSpace)$/;"	f	class:OCLEnv
+Output	YAMLTraits.cpp	/^Output::Output(raw_ostream &yout, void *context)$/;"	f	class:Output
+RegionBounds	RegionBounds.cpp	/^RegionBounds::RegionBounds() {}$/;"	f	class:RegionBounds
+RegionBounds	RegionBounds.cpp	/^RegionBounds::RegionBounds(BasicBlock *header, BasicBlock *exiting)$/;"	f	class:RegionBounds
+SequenceTraits	FeatureCollector.cpp	/^template <> struct SequenceTraits<std::vector<float> > {$/;"	s	namespace:llvm::yaml	file:
+SequenceTraits	FeatureCollector.cpp	/^template <> struct SequenceTraits<std::vector<int> > {$/;"	s	namespace:llvm::yaml	file:
+SequenceTraits	FeatureCollector.cpp	/^template <> struct SequenceTraits<std::vector<std::pair<float, float> > > {$/;"	s	namespace:llvm::yaml	file:
+SequenceTraits	SymbolicExecution.cpp	/^template <> struct SequenceTraits<std::vector<int> > {$/;"	s	namespace:llvm::yaml	file:
+SingleDimDivAnalysis	DivergenceAnalysis.cpp	/^SingleDimDivAnalysis::SingleDimDivAnalysis() : FunctionPass(ID) {}$/;"	f	class:SingleDimDivAnalysis
+SubscriptAnalysis	SubscriptAnalysis.cpp	/^SubscriptAnalysis::SubscriptAnalysis(ScalarEvolution *scalarEvolution,$/;"	f	class:SubscriptAnalysis
+SymbolicExecution	SymbolicExecution.cpp	/^SymbolicExecution::SymbolicExecution()$/;"	f	class:SymbolicExecution
+ThreadCoarsening	ThreadCoarsening.cpp	/^ThreadCoarsening::ThreadCoarsening() : FunctionPass(ID) {}$/;"	f	class:ThreadCoarsening
+ToValueVector	Utils.cpp	/^ValueVector ToValueVector(InstVector &insts) {$/;"	f
+UNKNOWN_MEMORY_LOCATION	OCLEnv.cpp	/^const int OCLEnv::UNKNOWN_MEMORY_LOCATION = -1;$/;"	m	class:OCLEnv	file:
+WARP_SIZE	OCLEnv.cpp	/^const int OCLEnv::WARP_SIZE = 32;$/;"	m	class:OCLEnv	file:
+Warp	Warp.cpp	/^Warp::Warp(int groupX, int groupY, int groupZ, int warpIndex,$/;"	f	class:Warp
+addEdge	Graph.cpp	/^void Graph<dataType>::addEdge(dataType source, dataType dest) {$/;"	f	class:Graph
+addSizes	DivergentRegion.cpp	/^unsigned int addSizes(unsigned int partialSum, BasicBlock *block) {$/;"	f
+analyzeSubscript	SubscriptAnalysis.cpp	/^SubscriptAnalysis::analyzeSubscript(const SCEV *scev) {$/;"	f	class:SubscriptAnalysis
+anchor	YAMLTraits.cpp	/^void Input::EmptyHNode::anchor() {}$/;"	f	class:Input::EmptyHNode
+anchor	YAMLTraits.cpp	/^void Input::HNode::anchor() {}$/;"	f	class:Input::HNode
+anchor	YAMLTraits.cpp	/^void Input::ScalarHNode::anchor() {}$/;"	f	class:Input::ScalarHNode
+applyCoarseningMap	Coarsening.cpp	/^void ThreadCoarsening::applyCoarseningMap(BasicBlock *block,$/;"	f	class:ThreadCoarsening
+applyCoarseningMap	Coarsening.cpp	/^void ThreadCoarsening::applyCoarseningMap(DivergentRegion &region,$/;"	f	class:ThreadCoarsening
+applyCoarseningMap	Coarsening.cpp	/^void ThreadCoarsening::applyCoarseningMap(Instruction *inst,$/;"	f	class:ThreadCoarsening
+applyMap	Utils.cpp	/^void applyMap(BasicBlock *block, Map &map) {$/;"	f
+applyMap	Utils.cpp	/^void applyMap(InstVector &insts, Map &map, InstVector &result) {$/;"	f
+applyMap	Utils.cpp	/^void applyMap(Instruction *Inst, CoarseningMap &map, unsigned int CF) {$/;"	f
+applyMap	Utils.cpp	/^void applyMap(Instruction *Inst, Map &map) {$/;"	f
+applyMapToPHIs	Utils.cpp	/^void applyMapToPHIs(BasicBlock *block, Map &map) {$/;"	f
+applyMapToPhiBlocks	Utils.cpp	/^void applyMapToPhiBlocks(PHINode *Phi, Map &map) {$/;"	f
+areSubregionsDisjoint	DivergentRegion.cpp	/^bool DivergentRegion::areSubregionsDisjoint() {$/;"	f	class:DivergentRegion
+begin	DivergentRegion.cpp	/^DivergentRegion::const_iterator DivergentRegion::begin() const {$/;"	f	class:DivergentRegion
+begin	DivergentRegion.cpp	/^DivergentRegion::iterator DivergentRegion::begin() { return iterator(*this); }$/;"	f	class:DivergentRegion
+begin	Warp.cpp	/^Warp::iterator Warp::begin() {$/;"	f	class:Warp
+beginBitSetScalar	YAMLTraits.cpp	/^bool Input::beginBitSetScalar(bool &DoClear) {$/;"	f	class:Input
+beginBitSetScalar	YAMLTraits.cpp	/^bool Output::beginBitSetScalar(bool &DoClear) {$/;"	f	class:Output
+beginDocuments	YAMLTraits.cpp	/^void Output::beginDocuments() {$/;"	f	class:Output
+beginEnumScalar	YAMLTraits.cpp	/^void Input::beginEnumScalar() {$/;"	f	class:Input
+beginEnumScalar	YAMLTraits.cpp	/^void Output::beginEnumScalar() {$/;"	f	class:Output
+beginFlowSequence	YAMLTraits.cpp	/^unsigned Input::beginFlowSequence() {$/;"	f	class:Input
+beginFlowSequence	YAMLTraits.cpp	/^unsigned Output::beginFlowSequence() {$/;"	f	class:Output
+beginMapping	YAMLTraits.cpp	/^void Input::beginMapping() {$/;"	f	class:Input
+beginMapping	YAMLTraits.cpp	/^void Output::beginMapping() {$/;"	f	class:Output
+beginSequence	YAMLTraits.cpp	/^unsigned Input::beginSequence() {$/;"	f	class:Input
+beginSequence	YAMLTraits.cpp	/^unsigned Output::beginSequence() {$/;"	f	class:Output
+bitSetMatch	YAMLTraits.cpp	/^bool Input::bitSetMatch(const char *Str, bool) {$/;"	f	class:Input
+bitSetMatch	YAMLTraits.cpp	/^bool Output::bitSetMatch(const char *Str, bool Matches) {$/;"	f	class:Output
+buildBackwardGraph	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::buildBackwardGraph() {$/;"	f	class:ControlDependenceAnalysis
+buildGraph	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::buildGraph() {$/;"	f	class:ControlDependenceAnalysis
+buildGraph	ILPComputation.cpp	/^void buildGraph(BasicBlock *block, Graph<Instruction *> &graph) {$/;"	f
+canElideEmptySequence	YAMLTraits.cpp	/^bool Input::canElideEmptySequence() {$/;"	f	class:Input
+canElideEmptySequence	YAMLTraits.cpp	/^bool Output::canElideEmptySequence() {$/;"	f	class:Output
+changeBlockTarget	Utils.cpp	/^void changeBlockTarget(BasicBlock *block, BasicBlock *newTarget,$/;"	f
+cleanUpRegions	DivergenceAnalysis.cpp	/^RegionVector cleanUpRegions(RegionVector &regions, const DominatorTree *dt) {$/;"	f
+clone	DivergentRegion.cpp	/^DivergentRegion *DivergentRegion::clone(const Twine &suffix, DominatorTree *dt,$/;"	f	class:DivergentRegion
+coarsenFunction	Coarsening.cpp	/^void ThreadCoarsening::coarsenFunction() {$/;"	f	class:ThreadCoarsening
+computeBankConflictNumber	SubscriptAnalysis.cpp	/^int SubscriptAnalysis::computeBankConflictNumber($/;"	f	class:SubscriptAnalysis
+computeDistance	MLPComputation.cpp	/^int computeDistance(Instruction *def, Instruction *user) {$/;"	f
+computeILP	FeatureCollector.cpp	/^void FeatureCollector::computeILP(BasicBlock *block) {$/;"	f	class:FeatureCollector
+computeLiveRange	FeatureCollector.cpp	/^int computeLiveRange(Instruction *inst) {$/;"	f
+computeMLP	FeatureCollector.cpp	/^void FeatureCollector::computeMLP(BasicBlock *block) {$/;"	f	class:FeatureCollector
+computeTransactionNumber	SubscriptAnalysis.cpp	/^int SubscriptAnalysis::computeTransactionNumber($/;"	f	class:SubscriptAnalysis
+const_iterator	DivergentRegion.cpp	/^DivergentRegion::const_iterator::const_iterator($/;"	f	class:DivergentRegion::const_iterator
+const_iterator	DivergentRegion.cpp	/^DivergentRegion::const_iterator::const_iterator() { currentBlock = 0; }$/;"	f	class:DivergentRegion::const_iterator
+const_iterator	DivergentRegion.cpp	/^DivergentRegion::const_iterator::const_iterator(const DivergentRegion &region) {$/;"	f	class:DivergentRegion::const_iterator
+contains	DivergentRegion.cpp	/^bool contains(const DivergentRegion &region, const BasicBlock *block) {$/;"	f
+contains	DivergentRegion.cpp	/^bool contains(const DivergentRegion &region, const Instruction *inst) {$/;"	f
+containsInternally	DivergentRegion.cpp	/^bool containsInternally(const DivergentRegion &region,$/;"	f
+controls	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::controls(BasicBlock *first,$/;"	f	class:ControlDependenceAnalysis
+countArgs	FeatureCollector.cpp	/^void FeatureCollector::countArgs(const Function &function) {$/;"	f	class:FeatureCollector
+countBarriers	FeatureCollector.cpp	/^void FeatureCollector::countBarriers(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countBranches	FeatureCollector.cpp	/^void FeatureCollector::countBranches(const Function &function) {$/;"	f	class:FeatureCollector
+countConstants	FeatureCollector.cpp	/^void FeatureCollector::countConstants(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countDivInsts	FeatureCollector.cpp	/^void FeatureCollector::countDivInsts(Function &function,$/;"	f	class:FeatureCollector
+countEdges	FeatureCollector.cpp	/^void FeatureCollector::countEdges(const Function &function) {$/;"	f	class:FeatureCollector
+countIncomingEdges	FeatureCollector.cpp	/^void FeatureCollector::countIncomingEdges(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countInstsBlock	FeatureCollector.cpp	/^void FeatureCollector::countInstsBlock(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countLoads	MLPComputation.cpp	/^int countLoads(BlockVector blocks, BasicBlock *defBlock, BasicBlock *userBlock,$/;"	f
+countLoadsBounded	MLPComputation.cpp	/^int countLoadsBounded(Instruction *def, Instruction *user) {$/;"	f
+countLocalMemoryUsage	FeatureCollector.cpp	/^void FeatureCollector::countLocalMemoryUsage(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countMathFunctions	FeatureCollector.cpp	/^void FeatureCollector::countMathFunctions(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countOutgoingEdges	FeatureCollector.cpp	/^void FeatureCollector::countOutgoingEdges(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+countPhis	FeatureCollector.cpp	/^void FeatureCollector::countPhis(const BasicBlock &block) {$/;"	f	class:FeatureCollector
+createHNodes	YAMLTraits.cpp	/^Input::HNode *Input::createHNodes(Node *N) {$/;"	f	class:Input
+dependsOn	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::dependsOn(BasicBlock *first,$/;"	f	class:ControlDependenceAnalysis
+dependsOn	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::dependsOn(Instruction *first,$/;"	f	class:ControlDependenceAnalysis
+dependsOnAny	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::dependsOnAny(BasicBlock *inputBlock,$/;"	f	class:ControlDependenceAnalysis
+dependsOnAny	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::dependsOnAny(Instruction *inst,$/;"	f	class:ControlDependenceAnalysis
+dominatesAll	Utils.cpp	/^bool dominatesAll(const BasicBlock *block, const BlockVector &blocks,$/;"	f
+dump	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::dump() {$/;"	f	class:ControlDependenceAnalysis
+dump	DivergentRegion.cpp	/^void DivergentRegion::dump() {$/;"	f	class:DivergentRegion
+dump	FeatureCollector.cpp	/^void FeatureCollector::dump() {$/;"	f	class:FeatureCollector
+dump	NDRange.cpp	/^void NDRange::dump() {$/;"	f	class:NDRange
+dump	RegionBounds.cpp	/^void RegionBounds::dump(const std::string &prefix) const {$/;"	f	class:RegionBounds
+dump	SymbolicExecution.cpp	/^void SymbolicExecution::dump() {$/;"	f	class:SymbolicExecution
+dump	Utils.cpp	/^void dump(const Map &map) {$/;"	f
+dumpCoarseningMap	Utils.cpp	/^void dumpCoarseningMap(const CoarseningMap &cMap) {$/;"	f
+dumpIntVector	Utils.cpp	/^void dumpIntVector(const std::vector<int> &toDump) {$/;"	f
+dumpSet	Utils.cpp	/^template <> void dumpSet(const BlockSet &toDump) {$/;"	f
+dumpSet	Utils.cpp	/^template <class type> void dumpSet(const std::set<type *> &toDump) {$/;"	f
+dumpV2V	Utils.cpp	/^void dumpV2V(const V2VMap &map) {$/;"	f
+dumpVector	Utils.cpp	/^template <> void dumpVector(const BlockVector &toDump) {$/;"	f
+dumpVector	Utils.cpp	/^template <class type> void dumpVector(const std::vector<type *> &toDump) {$/;"	f
+element	FeatureCollector.cpp	/^  element(IO &, std::vector<std::pair<float, float> > &seq, size_t index) {$/;"	f	struct:llvm::yaml::SequenceTraits
+element	FeatureCollector.cpp	/^  static float &element(IO &, std::vector<float> &seq, size_t index) {$/;"	f	struct:llvm::yaml::SequenceTraits
+element	FeatureCollector.cpp	/^  static int &element(IO &, std::vector<int> &seq, size_t index) {$/;"	f	struct:llvm::yaml::SequenceTraits
+element	SymbolicExecution.cpp	/^  static int &element(IO &, std::vector<int> &seq, size_t index) {$/;"	f	struct:llvm::yaml::SequenceTraits
+end	DivergentRegion.cpp	/^DivergentRegion::const_iterator DivergentRegion::const_iterator::end() {$/;"	f	class:DivergentRegion::const_iterator
+end	DivergentRegion.cpp	/^DivergentRegion::const_iterator DivergentRegion::end() const {$/;"	f	class:DivergentRegion
+end	DivergentRegion.cpp	/^DivergentRegion::iterator DivergentRegion::end() {$/;"	f	class:DivergentRegion
+end	DivergentRegion.cpp	/^DivergentRegion::iterator DivergentRegion::iterator::end() {$/;"	f	class:DivergentRegion::iterator
+end	Warp.cpp	/^Warp::iterator Warp::end() {$/;"	f	class:Warp
+end	Warp.cpp	/^Warp::iterator Warp::iterator::end() {$/;"	f	class:Warp::iterator
+endBitSetScalar	YAMLTraits.cpp	/^void Input::endBitSetScalar() {$/;"	f	class:Input
+endBitSetScalar	YAMLTraits.cpp	/^void Output::endBitSetScalar() {$/;"	f	class:Output
+endDocuments	YAMLTraits.cpp	/^void Output::endDocuments() {$/;"	f	class:Output
+endEnumScalar	YAMLTraits.cpp	/^void Input::endEnumScalar() {$/;"	f	class:Input
+endEnumScalar	YAMLTraits.cpp	/^void Output::endEnumScalar() {$/;"	f	class:Output
+endFlowSequence	YAMLTraits.cpp	/^void Input::endFlowSequence() {$/;"	f	class:Input
+endFlowSequence	YAMLTraits.cpp	/^void Output::endFlowSequence() {$/;"	f	class:Output
+endMapping	YAMLTraits.cpp	/^void Input::endMapping() {$/;"	f	class:Input
+endMapping	YAMLTraits.cpp	/^void Output::endMapping() {$/;"	f	class:Output
+endSequence	YAMLTraits.cpp	/^void Input::endSequence() {$/;"	f	class:Input
+endSequence	YAMLTraits.cpp	/^void Output::endSequence() {$/;"	f	class:Output
+error	YAMLTraits.cpp	/^std::error_code Input::error() { return EC; }$/;"	f	class:Input
+extractBranches	BranchExtraction.cpp	/^void BranchExtraction::extractBranches(DivergentRegion *region) {$/;"	f	class:BranchExtraction
+fillGraph	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::fillGraph(Function &function) {$/;"	f	class:ControlDependenceAnalysis
+fillRegion	DivergentRegion.cpp	/^void DivergentRegion::fillRegion() {$/;"	f	class:DivergentRegion
+filterUsers	MLPComputation.cpp	/^InstVector filterUsers(InstVector &insts, BasicBlock *block) {$/;"	f
+filterUsers	Utils.cpp	/^InstVector filterUsers(llvm::Instruction *used, InstVector &users) {$/;"	f
+find	Graph.cpp	/^unsigned int Graph<dataType>::find(dataType toFind) {$/;"	f	class:Graph
+findAliveValues	DivergentRegion.cpp	/^void DivergentRegion::findAliveValues() {$/;"	f	class:DivergentRegion
+findBranches	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::findBranches() {$/;"	f	class:DivergenceAnalysis
+findFirstUser	Utils.cpp	/^Instruction *findFirstUser(Instruction *inst) {$/;"	f
+findImmediatePostDom	Utils.cpp	/^BasicBlock *findImmediatePostDom(BasicBlock *block,$/;"	f
+findIncomingValues	DivergentRegion.cpp	/^void DivergentRegion::findIncomingValues() {$/;"	f	class:DivergentRegion
+findLastUser	Utils.cpp	/^Instruction *findLastUser(Instruction *inst) {$/;"	f
+findLs	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::findLs() {$/;"	f	class:ControlDependenceAnalysis
+findOpenCLFunctionCalls	NDRange.cpp	/^void findOpenCLFunctionCalls(Function *callee, Function *caller,$/;"	f
+findOpenCLFunctionCallsByName	NDRange.cpp	/^void findOpenCLFunctionCallsByName(std::string calleeName, Function *caller,$/;"	f
+findOpenCLFunctionCallsByNameAllDirs	NDRange.cpp	/^void NDRange::findOpenCLFunctionCallsByNameAllDirs(std::string calleeName,$/;"	f	class:NDRange
+findOutermostBranch	Utils.cpp	/^BranchInst *findOutermostBranch(BranchSet &branches, const DominatorTree *dt) {$/;"	f
+findOutermostInsts	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::findOutermostInsts(InstVector &insts,$/;"	f	class:DivergenceAnalysis
+findOutermostRegions	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::findOutermostRegions() {$/;"	f	class:DivergenceAnalysis
+findRegions	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::findRegions() {$/;"	f	class:DivergenceAnalysis
+findS	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::findS(Function &function) {$/;"	f	class:ControlDependenceAnalysis
+findUsers	Utils.cpp	/^InstVector findUsers(llvm::Value *value) {$/;"	f
+findUsersOfArguments	Utils.cpp	/^InstVector findUsersOfArguments(const llvm::Argument *value) {$/;"	f
+findUsesOf	DivergenceAnalysis.cpp	/^void findUsesOf(Instruction *inst, InstSet &result) {$/;"	f
+flow	FeatureCollector.cpp	/^  static const bool flow = true;$/;"	m	struct:llvm::yaml::SequenceTraits	file:
+flow	SymbolicExecution.cpp	/^  static const bool flow = true;$/;"	m	struct:llvm::yaml::SequenceTraits	file:
+getAddInst	NDRangeScaling.cpp	/^Instruction *getAddInst(Value *firstValue, Value *secondValue) {$/;"	f
+getAddInst	NDRangeScaling.cpp	/^Instruction *getAddInst(Value *value, unsigned int addend) {$/;"	f
+getAlive	DivergentRegion.cpp	/^InstVector &DivergentRegion::getAlive() { return alive; }$/;"	f	class:DivergentRegion
+getAnalysisUsage	BranchExtraction.cpp	/^void BranchExtraction::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:BranchExtraction
+getAnalysisUsage	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:ControlDependenceAnalysis
+getAnalysisUsage	DivergenceAnalysis.cpp	/^void MultiDimDivAnalysis::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:MultiDimDivAnalysis
+getAnalysisUsage	DivergenceAnalysis.cpp	/^void SingleDimDivAnalysis::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:SingleDimDivAnalysis
+getAnalysisUsage	FeatureExtraction.cpp	/^void OpenCLFeatureExtractor::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:OpenCLFeatureExtractor
+getAnalysisUsage	LoopFeatureExtraction.cpp	/^void OpenCLLoopFeatureExtractor::getAnalysisUsage(AnalysisUsage &AU) const {$/;"	f	class:OpenCLLoopFeatureExtractor
+getAnalysisUsage	NDRange.cpp	/^void NDRange::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:NDRange
+getAnalysisUsage	SymbolicExecution.cpp	/^void SymbolicExecution::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:SymbolicExecution
+getAnalysisUsage	ThreadCoarsening.cpp	/^void ThreadCoarsening::getAnalysisUsage(AnalysisUsage &au) const {$/;"	f	class:ThreadCoarsening
+getAndInst	NDRangeScaling.cpp	/^Instruction *getAndInst(Value *value, unsigned int factor) {$/;"	f
+getAverage	MathUtils.cpp	/^float getAverage(const std::vector<integerType> &elements) {$/;"	f
+getBankConflictNumber	SubscriptAnalysis.cpp	/^int SubscriptAnalysis::getBankConflictNumber(Value *value) {$/;"	f	class:SubscriptAnalysis
+getBlocks	DivergentRegion.cpp	/^BlockVector &DivergentRegion::getBlocks() { return blocks; }$/;"	f	class:DivergentRegion
+getBounds	DivergentRegion.cpp	/^RegionBounds &DivergentRegion::getBounds() { return bounds; }$/;"	f	class:DivergentRegion
+getCoarsenedInstruction	Coarsening.cpp	/^ThreadCoarsening::getCoarsenedInstruction(Instruction *inst,$/;"	f	class:ThreadCoarsening
+getConstantInt	NDRangeScaling.cpp	/^ConstantInt *getConstantInt(unsigned int value, unsigned int width,$/;"	f
+getContext	YAMLTraits.cpp	/^void *IO::getContext() {$/;"	f	class:IO
+getCoordinate	NDRangePoint.cpp	/^int NDRangePoint::getCoordinate(const std::string &name, int direction) const {$/;"	f	class:NDRangePoint
+getDephts	ILPComputation.cpp	/^getDephts(std::map<Instruction *, unsigned int> &inputMap, InstVector &insts) {$/;"	f
+getDirection	NDRange.cpp	/^int NDRange::getDirection(Instruction *inst) const {$/;"	f	class:NDRange
+getDivInst	NDRangeScaling.cpp	/^Instruction *getDivInst(Value *value, unsigned int divisor) {$/;"	f
+getDivInsts	DivergenceAnalysis.cpp	/^InstVector &DivergenceAnalysis::getDivInsts() { return divInsts; }$/;"	f	class:DivergenceAnalysis
+getDivInsts	DivergenceAnalysis.cpp	/^InstVector DivergenceAnalysis::getDivInsts(DivergentRegion *region) {$/;"	f	class:DivergenceAnalysis
+getDivRegions	DivergenceAnalysis.cpp	/^RegionVector &DivergenceAnalysis::getDivRegions() { return regions; }$/;"	f	class:DivergenceAnalysis
+getDivRegions	DivergenceAnalysis.cpp	/^RegionVector DivergenceAnalysis::getDivRegions(DivergentRegion *region) {$/;"	f	class:DivergenceAnalysis
+getExit	DivergentRegion.cpp	/^BasicBlock *getExit(DivergentRegion &region) {$/;"	f
+getExiting	DivergentRegion.cpp	/^BasicBlock *DivergentRegion::getExiting() { return bounds.getExiting(); }$/;"	f	class:DivergentRegion
+getExiting	DivergentRegion.cpp	/^const BasicBlock *DivergentRegion::getExiting() const {$/;"	f	class:DivergentRegion
+getExiting	RegionBounds.cpp	/^BasicBlock *RegionBounds::getExiting() { return exiting; }$/;"	f	class:RegionBounds
+getExiting	RegionBounds.cpp	/^const BasicBlock *RegionBounds::getExiting() const { return exiting; }$/;"	f	class:RegionBounds
+getFunctionSignature	FeatureCollector.cpp	/^void FeatureCollector::getFunctionSignature(const Function &function) {$/;"	f	class:FeatureCollector
+getGlobal	NDRangePoint.cpp	/^int NDRangePoint::getGlobal(int direction) const { return global[direction]; }$/;"	f	class:NDRangePoint
+getGlobalSize	NDRangeSpace.cpp	/^int NDRangeSpace::getGlobalSize(int direction) const {$/;"	f	class:NDRangeSpace
+getGlobalSizeX	NDRangeSpace.cpp	/^int NDRangeSpace::getGlobalSizeX() const { return getGlobalSize(0); }$/;"	f	class:NDRangeSpace
+getGlobalSizeY	NDRangeSpace.cpp	/^int NDRangeSpace::getGlobalSizeY() const { return getGlobalSize(1); }$/;"	f	class:NDRangeSpace
+getGlobalSizeZ	NDRangeSpace.cpp	/^int NDRangeSpace::getGlobalSizeZ() const { return getGlobalSize(2); }$/;"	f	class:NDRangeSpace
+getGlobalX	NDRangePoint.cpp	/^int NDRangePoint::getGlobalX() const { return global[0]; }$/;"	f	class:NDRangePoint
+getGlobalY	NDRangePoint.cpp	/^int NDRangePoint::getGlobalY() const { return global[1]; }$/;"	f	class:NDRangePoint
+getGlobalZ	NDRangePoint.cpp	/^int NDRangePoint::getGlobalZ() const { return global[2]; }$/;"	f	class:NDRangePoint
+getGroup	NDRangePoint.cpp	/^int NDRangePoint::getGroup(int direction) const { return group[direction]; }$/;"	f	class:NDRangePoint
+getGroupSize	NDRangeSpace.cpp	/^int NDRangeSpace::getGroupSize() const {$/;"	f	class:NDRangeSpace
+getGroupX	NDRangePoint.cpp	/^int NDRangePoint::getGroupX() const { return group[0]; }$/;"	f	class:NDRangePoint
+getGroupY	NDRangePoint.cpp	/^int NDRangePoint::getGroupY() const { return group[1]; }$/;"	f	class:NDRangePoint
+getGroupZ	NDRangePoint.cpp	/^int NDRangePoint::getGroupZ() const { return group[2]; }$/;"	f	class:NDRangePoint
+getHeader	DivergentRegion.cpp	/^BasicBlock *DivergentRegion::getHeader() { return bounds.getHeader(); }$/;"	f	class:DivergentRegion
+getHeader	DivergentRegion.cpp	/^const BasicBlock *DivergentRegion::getHeader() const {$/;"	f	class:DivergentRegion
+getHeader	RegionBounds.cpp	/^BasicBlock *RegionBounds::getHeader() { return header; }$/;"	f	class:RegionBounds
+getHeader	RegionBounds.cpp	/^const BasicBlock *RegionBounds::getHeader() const { return header; }$/;"	f	class:RegionBounds
+getILP	ILPComputation.cpp	/^float getILP(BasicBlock *block) {$/;"	f
+getIncoming	DivergentRegion.cpp	/^InstVector &DivergentRegion::getIncoming() { return incoming; }$/;"	f	class:DivergentRegion
+getIncoming	Graph.cpp	/^std::vector<dataType> Graph<dataType>::getIncoming(dataType dest) {$/;"	f	class:Graph
+getInsts	ILPComputation.cpp	/^InstVector getInsts(BasicBlock *block) {$/;"	f
+getInsts	Utils.cpp	/^std::vector<InstructionType *> getInsts(Function &F) {$/;"	f
+getIntWidth	NDRangeScaling.cpp	/^unsigned int getIntWidth(Value *value) {$/;"	f
+getLocal	NDRangePoint.cpp	/^int NDRangePoint::getLocal(int direction) const { return local[direction]; }$/;"	f	class:NDRangePoint
+getLocalSize	NDRangeSpace.cpp	/^int NDRangeSpace::getLocalSize(int direction) const {$/;"	f	class:NDRangeSpace
+getLocalSizeX	NDRangeSpace.cpp	/^int NDRangeSpace::getLocalSizeX() const { return localSize[0]; }$/;"	f	class:NDRangeSpace
+getLocalSizeY	NDRangeSpace.cpp	/^int NDRangeSpace::getLocalSizeY() const { return localSize[1]; }$/;"	f	class:NDRangeSpace
+getLocalSizeZ	NDRangeSpace.cpp	/^int NDRangeSpace::getLocalSizeZ() const { return localSize[2]; }$/;"	f	class:NDRangeSpace
+getLocalX	NDRangePoint.cpp	/^int NDRangePoint::getLocalX() const { return local[0]; }$/;"	f	class:NDRangePoint
+getLocalY	NDRangePoint.cpp	/^int NDRangePoint::getLocalY() const { return local[1]; }$/;"	f	class:NDRangePoint
+getLocalZ	NDRangePoint.cpp	/^int NDRangePoint::getLocalZ() const { return local[2]; }$/;"	f	class:NDRangePoint
+getMLP	MLPComputation.cpp	/^float getMLP(BasicBlock *block) {$/;"	f
+getMemoryOffsets	SubscriptAnalysis.cpp	/^SubscriptAnalysis::getMemoryOffsets(std::vector<const SCEV *> scevs,$/;"	f	class:SubscriptAnalysis
+getModuloInst	NDRangeScaling.cpp	/^Instruction *getModuloInst(Value *value, unsigned int modulo) {$/;"	f
+getMulInst	NDRangeScaling.cpp	/^Instruction *getMulInst(Value *value, unsigned int factor) {$/;"	f
+getNDRange	OCLEnv.cpp	/^const NDRange *OCLEnv::getNDRange() const { return ndRange; }$/;"	f	class:OCLEnv
+getNDRangeSpace	OCLEnv.cpp	/^const NDRangeSpace &OCLEnv::getNDRangeSpace() const { return ndRangeSpace; }$/;"	f	class:OCLEnv
+getNumberOfGroups	NDRangeSpace.cpp	/^int NDRangeSpace::getNumberOfGroups(int direction) const {$/;"	f	class:NDRangeSpace
+getNumberOfGroupsX	NDRangeSpace.cpp	/^int NDRangeSpace::getNumberOfGroupsX() const { return numberOfGroups[0]; }$/;"	f	class:NDRangeSpace
+getNumberOfGroupsY	NDRangeSpace.cpp	/^int NDRangeSpace::getNumberOfGroupsY() const { return numberOfGroups[1]; }$/;"	f	class:NDRangeSpace
+getNumberOfGroupsZ	NDRangeSpace.cpp	/^int NDRangeSpace::getNumberOfGroupsZ() const { return numberOfGroups[2]; }$/;"	f	class:NDRangeSpace
+getOpenCLFunctionByName	Utils.cpp	/^Function *getOpenCLFunctionByName(std::string calleeName, Function *caller) {$/;"	f
+getOutermostDivInsts	DivergenceAnalysis.cpp	/^InstVector &DivergenceAnalysis::getOutermostDivInsts() {$/;"	f	class:DivergenceAnalysis
+getOutermostDivRegions	DivergenceAnalysis.cpp	/^RegionVector &DivergenceAnalysis::getOutermostDivRegions() {$/;"	f	class:DivergenceAnalysis
+getOutgoing	Graph.cpp	/^std::vector<dataType> Graph<dataType>::getOutgoing(dataType source) {$/;"	f	class:Graph
+getPHIs	Utils.cpp	/^PhiVector getPHIs(BasicBlock *block) {$/;"	f
+getPredecessor	DivergentRegion.cpp	/^BasicBlock *getPredecessor(DivergentRegion *region, LoopInfo *loopInfo) {$/;"	f
+getRegionBlocks	MLPComputation.cpp	/^BlockVector getRegionBlocks(BasicBlock *defBlock, BasicBlock *userBlock) {$/;"	f
+getShiftInst	NDRangeScaling.cpp	/^Instruction *getShiftInst(Value *value, unsigned int shift) {$/;"	f
+getSize	NDRangeSpace.cpp	/^int NDRangeSpace::getSize(const std::string &name, int direction) const {$/;"	f	class:NDRangeSpace
+getSizes	NDRange.cpp	/^InstVector NDRange::getSizes() {$/;"	f	class:NDRange
+getSizes	NDRange.cpp	/^InstVector NDRange::getSizes(int direction) {$/;"	f	class:NDRange
+getSubregionAlive	DivergentRegion.cpp	/^void getSubregionAlive(DivergentRegion *region,$/;"	f
+getSubregionExiting	DivergentRegion.cpp	/^BasicBlock *getSubregionExiting(DivergentRegion *region,$/;"	f
+getTids	DivergenceAnalysis.cpp	/^InstVector DivergenceAnalysis::getTids() {$/;"	f	class:DivergenceAnalysis
+getTids	DivergenceAnalysis.cpp	/^InstVector MultiDimDivAnalysis::getTids() { return ndr->getTids(); }$/;"	f	class:MultiDimDivAnalysis
+getTids	DivergenceAnalysis.cpp	/^InstVector SingleDimDivAnalysis::getTids() {$/;"	f	class:SingleDimDivAnalysis
+getTids	NDRange.cpp	/^InstVector NDRange::getTids() {$/;"	f	class:NDRange
+getTids	NDRange.cpp	/^InstVector NDRange::getTids(int direction) {$/;"	f	class:NDRange
+getTransactionNumber	SubscriptAnalysis.cpp	/^int SubscriptAnalysis::getTransactionNumber(Value *value) {$/;"	f	class:SubscriptAnalysis
+getType	NDRange.cpp	/^std::string NDRange::getType(Instruction *inst) const {$/;"	f	class:NDRange
+getTypeWidth	SubscriptAnalysis.cpp	/^int getTypeWidth(const Type *type) {$/;"	f
+getUnknownSCEV	SubscriptAnalysis.cpp	/^const SCEVUnknown *SubscriptAnalysis::getUnknownSCEV(const SCEV *scev) {$/;"	f	class:SubscriptAnalysis
+getVariance	MathUtils.cpp	/^float getVariance(const std::vector<integerType> &elements) {$/;"	f
+indicesToElements	Graph.cpp	/^std::vector<dataType> indicesToElements(std::vector<dataType> &elements,$/;"	f
+init	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::init() {$/;"	f	class:DivergenceAnalysis
+init	NDRange.cpp	/^void NDRange::init() {$/;"	f	class:NDRange
+init	ThreadCoarsening.cpp	/^void ThreadCoarsening::init() {$/;"	f	class:ThreadCoarsening
+initAliveMap	RegionCoarsening.cpp	/^void ThreadCoarsening::initAliveMap(DivergentRegion *region,$/;"	f	class:ThreadCoarsening
+initBuffers	SymbolicExecution.cpp	/^void SymbolicExecution::initBuffers() {$/;"	f	class:SymbolicExecution
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<Hex16>::input(StringRef Scalar, void *, Hex16 &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<Hex32>::input(StringRef Scalar, void *, Hex32 &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<Hex64>::input(StringRef Scalar, void *, Hex64 &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<Hex8>::input(StringRef Scalar, void *, Hex8 &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<StringRef>::input(StringRef Scalar, void *,$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<bool>::input(StringRef Scalar, void *, bool &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<double>::input(StringRef Scalar, void *, double &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<float>::input(StringRef Scalar, void *, float &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<int16_t>::input(StringRef Scalar, void *, int16_t &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<int32_t>::input(StringRef Scalar, void *, int32_t &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<int64_t>::input(StringRef Scalar, void *, int64_t &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<int8_t>::input(StringRef Scalar, void *, int8_t &Val) {$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<std::string>::input(StringRef Scalar, void *,$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<uint16_t>::input(StringRef Scalar, void *,$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<uint32_t>::input(StringRef Scalar, void *,$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<uint64_t>::input(StringRef Scalar, void *,$/;"	f	class:ScalarTraits
+input	YAMLTraits.cpp	/^StringRef ScalarTraits<uint8_t>::input(StringRef Scalar, void *, uint8_t &Val) {$/;"	f	class:ScalarTraits
+isBarrier	Utils.cpp	/^bool isBarrier(Instruction *inst) {$/;"	f
+isConsecutive	SubscriptAnalysis.cpp	/^bool SubscriptAnalysis::isConsecutive(Value *value, int direction) {$/;"	f	class:SubscriptAnalysis
+isCoordinate	NDRange.cpp	/^bool NDRange::isCoordinate(Instruction *inst) const {$/;"	f	class:NDRange
+isDivergent	DivergenceAnalysis.cpp	/^bool DivergenceAnalysis::isDivergent(Instruction *inst) {$/;"	f	class:DivergenceAnalysis
+isDominated	Utils.cpp	/^bool isDominated(const BasicBlock *block, const BlockVector &blocks,$/;"	f
+isDominated	Utils.cpp	/^bool isDominated(const Instruction *inst, BranchSet &branches,$/;"	f
+isDominated	Utils.cpp	/^bool isDominated(const Instruction *inst, BranchVector &branches,$/;"	f
+isGlobal	NDRange.cpp	/^bool NDRange::isGlobal(Instruction *inst) const {$/;"	f	class:NDRange
+isGlobal	NDRange.cpp	/^bool NDRange::isGlobal(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isGlobalSize	NDRange.cpp	/^bool NDRange::isGlobalSize(Instruction *inst) const {$/;"	f	class:NDRange
+isGlobalSize	NDRange.cpp	/^bool NDRange::isGlobalSize(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isGroupId	NDRange.cpp	/^bool NDRange::isGroupId(Instruction *inst) const {$/;"	f	class:NDRange
+isGroupId	NDRange.cpp	/^bool NDRange::isGroupId(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isGroupsNum	NDRange.cpp	/^bool NDRange::isGroupsNum(Instruction *inst) const {$/;"	f	class:NDRange
+isGroupsNum	NDRange.cpp	/^bool NDRange::isGroupsNum(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isInLoop	Utils.cpp	/^bool isInLoop(const BasicBlock *block, LoopInfo *loopInfo) {$/;"	f
+isInLoop	Utils.cpp	/^bool isInLoop(const Instruction &inst, LoopInfo *loopInfo) {$/;"	f
+isInLoop	Utils.cpp	/^bool isInLoop(const Instruction *inst, LoopInfo *loopInfo) {$/;"	f
+isIntCast	Utils.cpp	/^bool isIntCast(Instruction *inst) {$/;"	f
+isKernel	Utils.cpp	/^bool isKernel(const Function *function) {$/;"	f
+isLoad	MLPComputation.cpp	/^bool isLoad(const llvm::Instruction &inst) { return isa<LoadInst>(inst); }$/;"	f
+isLocal	NDRange.cpp	/^bool NDRange::isLocal(Instruction *inst) const {$/;"	f	class:NDRange
+isLocal	NDRange.cpp	/^bool NDRange::isLocal(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isLocalMemoryAccess	Utils.cpp	/^bool isLocalMemoryAccess(Instruction *inst) {$/;"	f
+isLocalMemoryLoad	Utils.cpp	/^bool isLocalMemoryLoad(Instruction *inst) {$/;"	f
+isLocalMemoryStore	Utils.cpp	/^bool isLocalMemoryStore(Instruction *inst) {$/;"	f
+isLocalSize	NDRange.cpp	/^bool NDRange::isLocalSize(Instruction *inst) const {$/;"	f	class:NDRange
+isLocalSize	NDRange.cpp	/^bool NDRange::isLocalSize(Instruction *inst, int direction) const {$/;"	f	class:NDRange
+isMathFunction	Utils.cpp	/^bool isMathFunction(Instruction *inst) {$/;"	f
+isMathName	Utils.cpp	/^bool isMathName(std::string functionName) {$/;"	f
+isOutermost	DivergenceAnalysis.cpp	/^bool isOutermost(DivergentRegion *region, RegionVector &regions) {$/;"	f
+isOutermost	DivergenceAnalysis.cpp	/^bool isOutermost(Instruction *inst, RegionVector &regions) {$/;"	f
+isPresent	Utils.cpp	/^bool isPresent(const Instruction *inst, const BlockVector &value) {$/;"	f
+isPresent	Utils.cpp	/^bool isPresent(const Instruction *inst, std::vector<BlockVector *> &value) {$/;"	f
+isPresent	Utils.cpp	/^bool isPresent(const T *value, const std::set<const T *> &values) {$/;"	f
+isPresent	Utils.cpp	/^bool isPresent(const T *value, const std::vector<T *> &values) {$/;"	f
+isPresent	Utils.cpp	/^bool isPresent(const T *value, const std::vector<const T *> &values) {$/;"	f
+isPresent	Utils.cpp	/^template <class T> bool isPresent(const T *value, const std::deque<T *> &d) {$/;"	f
+isPresent	Utils.cpp	/^template <class T> bool isPresent(const T *value, const std::set<T *> &values) {$/;"	f
+isPresentInDirection	NDRange.cpp	/^bool NDRange::isPresentInDirection(llvm::Instruction *inst,$/;"	f	class:NDRange
+isSize	NDRange.cpp	/^bool NDRange::isSize(Instruction *inst) const {$/;"	f	class:NDRange
+isTid	NDRange.cpp	/^bool NDRange::isTid(Instruction *inst) {$/;"	f	class:NDRange
+isTidInDirection	NDRange.cpp	/^bool NDRange::isTidInDirection(Instruction *inst, int direction) {$/;"	f	class:NDRange
+isUsedOutsideOfDefiningBlock	Utils.cpp	/^bool isUsedOutsideOfDefiningBlock(const Instruction *inst) {$/;"	f
+isValidKey	YAMLTraits.cpp	/^bool Input::MapHNode::isValidKey(StringRef Key) {$/;"	f	class:Input::MapHNode
+isolateRegion	BranchExtraction.cpp	/^void BranchExtraction::isolateRegion(DivergentRegion *region) {$/;"	f	class:BranchExtraction
+iterator	DivergentRegion.cpp	/^DivergentRegion::iterator::iterator() { currentBlock = 0; }$/;"	f	class:DivergentRegion::iterator
+iterator	DivergentRegion.cpp	/^DivergentRegion::iterator::iterator(const DivergentRegion &region) {$/;"	f	class:DivergentRegion::iterator
+iterator	DivergentRegion.cpp	/^DivergentRegion::iterator::iterator(const iterator &original) {$/;"	f	class:DivergentRegion::iterator
+iterator	Warp.cpp	/^Warp::iterator::iterator() { currentPoint = 0; }$/;"	f	class:Warp::iterator
+iterator	Warp.cpp	/^Warp::iterator::iterator(const Warp* warp) {$/;"	f	class:Warp::iterator
+iterator	Warp.cpp	/^Warp::iterator::iterator(const iterator& original) {$/;"	f	class:Warp::iterator
+listBlocks	RegionBounds.cpp	/^void RegionBounds::listBlocks(BlockVector &result) {$/;"	f	class:RegionBounds
+listBlocks	RegionBounds.cpp	/^void listBlocks(BasicBlock *header, BasicBlock *exiting, BlockVector &result) {$/;"	f
+listBlocks	RegionBounds.cpp	/^void listBlocks(RegionBounds *bounds, BlockVector &result) { $/;"	f
+livenessAnalysis	FeatureCollector.cpp	/^void FeatureCollector::livenessAnalysis(BasicBlock &block) {$/;"	f	class:FeatureCollector
+llvm	FeatureCollector.cpp	/^namespace llvm {$/;"	n	file:
+llvm	SymbolicExecution.cpp	/^namespace llvm {$/;"	n	file:
+loopCountBranches	FeatureCollector.cpp	/^void FeatureCollector::loopCountBranches(const Function &function,$/;"	f	class:FeatureCollector
+loopCountDivInsts	FeatureCollector.cpp	/^void FeatureCollector::loopCountDivInsts(Function &function,$/;"	f	class:FeatureCollector
+loopCountEdges	FeatureCollector.cpp	/^void FeatureCollector::loopCountEdges(const Function &function, LoopInfo *LI) {$/;"	f	class:FeatureCollector
+mapTag	YAMLTraits.cpp	/^bool Input::mapTag(StringRef Tag, bool Default) {$/;"	f	class:Input
+mapTag	YAMLTraits.cpp	/^bool Output::mapTag(StringRef Tag, bool Use) {$/;"	f	class:Output
+mapping	FeatureCollector.cpp	/^  static void mapping(IO &io, FeatureCollector &collector) {$/;"	f	struct:llvm::yaml::MappingTraits
+mapping	FeatureCollector.cpp	/^  static void mapping(IO &io, std::pair<float, float> &avgVar) {$/;"	f	struct:llvm::yaml::MappingTraits
+mapping	SymbolicExecution.cpp	/^  static void mapping(IO &io, SymbolicExecution &exe) {$/;"	f	struct:llvm::yaml::MappingTraits
+matchEnumScalar	YAMLTraits.cpp	/^bool Input::matchEnumScalar(const char *Str, bool) {$/;"	f	class:Input
+matchEnumScalar	YAMLTraits.cpp	/^bool Output::matchEnumScalar(const char *Str, bool Match) {$/;"	f	class:Output
+modifyGraph	Graph.cpp	/^void Graph<dataType>::modifyGraph(dataType source, dataType dest,$/;"	f	class:Graph
+newLineCheck	YAMLTraits.cpp	/^void Output::newLineCheck() {$/;"	f	class:Output
+nextDocument	YAMLTraits.cpp	/^bool Input::nextDocument() {$/;"	f	class:Input
+operator !=	DivergentRegion.cpp	/^DivergentRegion::const_iterator::operator!=(const const_iterator &iter) const {$/;"	f	class:DivergentRegion::const_iterator
+operator !=	DivergentRegion.cpp	/^bool DivergentRegion::iterator::operator!=(const iterator &iter) const {$/;"	f	class:DivergentRegion::iterator
+operator !=	Warp.cpp	/^bool Warp::iterator::operator!=(const iterator& iter) const {$/;"	f	class:Warp::iterator
+operator *	DivergentRegion.cpp	/^BasicBlock *DivergentRegion::iterator::operator*() const {$/;"	f	class:DivergentRegion::iterator
+operator *	DivergentRegion.cpp	/^const BasicBlock *DivergentRegion::const_iterator::operator*() const {$/;"	f	class:DivergentRegion::const_iterator
+operator *	Warp.cpp	/^NDRangePoint Warp::iterator::operator*() const {$/;"	f	class:Warp::iterator
+operator ++	DivergentRegion.cpp	/^DivergentRegion::const_iterator &DivergentRegion::const_iterator::operator++() {$/;"	f	class:DivergentRegion::const_iterator
+operator ++	DivergentRegion.cpp	/^DivergentRegion::const_iterator::operator++(int) {$/;"	f	class:DivergentRegion::const_iterator
+operator ++	DivergentRegion.cpp	/^DivergentRegion::iterator &DivergentRegion::iterator::operator++() {$/;"	f	class:DivergentRegion::iterator
+operator ++	DivergentRegion.cpp	/^DivergentRegion::iterator DivergentRegion::iterator::operator++(int) {$/;"	f	class:DivergentRegion::iterator
+operator ++	Warp.cpp	/^Warp::iterator Warp::iterator::operator++(int) {$/;"	f	class:Warp::iterator
+operator ++	Warp.cpp	/^Warp::iterator& Warp::iterator::operator++() {$/;"	f	class:Warp::iterator
+output	YAMLTraits.cpp	/^void Output::output(StringRef s) {$/;"	f	class:Output
+output	YAMLTraits.cpp	/^void ScalarTraits<Hex16>::output(const Hex16 &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<Hex32>::output(const Hex32 &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<Hex64>::output(const Hex64 &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<Hex8>::output(const Hex8 &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<StringRef>::output(const StringRef &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<bool>::output(const bool &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<double>::output(const double &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<float>::output(const float &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<int16_t>::output(const int16_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<int32_t>::output(const int32_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<int64_t>::output(const int64_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<int8_t>::output(const int8_t &Val, void *, raw_ostream &Out) {$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<std::string>::output(const std::string &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<uint16_t>::output(const uint16_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<uint32_t>::output(const uint32_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<uint64_t>::output(const uint64_t &Val, void *,$/;"	f	class:ScalarTraits
+output	YAMLTraits.cpp	/^void ScalarTraits<uint8_t>::output(const uint8_t &Val, void *,$/;"	f	class:ScalarTraits
+outputNewLine	YAMLTraits.cpp	/^void Output::outputNewLine() {$/;"	f	class:Output
+outputUpToEndOfLine	YAMLTraits.cpp	/^void Output::outputUpToEndOfLine(StringRef s) {$/;"	f	class:Output
+outputting	YAMLTraits.cpp	/^bool Input::outputting() {$/;"	f	class:Input
+outputting	YAMLTraits.cpp	/^bool Output::outputting() {$/;"	f	class:Output
+paddedKey	YAMLTraits.cpp	/^void Output::paddedKey(StringRef key) {$/;"	f	class:Output
+performAnalysis	DivergenceAnalysis.cpp	/^void DivergenceAnalysis::performAnalysis() {$/;"	f	class:DivergenceAnalysis
+postdominatesAll	Utils.cpp	/^bool postdominatesAll(const BasicBlock *block, const BlockVector &blocks,$/;"	f
+postflightDocument	YAMLTraits.cpp	/^void Output::postflightDocument() {$/;"	f	class:Output
+postflightElement	YAMLTraits.cpp	/^void Input::postflightElement(void *SaveInfo) {$/;"	f	class:Input
+postflightElement	YAMLTraits.cpp	/^void Output::postflightElement(void *) {$/;"	f	class:Output
+postflightFlowElement	YAMLTraits.cpp	/^void Input::postflightFlowElement(void *SaveInfo) {$/;"	f	class:Input
+postflightFlowElement	YAMLTraits.cpp	/^void Output::postflightFlowElement(void *) {$/;"	f	class:Output
+postflightKey	YAMLTraits.cpp	/^void Input::postflightKey(void *saveInfo) {$/;"	f	class:Input
+postflightKey	YAMLTraits.cpp	/^void Output::postflightKey(void *) {$/;"	f	class:Output
+preflightDocument	YAMLTraits.cpp	/^bool Output::preflightDocument(unsigned index) {$/;"	f	class:Output
+preflightElement	YAMLTraits.cpp	/^bool Input::preflightElement(unsigned Index, void *&SaveInfo) {$/;"	f	class:Input
+preflightElement	YAMLTraits.cpp	/^bool Output::preflightElement(unsigned, void *&) {$/;"	f	class:Output
+preflightFlowElement	YAMLTraits.cpp	/^bool Input::preflightFlowElement(unsigned index, void *&SaveInfo) {$/;"	f	class:Input
+preflightFlowElement	YAMLTraits.cpp	/^bool Output::preflightFlowElement(unsigned, void *&) {$/;"	f	class:Output
+preflightKey	YAMLTraits.cpp	/^bool Input::preflightKey(const char *Key, bool Required, bool, bool &UseDefault,$/;"	f	class:Input
+preflightKey	YAMLTraits.cpp	/^bool Output::preflightKey(const char *Key, bool Required, bool SameAsDefault,$/;"	f	class:Output
+remapBlocksInPHIs	Utils.cpp	/^void remapBlocksInPHIs(BasicBlock *block, BasicBlock *oldBlock,$/;"	f
+removeEdge	Graph.cpp	/^void Graph<dataType>::removeEdge(dataType source, dataType dest) {$/;"	f	class:Graph
+renameValueWithFactor	Utils.cpp	/^void renameValueWithFactor(Value *value, StringRef oldName,$/;"	f
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEV *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVAddRecExpr *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVCastExpr *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVCommutativeExpr *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVConstant *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVUDivExpr *expr,$/;"	f	class:SubscriptAnalysis
+replaceInExpr	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInExpr(const SCEVUnknown *expr,$/;"	f	class:SubscriptAnalysis
+replaceInPhi	SubscriptAnalysis.cpp	/^const SCEV *SubscriptAnalysis::replaceInPhi(PHINode *Phi,$/;"	f	class:SubscriptAnalysis
+replacePlaceholders	Coarsening.cpp	/^void ThreadCoarsening::replacePlaceholders() {$/;"	f	class:ThreadCoarsening
+replaceUses	Utils.cpp	/^void replaceUses(Value *oldValue, Value *newValue) {$/;"	f
+replicateInst	Coarsening.cpp	/^void ThreadCoarsening::replicateInst(Instruction *inst) {$/;"	f	class:ThreadCoarsening
+replicateRegion	RegionCoarsening.cpp	/^void ThreadCoarsening::replicateRegion(DivergentRegion *region) {$/;"	f	class:ThreadCoarsening
+replicateRegionClassic	RegionCoarsening.cpp	/^void ThreadCoarsening::replicateRegionClassic(DivergentRegion *region) {$/;"	f	class:ThreadCoarsening
+replicateRegionImpl	RegionCoarsening.cpp	/^void ThreadCoarsening::replicateRegionImpl(DivergentRegion *region,$/;"	f	class:ThreadCoarsening
+resolveInstruction	SubscriptAnalysis.cpp	/^SubscriptAnalysis::resolveInstruction(llvm::Instruction *instruction,$/;"	f	class:SubscriptAnalysis
+resolveValue	OCLEnv.cpp	/^int OCLEnv::resolveValue(llvm::Value *value) const {$/;"	f	class:OCLEnv
+runOnFunction	BranchExtraction.cpp	/^bool BranchExtraction::runOnFunction(Function &F) {$/;"	f	class:BranchExtraction
+runOnFunction	ControlDependenceAnalysis.cpp	/^bool ControlDependenceAnalysis::runOnFunction(Function &function) {$/;"	f	class:ControlDependenceAnalysis
+runOnFunction	DivergenceAnalysis.cpp	/^bool MultiDimDivAnalysis::runOnFunction(Function &functionRef) {$/;"	f	class:MultiDimDivAnalysis
+runOnFunction	DivergenceAnalysis.cpp	/^bool SingleDimDivAnalysis::runOnFunction(Function &functionRef) {$/;"	f	class:SingleDimDivAnalysis
+runOnFunction	FeatureExtraction.cpp	/^bool OpenCLFeatureExtractor::runOnFunction(Function &function) {$/;"	f	class:OpenCLFeatureExtractor
+runOnFunction	LoopFeatureExtraction.cpp	/^bool OpenCLLoopFeatureExtractor::runOnFunction(Function &function) {$/;"	f	class:OpenCLLoopFeatureExtractor
+runOnFunction	NDRange.cpp	/^bool NDRange::runOnFunction(Function &function) {$/;"	f	class:NDRange
+runOnFunction	SymbolicExecution.cpp	/^bool SymbolicExecution::runOnFunction(Function &function) {$/;"	f	class:SymbolicExecution
+runOnFunction	ThreadCoarsening.cpp	/^bool ThreadCoarsening::runOnFunction(Function &F) {$/;"	f	class:ThreadCoarsening
+safeIncrement	Utils.cpp	/^void safeIncrement(std::map<std::string, int> &map, std::string key) {$/;"	f
+scalarString	YAMLTraits.cpp	/^void Input::scalarString(StringRef &S, bool) {$/;"	f	class:Input
+scalarString	YAMLTraits.cpp	/^void Output::scalarString(StringRef &S, bool MustQuote) {$/;"	f	class:Output
+scaleIds	NDRangeScaling.cpp	/^void ThreadCoarsening::scaleIds() {$/;"	f	class:ThreadCoarsening
+scaleNDRange	NDRangeScaling.cpp	/^void ThreadCoarsening::scaleNDRange() {$/;"	f	class:ThreadCoarsening
+scaleSizes	NDRangeScaling.cpp	/^void ThreadCoarsening::scaleSizes() {$/;"	f	class:ThreadCoarsening
+setAlive	DivergentRegion.cpp	/^void DivergentRegion::setAlive(const InstVector &alive) { this->alive = alive; }$/;"	f	class:DivergentRegion
+setContext	YAMLTraits.cpp	/^void IO::setContext(void *Context) {$/;"	f	class:IO
+setCurrentDocument	YAMLTraits.cpp	/^bool Input::setCurrentDocument() {$/;"	f	class:Input
+setError	YAMLTraits.cpp	/^void Input::setError(HNode *hnode, const Twine &message) {$/;"	f	class:Input
+setError	YAMLTraits.cpp	/^void Input::setError(Node *node, const Twine &message) {$/;"	f	class:Input
+setError	YAMLTraits.cpp	/^void Input::setError(const Twine &Message) {$/;"	f	class:Input
+setError	YAMLTraits.cpp	/^void Output::setError(const Twine &message) {$/;"	f	class:Output
+setExiting	DivergentRegion.cpp	/^void DivergentRegion::setExiting(BasicBlock *Exiting) {$/;"	f	class:DivergentRegion
+setExiting	RegionBounds.cpp	/^void RegionBounds::setExiting(BasicBlock *exiting) { this->exiting = exiting; }$/;"	f	class:RegionBounds
+setHeader	DivergentRegion.cpp	/^void DivergentRegion::setHeader(BasicBlock *Header) {$/;"	f	class:DivergentRegion
+setHeader	RegionBounds.cpp	/^void RegionBounds::setHeader(BasicBlock *header) { this->header = header; }$/;"	f	class:RegionBounds
+setIncoming	DivergentRegion.cpp	/^void DivergentRegion::setIncoming(const InstVector &incoming) {$/;"	f	class:DivergentRegion
+setup	OCLEnv.cpp	/^void OCLEnv::setup(Function &function) {$/;"	f	class:OCLEnv
+size	DivergentRegion.cpp	/^unsigned int DivergentRegion::size() {$/;"	f	class:DivergentRegion
+size	FeatureCollector.cpp	/^  static size_t size(IO &, std::vector<float> &seq) { return seq.size(); }$/;"	f	struct:llvm::yaml::SequenceTraits
+size	FeatureCollector.cpp	/^  static size_t size(IO &, std::vector<int> &seq) { return seq.size(); }$/;"	f	struct:llvm::yaml::SequenceTraits
+size	FeatureCollector.cpp	/^  static size_t size(IO &, std::vector<std::pair<float, float> > &seq) {$/;"	f	struct:llvm::yaml::SequenceTraits
+size	SymbolicExecution.cpp	/^  static size_t size(IO &, std::vector<int> &seq) { return seq.size(); }$/;"	f	struct:llvm::yaml::SequenceTraits
+square	MathUtils.cpp	/^float square(float input) { return input * input; }$/;"	f
+toNext	DivergentRegion.cpp	/^void DivergentRegion::const_iterator::toNext() {$/;"	f	class:DivergentRegion::const_iterator
+toNext	DivergentRegion.cpp	/^void DivergentRegion::iterator::toNext() {$/;"	f	class:DivergentRegion::iterator
+toNext	Warp.cpp	/^void Warp::iterator::toNext() {$/;"	f	class:Warp::iterator
+toString	NDRangePoint.cpp	/^std::string NDRangePoint::toString() const {$/;"	f	class:NDRangePoint
+transitiveClosure	ControlDependenceAnalysis.cpp	/^void ControlDependenceAnalysis::transitiveClosure() {$/;"	f	class:ControlDependenceAnalysis
+updateAliveMap	RegionCoarsening.cpp	/^void ThreadCoarsening::updateAliveMap(CoarseningMap &aliveMap, Map &regionMap) {$/;"	f	class:ThreadCoarsening
+updateBounds	DivergentRegion.cpp	/^void DivergentRegion::updateBounds(DominatorTree *dt, PostDominatorTree *pdt) {$/;"	f	class:DivergentRegion
+updatePlaceholderMap	Coarsening.cpp	/^void ThreadCoarsening::updatePlaceholderMap(Instruction *inst,$/;"	f	class:ThreadCoarsening
+updatePlaceholdersWithAlive	RegionCoarsening.cpp	/^void ThreadCoarsening::updatePlaceholdersWithAlive(CoarseningMap &aliveMap) {$/;"	f	class:ThreadCoarsening
+verifyUnknown	SubscriptAnalysis.cpp	/^bool SubscriptAnalysis::verifyUnknown(const SCEV *scev, const SCEV *unknown) {$/;"	f	class:SubscriptAnalysis
+verifyUnknown	SubscriptAnalysis.cpp	/^bool SubscriptAnalysis::verifyUnknown(const std::vector<const SCEV *> &scevs,$/;"	f	class:SubscriptAnalysis
+visitBasicBlock	FeatureExtraction.cpp	/^void OpenCLFeatureExtractor::visitBasicBlock(BasicBlock &basicBlock) {$/;"	f	class:OpenCLFeatureExtractor
+visitBasicBlock	LoopFeatureExtraction.cpp	/^void OpenCLLoopFeatureExtractor::visitBasicBlock(BasicBlock &basicBlock) {$/;"	f	class:OpenCLLoopFeatureExtractor
+visitFunction	FeatureExtraction.cpp	/^void OpenCLFeatureExtractor::visitFunction(Function &function) {$/;"	f	class:OpenCLFeatureExtractor
+visitFunction	LoopFeatureExtraction.cpp	/^void OpenCLLoopFeatureExtractor::visitFunction(Function &function) {$/;"	f	class:OpenCLLoopFeatureExtractor
+visitInstruction	FeatureExtraction.cpp	/^void OpenCLFeatureExtractor::visitInstruction(Instruction &inst) {$/;"	f	class:OpenCLFeatureExtractor
+visitInstruction	LoopFeatureExtraction.cpp	/^void OpenCLLoopFeatureExtractor::visitInstruction(Instruction &inst) {$/;"	f	class:OpenCLLoopFeatureExtractor
+visitLoadInst	SymbolicExecution.cpp	/^void SymbolicExecution::visitLoadInst(LoadInst &loadInst) {$/;"	f	class:SymbolicExecution
+visitLocalMemoryInst	SymbolicExecution.cpp	/^void SymbolicExecution::visitLocalMemoryInst(Value *pointer, $/;"	f	class:SymbolicExecution
+visitMemoryInst	SymbolicExecution.cpp	/^void SymbolicExecution::visitMemoryInst(Value *pointer,$/;"	f	class:SymbolicExecution
+visitStoreInst	SymbolicExecution.cpp	/^void SymbolicExecution::visitStoreInst(StoreInst &storeInst) {$/;"	f	class:SymbolicExecution
+yaml	FeatureCollector.cpp	/^namespace yaml {$/;"	n	namespace:llvm	file:
+yaml	SymbolicExecution.cpp	/^namespace yaml {$/;"	n	namespace:llvm	file:
+~ControlDependenceAnalysis	ControlDependenceAnalysis.cpp	/^ControlDependenceAnalysis::~ControlDependenceAnalysis() {}$/;"	f	class:ControlDependenceAnalysis
+~Graph	Graph.cpp	/^template <typename dataType> Graph<dataType>::~Graph() {}$/;"	f	class:Graph
+~IO	YAMLTraits.cpp	/^IO::~IO() {$/;"	f	class:IO
+~Input	YAMLTraits.cpp	/^Input::~Input() {$/;"	f	class:Input
+~MapHNode	YAMLTraits.cpp	/^Input::MapHNode::~MapHNode() {$/;"	f	class:Input::MapHNode
+~Output	YAMLTraits.cpp	/^Output::~Output() {$/;"	f	class:Output
+~SequenceHNode	YAMLTraits.cpp	/^Input::SequenceHNode::~SequenceHNode() {$/;"	f	class:Input::SequenceHNode
+~SymbolicExecution	SymbolicExecution.cpp	/^SymbolicExecution::~SymbolicExecution() {$/;"	f	class:SymbolicExecution

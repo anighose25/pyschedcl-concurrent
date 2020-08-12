@@ -1,0 +1,50 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 0,
+      "size": "num_r1*num_c"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "num_r2*num_c"
+    }
+  ],
+  "name": "concat",
+  "src": "concat_transpose.cl",
+  "globalWorkSize": "[num_r1+num_r2,num_c]",
+  "ioBuffers": [],
+  "workDimension": 2,
+  "outputBuffers": [
+
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "(num_r1+num_r2)*num_c"
+    }
+
+  ],
+
+  "varArguments": [
+    {
+      "type": "int",
+      "pos": 3,
+      "value": "num_r1"
+    },
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "num_r2"
+    },
+    {
+      "type": "int",
+      "pos": 5,
+      "value": "num_c"
+    }
+
+  ]
+}

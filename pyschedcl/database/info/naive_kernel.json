@@ -1,0 +1,51 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "dataset*dataset*dataset"
+    }
+  ],
+  "name": "naive_kernel",
+  "src": "stencil.cl",
+  "globalWorkSize": "[dataset,dataset,dataset]",
+  "outputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 3,
+      "size": "dataset*dataset*dataset"
+    }
+  ],
+  "workDimension": 3,
+  "ioBuffers": [],
+  "varArguments": [
+    {
+      "type": "float",
+      "pos": 0,
+      "value": "0.1"
+    },
+    {
+      "type": "float",
+      "pos": 1,
+      "value": "0.1"
+    },
+
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "dataset-1"
+    },
+    {
+      "type": "int",
+      "pos": 5,
+      "value": "dataset-1"
+    },
+    {
+      "type": "int",
+      "pos": 6,
+      "value": "dataset-1"
+    }
+  ]
+}

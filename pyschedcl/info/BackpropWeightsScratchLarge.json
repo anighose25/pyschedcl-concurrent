@@ -1,0 +1,94 @@
+{
+	"src": "BackpropWeightsScratchLarge.cl",
+	"name": "backprop_floats_withscratch_dobias_striped",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 2,
+		"size": "32 * 32"
+	},
+	{
+		"break": 0,
+		"type": "float",
+		"pos": 3,
+		"size": "32 * 32"
+	}
+	],
+	"localArguments": [
+		{
+				"pos": 8,
+				"size": "32 * 32",
+				"type": "float"
+		},
+		{
+			"pos": 9,
+			"size": "32 *  32",
+			"type": "float"
+		}
+	],
+	"partition":0,
+	"workDimension": 2,
+	"globalWorkSize": [32,32],
+	"id": 1,
+	"varArguments": [
+		{
+			"type": "float",
+			"pos": 0,
+			"value": "0.5"
+		},
+		{
+			"type": "int",
+			"pos": 1,
+			"value": "1"
+		}
+		],
+	"ioBuffers":[
+		{
+				"break": 1,
+				"pos": 5,
+				"size": "32 * 32",
+				"type": "float"
+			},
+			{
+					"break": 1,
+					"pos": 7,
+					"size": "32 * 32",
+					"type": "float"
+		}
+	],
+
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 4,
+          "size": "32 * 32",
+          "type": "float"
+	  },
+		{
+				"break": 1,
+				"pos": 6,
+				"size": "32 * 32",
+				"type": "float"
+	}
+
+  ],
+	"macros_values":
+      {
+				"gOutputSize" : 31,
+				"gNumFilters": 1,
+				"gFilterSizeSquared": 1,
+				"gInputPlanes": 1,
+				"gInputSizeSquared": 256,
+				"gOutputSizeSquared": 225,
+				"BIASED": 1,
+				"gInputSize": 16,
+				"gFilterSize": 2,
+				"gMargin": 1,
+				"gInputStripeOuterSize": 1,
+				"gOutputStripeSize" : 1,
+				"gInputStripeInnerSize" : 1,
+				"gInputStripeMarginSize" : 1,
+				"gOutputStripeNumRows" : 1,
+				"gNumStripes" :1
+  		 }
+}

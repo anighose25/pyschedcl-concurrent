@@ -1,0 +1,55 @@
+{
+	"src": "pooling.cl",
+	"name": "forwardNaive",
+	"inputBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 1,
+		"size": "32*32*3"
+	}
+  ],
+  
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 0,
+		"value": "2"
+	}
+  ],
+	"partition":10,
+	"workDimension": 1,
+	"globalChunkFactor": [2],
+	"localChunkFactor": [1],
+	"globalWorkSize": [32],
+	"id": 1,
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 2,
+          "size": "32*32*10",
+          "type": "int"
+	  },
+	  {
+		"break": 1,
+		"pos": 3,
+		"size": "32*32*10",
+		"type": "float"
+	}
+  ],
+	"macros_values":
+      {
+					 "gOutputSize" : 15,
+					 "gNumFilters": 10,
+					 "gEven": 0,
+					 "gFilterSizeSquared": 4,
+					 "gInputPlanes": 8,
+					 "gInputSizeSquared": 256,
+					 "gOutputSizeSquared": 225,
+					 "gPadZeros": 0,
+					 "gHalfFilterSize": 1,
+					 "gInputSize": 16,
+					 "gFilterSize": 2,
+					 "gPoolingSize": 2
+  		 }
+		
+}

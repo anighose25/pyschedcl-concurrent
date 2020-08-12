@@ -1,0 +1,1 @@
+{"naive_copy0": {"write": {"device_start": -1, "host_queued_start": 1586205312.84514, "device_queued": -1, "device_end": -1, "host_queued_end": 1586205312.845399}, "device": "cpu", "nd_range": {"device_start": 2873087.034890878, "device_end": 2873087.0349962004}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

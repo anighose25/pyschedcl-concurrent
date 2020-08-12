@@ -1,0 +1,1 @@
+{"mm0": {"write": {"device_start": -1, "host_queued_start": 1586204245.913419, "device_queued": -1, "device_end": -1, "host_queued_end": 1586204245.913682}, "device": "cpu", "nd_range": {"device_start": 2872020.103174466, "device_end": 2872020.104673327}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

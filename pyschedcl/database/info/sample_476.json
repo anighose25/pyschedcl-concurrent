@@ -1,0 +1,42 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 0, 
+      "size": "dataset"
+    }, 
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 1, 
+      "size": "dataset"
+    }, 
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 3, 
+      "size": "dataset"
+    }
+  ], 
+  "name": "A", 
+  "src": "sample_476.cl", 
+  "globalWorkSize": "[dataset,dataset]", 
+  "outputBuffers": [
+    {
+      "break": 0, 
+      "type": "float", 
+      "pos": 2, 
+      "size": "dataset"
+    }
+  ], 
+  "workDimension": 2, 
+  "ioBuffers": [], 
+  "varArguments": [
+    {
+      "type": "int", 
+      "pos": 4, 
+      "value": "dataset"
+    }
+  ]
+}

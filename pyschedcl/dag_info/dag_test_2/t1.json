@@ -1,0 +1,164 @@
+[
+  {
+    "partition" : 10,
+    "inputBuffers": [
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 0,
+        "size": "4096*4096"
+      },
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 1,
+        "size": "4096*4096"
+      }
+    ],
+    "name": "gemm",
+    "src": "gemm.cl",
+    "id": 0,
+    "globalWorkSize": [4096,4096],
+    "outputBuffers": [],
+    "workDimension": 2,
+    "ioBuffers": [
+
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 2,
+        "size": "4096*4096"
+      }
+
+    ],
+
+    "varArguments": [
+      {
+        "type": "float",
+        "pos": 3,
+        "value": "1"
+      },
+      {
+        "type": "float",
+        "pos": 4,
+        "value": "0"
+      },
+      {
+        "type": "int",
+        "pos": 5,
+        "value": "4096"
+      },
+      {
+        "type": "int",
+        "pos": 6,
+        "value": "4096"
+      },
+      {
+        "type": "int",
+        "pos": 7,
+        "value": "4096"
+      }
+    ]
+  },
+  {
+    "inputBuffers": [
+      {
+        "break": 1,
+        "type": "float",
+        "pos": 0,
+        "size": "4096"
+      },
+      {
+        "break": 1,
+        "type": "float",
+        "pos": 1,
+        "size": "4096"
+      }
+    ],
+    "name": "VectorAdd",
+    "src": "VectorAdd.cl",
+    "id" : 1,
+    "partition" : "10",
+    "partition": 10,
+    "varArguments": [
+      {
+        "type": "int",
+        "pos": 3,
+        "value": "partition_round(dataset, size_percent)"
+      }
+    ],
+    "depends": [],
+    "workDimension": 1,
+    "symbolicVariables": {
+      "dataset": 4096
+    },
+    "globalWorkSize": [4096],
+    "id": 1,
+    "outputBuffers": [
+      {
+        "break": 1,
+        "type": "float",
+        "pos": 2,
+        "size": "4096"
+      }
+    ]
+  },
+  {
+    "inputBuffers": [
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 0,
+        "size": "4096*4096",
+        "from": {
+          "kernel": 0,
+          "pos": 2
+        }
+      },
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 1,
+        "size": "4096",
+        "from": {
+          "kernel": 1,
+          "pos": 2
+        }
+      }
+
+    ],
+    "name": "atax_kernel1",
+    "partition" : "10",
+    "globalWorkSize": [4096],
+    "varArguments": [
+      {
+        "type": "int",
+        "pos": 3,
+        "value": "4096"
+      },
+      {
+        "type": "int",
+        "pos": 4,
+        "value": "4096"
+      }
+    ],
+    "depends": [0,1],
+    "workDimension": 1,
+    "symbolicVariables": {
+      "dataset": 4096
+    },
+    "id": 2,
+    "src": "atax.cl",
+    "partition" : "10",
+    "ioBuffers": [
+
+      {
+        "break": 0,
+        "type": "float",
+        "pos": 2,
+        "size": "4096"
+      }
+    ],
+    "outputBuffers": []
+  }
+]

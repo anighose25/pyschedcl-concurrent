@@ -1,0 +1,46 @@
+[
+  {
+    "inputBuffers": [
+      {
+        "break": 0, 
+        "type": "float", 
+        "pos": 0, 
+        "size": "64"
+      }, 
+      {
+        "break": 0, 
+        "type": "float", 
+        "pos": 1, 
+        "size": "64"
+      }
+    ], 
+    "partition": 10, 
+    "name": "A", 
+    "src": "sample_1.cl", 
+    "globalWorkSize": "[64]", 
+    "outputBuffers": [
+      {
+        "break": 0, 
+        "type": "float", 
+        "pos": 2, 
+        "size": "64"
+      }
+    ], 
+    "depends": [], 
+    "task": 0, 
+    "workDimension": 1, 
+    "symbolicVariables": {
+      "partition": 10, 
+      "dataset": 64
+    }, 
+    "id": 0, 
+    "ioBuffers": [], 
+    "varArguments": [
+      {
+        "type": "int", 
+        "pos": 3, 
+        "value": "64"
+      }
+    ]
+  }
+]

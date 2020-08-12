@@ -1,0 +1,93 @@
+0 -> float_io
+1 -> float_io
+2 -> float
+3 -> int
+4 -> int
+---
+AShr:            0
+Add:             6
+AddrSpaceCast:   0
+Alloca:          0
+And:             0
+AtomicCmpXchg:   0
+AtomicRMW:       0
+BitCast:         0
+Br:              6
+Call:            3
+ExtractElement:  0
+ExtractValue:    0
+FAdd:            0
+FCmp:            0
+FDiv:            0
+FMul:            0
+FPExt:           2
+FPToSI:          0
+FPToUI:          0
+FPTrunc:         1
+FRem:            0
+FSub:            1
+Fence:           0
+GetElementPtr:   4
+ICmp:            3
+IndirectBr:      0
+InsertElement:   0
+InsertValue:     0
+IntToPtr:        0
+Invoke:          0
+LShr:            0
+LandingPad:      0
+Load:            3
+Mul:             4
+Or:              0
+PHI:             0
+PtrToInt:        0
+Resume:          0
+Ret:             1
+SDiv:            0
+SExt:            0
+SIToFP:          0
+SRem:            0
+Select:          0
+Shl:             0
+ShuffleVector:   0
+Store:           1
+Sub:             1
+Switch:          0
+Trunc:           0
+UDiv:            0
+UIToFP:          0
+URem:            0
+Unreachable:     0
+UserOp1:         0
+UserOp2:         0
+VAArg:           0
+Xor:             0
+ZExt:            0
+args:            5
+barriers:        0
+blocks:          7
+condBranches:    3
+criticalEdges:   3
+divInsts:        30
+divRegionInsts:  95
+divRegions:      3
+edges:           9
+eightB:          0
+fourB:           6
+fps:             1
+insts:           36
+localLoads:      0
+localStores:     0
+mathFunctions:   0
+uncondBranches:  3
+uniformLoads:    0
+vector2:         0
+vector4:         0
+vectorOperands:  0
+instsPerBlock:   [ 4, 2, 2, 25, 1, 1, 1 ]
+phiArgs:         [ 0, 0, 0, 0, 0, 0, 0 ]
+ilpPerBlock:     [  ]
+mlpPerBlock:     [  ]
+avgLiveRange:    [ 1, 1, 1, 1.91304, 0, 0, 0 ]
+aliveOut:        [ 2, 0, 0, 0, 0, 0, 0 ]
+...

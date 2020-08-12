@@ -1,0 +1,3 @@
+opt: for the -count-kernel-name option: requires a value!
+error: error reading '../../../../kernel_src/'
+1 error generated.

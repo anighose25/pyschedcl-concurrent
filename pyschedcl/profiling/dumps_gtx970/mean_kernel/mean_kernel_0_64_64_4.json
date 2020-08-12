@@ -1,0 +1,1 @@
+{"mean_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586199079.716353, "device_queued": -1, "device_end": -1, "host_queued_end": 1586199079.716614}, "device": "cpu", "nd_range": {"device_start": 2866853.9061038233, "device_end": 2866853.906113355}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

@@ -1,0 +1,50 @@
+$py(mod='%')
+$py(op='gOutputSize')
+$py(
+def globalId(x,S,C):
+    return "const int globalId%d = get_group_id(0)*get_local_size(0)+(get_local_id(0)/%d)*%d*%d +get_local_id(0)%c%d+%d*%d;" % (x,S,S,C,mod,S,x,S)
+)
+$py(
+def backwardPooling(x,S,C):
+    return """ #define nPlaneCombo%d (globalId%d / gOutputSizeSquared) 
+    #define outputPosCombo%d (globalId%d %c gOutputSizeSquared)
+
+    int n%d = nPlaneCombo%d / gNumPlanes;
+    int plane%d = nPlaneCombo%d %c gNumPlanes;
+    int outputRow%d = outputPosCombo%d / gOutputSize;
+    int outputCol%d = outputPosCombo%d %c gOutputSize;
+
+    if (n%d >= batchSize) {
+        return;
+    }
+
+    int resultIndex%d = (( n%d
+        * gNumPlanes + plane%d)
+        * gOutputSize + outputRow%d)
+        * gOutputSize + outputCol%d;
+    #define error%d (gradOutput[resultIndex%d])
+    int selector%d = (selectors[resultIndex%d]);
+    #define drow%d (selector%d / gPoolingSize)
+    #define dcol%d (selector%d %c gPoolingSize)
+    #define inputRow%d (outputRow%d * gPoolingSize + drow%d)
+    #define inputCol%d (outputCol%d * gPoolingSize + dcol%d)
+    int inputIndex%d = (( n%d
+        * gNumPlanes + plane%d)
+        * gInputSize + inputRow%d)
+        * gInputSize + inputCol%d;
+    gradInput[ inputIndex%d ] = error%d;""" %(x,x,x,x,mod,x,x,x,x,mod,x,x,x,x,mod,x,x,x,x,x,x,x,x,x,x,x,x,x,x,mod,x,x,x,x,x,x,x,x,x,x,x,x,x)
+)
+$extend(globalId)
+$extend(backwardPooling)
+kernel void backward_pooling(const int batchSize, global const float *gradOutput, global const int *selectors, global float *gradInput) 
+{
+$for(x in range(0,C))
+    $globalId(x,S,C)
+$endfor
+$for(x in range(0,C))
+    $backwardPooling(x,S,C)
+$endfor    
+ 
+    
+}
+

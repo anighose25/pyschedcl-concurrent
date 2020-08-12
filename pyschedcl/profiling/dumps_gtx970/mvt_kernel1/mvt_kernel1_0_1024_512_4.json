@@ -1,0 +1,1 @@
+{"mvt_kernel10": {"write": {"device_start": -1, "host_queued_start": 1586236171.478405, "device_queued": -1, "device_end": -1, "host_queued_end": 1586236171.478715}, "device": "cpu", "nd_range": {"device_start": 2903945.6682030302, "device_end": 2903945.6691476423}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

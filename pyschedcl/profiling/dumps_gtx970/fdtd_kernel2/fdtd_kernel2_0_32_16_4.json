@@ -1,0 +1,1 @@
+{"fdtd_kernel20": {"write": {"device_start": -1, "host_queued_start": 1586198508.94059, "device_queued": -1, "device_end": -1, "host_queued_end": 1586198508.940859}, "device": "cpu", "nd_range": {"device_start": 2866283.130349393, "device_end": 2866283.130364151}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

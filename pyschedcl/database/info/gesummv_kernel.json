@@ -1,0 +1,58 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset*dataset"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "dataset*dataset"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "dataset"
+    }
+  ],
+  "name": "gesummv_kernel",
+  "src": "gesummv.cl",
+  "globalWorkSize": "[dataset]",
+  "outputBuffers": [],
+  "workDimension": 1,
+  "ioBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 3,
+      "size": "dataset*dataset"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 4,
+      "size": "dataset"
+    }
+  ],
+  "varArguments": [
+    {
+      "type": "float",
+      "pos": 5,
+      "value": "0.1"
+    },
+    {
+      "type": "float",
+      "pos": 6,
+      "value": "0.9"
+    },
+    {
+      "type": "int",
+      "pos": 7,
+      "value": "dataset"
+    }
+  ]
+}

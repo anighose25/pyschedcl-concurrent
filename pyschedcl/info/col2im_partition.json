@@ -1,0 +1,44 @@
+{
+	"src": "ForwardIm2Col.cl",
+	"name": "col2im",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 1,
+		"size": "16*16"
+	}
+  ],
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 0,
+		"value": "3"
+	},
+	{
+		"type": "int",
+		"pos": 3,
+		"value": "0"
+	}
+  ],
+	"partition":1,
+	"workDimension": 2,
+	"globalWorkSize": [32,32],
+	"id": 1,
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 2,
+          "size": "20*20",
+          "type": "float"
+      }
+  ],
+	"macros_values":
+      {
+					  "gPadding" : 1,
+						"gStride" : 1,
+					  "gColSize" : 1,
+					  "gFilterSize" : 1,
+					  "gSize" : 1
+  		 }
+
+}

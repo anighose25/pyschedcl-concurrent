@@ -1,0 +1,1 @@
+{"softmax0": {"write": {"device_start": -1, "host_queued_start": 1585477573.840983, "device_queued": -1, "device_end": -1, "host_queued_end": 1585477573.841338}, "device": "cpu", "nd_range": {"device_start": 2145348.0309533873, "device_end": 2145348.032301959}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

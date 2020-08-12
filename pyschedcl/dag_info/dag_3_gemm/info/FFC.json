@@ -1,0 +1,60 @@
+{
+	"src": "FFC.cl",
+	"name": "myGEMM3",
+	"inputBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 0,
+		"size": "m1*p1"
+	},
+  {
+    "break": 0,
+    "type": "float",
+    "pos": 1,
+    "size": "p1*n1"
+	},
+  {
+    "break": 0,
+    "type": "float",
+    "pos": 3,
+    "size": "n1"
+	}
+
+  ],
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 4,
+		"value": "m1"
+	},
+	{
+		"type": "int",
+		"pos": 5,
+		"value": "n1"
+	},
+	{
+		"type": "int",
+		"pos": 6,
+		"value": "p1"
+	}
+  ],
+	"partition":5,
+	"workDimension": 2,
+	"globalWorkSize": "[m1/wpt,n1]",
+	"localWorkSize" :"[TS,TS]",
+	"id": 1,
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 2,
+          "size": "m1*n1",
+          "type": "float"
+      }
+  ],
+	"ioBuffers":[],
+	"macros_values":
+      {
+					  "WPT": 1,
+						"TS":"TS"
+			}
+}

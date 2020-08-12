@@ -1,0 +1,64 @@
+{
+  "inputBuffers": [
+    {
+      "break": 1,
+      "type": "float",
+      "pos": 0,
+      "size": "m1*p1"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "p1*n1"
+    }
+  ],
+  "name": "gemm",
+  "src": "gemm.cl",
+  "globalWorkSize": "[m1,n1]",
+  "ioBuffers": [],
+  "workDimension": 2,
+  "outputBuffers": [
+
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "m1*n1"
+    }
+
+  ],
+
+  "varArguments": [
+    {
+      "type": "float",
+      "pos": 3,
+      "value": "1"
+    },
+    {
+      "type": "float",
+      "pos": 4,
+      "value": "0"
+    },
+    {
+      "type": "int",
+      "pos": 5,
+      "value": "m1"
+    },
+    {
+      "type": "int",
+      "pos": 6,
+      "value": "n1"
+    },
+    {
+      "type": "int",
+      "pos": 7,
+      "value": "p1"
+    }
+  ],
+  "macros_values":
+      {
+            "WPT": "work_per_thread",
+            "TS":"tile_size"
+      }
+}

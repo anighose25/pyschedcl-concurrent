@@ -1,0 +1,142 @@
+$py(mod='%')
+$py(op='gOutputSize')
+$py(
+def localid(x,S,C):
+    return "const int localId%d = (get_local_id(0)/%d)*%d*%d +get_local_id(0)%c%d+%d*%d;" % (x,S,S,C,mod,S,x,S)   
+def dumpOutput(x):
+    return "int resultIndex%d = (n * gNumFilters + outPlane) * gOutputSizeSquared + localId%d;\n    if (localId%d < gOutputSizeSquared)\n\t output[resultIndex%d] = sum%d;\n " % (x,x,x,x,x)
+)
+$py(
+def outputRow(x,outputSize):
+    return "int outputRow%d = localId%d/%s;" %(x, x, outputSize)
+)
+$py(
+def outputCol(x,outputSize):
+    return "int outputCol%d = localId%d%s%s;" %(x, x, mod,outputSize)
+)
+$py(
+def thisOffset_filter(x):
+    return "int thisOffset%d = localId%d + i * workgroupSize;\n\t\tif(thisOffset%d < filterCubeLength)\n\t\t\t_filterCube[thisOffset%d] = filters[filterCubeGlobalOffset + thisOffset%d];\n" %(x,x,x,x,x)
+)
+$py(
+def thisOffset_image(x):
+    return "int thisOffset%d = workgroupSize * i + localId%d;\n\t    if (thisOffset%d < gInputSizeSquared)\n\t\t_upstreamImage[ thisOffset%d ] = images[ thisUpstreamImageOffset + thisOffset%d ];\n" %(x,x,x,x,x)
+)
+$py(
+def rowOffset(x):
+    return """int inputRow%d = outputRow%d + u;
+            #if gPadZeros == 0
+                inputRow%d += gHalfFilterSize;
+            #endif
+            int inputimagerowoffset%d = inputRow * gInputSize;""" %(x,x,x,x)
+)
+$py(
+def colOffset(x):
+    return """int inputCol%d = outputCol%d + v;
+                #if gPadZeros == 0
+                    inputCol%d += gHalfFilterSize;
+                #endif""" %(x,x,x)
+)
+$py(
+def initconvolutionSum(x):
+    return """float sum%d = 0;""" %(x)
+)
+$py(
+def convolutionBoundaries(x):
+    return """const int minu%d = gPadZeros ? max(-gHalfFilterSize, -outputRow%d) : -gHalfFilterSize;
+    const int maxu%d = gPadZeros ? min(gHalfFilterSize - gEven, gOutputSize - 1 - outputRow%d  - gEven) : gHalfFilterSize - gEven;
+    const int minv%d = gPadZeros ? max(-gHalfFilterSize, -outputCol%d) : - gHalfFilterSize;
+    const int maxv%d = gPadZeros ? min(gHalfFilterSize - gEven, gOutputSize - 1 - outputCol%d - gEven) : gHalfFilterSize - gEven;""" %(x,x,x,x,x,x,x,x)
+)
+$py(
+def convolutionLoop(x):
+    return """for (int u = minu%d; u <= maxu%d; u++) {
+            int inputRow = outputRow%d + u;
+            #if gPadZeros == 0
+                inputRow += gHalfFilterSize;
+            #endif
+            int inputimagerowoffset = inputRow * gInputSize;
+            int filterrowoffset = filterImageOffset + (u+gHalfFilterSize) * gFilterSize + gHalfFilterSize;
+            for (int v = minv%d; v <= maxv%d; v++) {
+                int inputCol = outputCol%d + v;
+                #if gPadZeros == 0
+                    inputCol += gHalfFilterSize;
+                #endif
+                if (localId%d < gOutputSizeSquared) {
+                   sum%d += _upstreamImage[ inputimagerowoffset + inputCol] * _filterCube[ filterrowoffset + v ];
+                   
+                }
+            } 
+        }""" %(x,x,x,x,x,x,x,x)
+)
+$py(
+def sum(x):
+    return """if (localId%d < gOutputSizeSquared) {
+                    sum += _upstreamImage[ inputimagerowoffset%d + inputCol%d] * _filterCube[ filterrowoffset + v ];
+                }""" %(x,x,x)
+)
+
+$extend(localid)
+$extend(dumpOutput)
+$extend(outputRow)
+$extend(outputCol)
+$extend(thisOffset_filter)
+$extend(thisOffset_image)
+$extend(rowOffset)
+$extend(colOffset)
+$extend(sum)
+$extend(convolutionBoundaries)
+$extend(convolutionLoop)
+$extend(initconvolutionSum)
+void kernel forward_3_by_n_outplane(const int batchSize,
+    global const float *images, global const float *filters, 
+    global float *output,
+    local float *_upstreamImage, local float *_filterCube) 
+{
+    const int globalId = get_global_id(0);
+    const int workgroupId = get_group_id(0);
+    const int workgroupSize = $(C)*get_local_size(0);
+    const int n = workgroupId / gNumFilters;
+    const int outPlane = workgroupId % gNumFilters;
+$for(x in range(0,C))
+    $localid(x,S,C)
+    $outputRow(x,op)
+    $outputCol(x,op)
+    $convolutionBoundaries(x)
+$endfor
+    const int numUpstreamsPerThread = (gInputSizeSquared + workgroupSize - 1) / workgroupSize;
+    const int filterCubeLength = gInputPlanes * gFilterSizeSquared;
+    const int filterCubeGlobalOffset = outPlane * filterCubeLength;
+    const int numPixelsPerThread = (filterCubeLength + workgroupSize - 1) / workgroupSize;
+    for (int i = 0; i < numPixelsPerThread; i++) 
+    {
+$for(x in range(0,C))
+        $thisOffset_filter(x)
+$endfor
+    }
+$for(x in range(0,C))
+    $initconvolutionSum(x)
+$endfor
+
+    for (int upstreamPlane = 0; upstreamPlane < gInputPlanes; upstreamPlane++) {
+        int thisUpstreamImageOffset = (n * gInputPlanes + upstreamPlane) * gInputSizeSquared;
+        barrier(CLK_LOCAL_MEM_FENCE);
+        for (int i = 0; i < numUpstreamsPerThread; i++) {
+    $for(x in range(0,C))
+        $thisOffset_image(x)
+    $endfor
+    }
+        barrier(CLK_LOCAL_MEM_FENCE);
+        int filterImageOffset = upstreamPlane * gFilterSizeSquared;
+    $for(x in range(0,C))
+        $convolutionLoop(x)
+    $endfor
+    }
+$for(x in range(0,C))
+    $dumpOutput(x)
+$endfor
+}
+
+  
+
+

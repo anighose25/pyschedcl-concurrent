@@ -1,0 +1,1 @@
+{"gesummv_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586203914.242522, "device_queued": -1, "device_end": -1, "host_queued_end": 1586203914.242813}, "device": "cpu", "nd_range": {"device_start": 2871688.4323076094, "device_end": 2871688.432599986}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

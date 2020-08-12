@@ -1,0 +1,6 @@
+Error opening '/home/anirban/ResearchTools/Github/pyschedcl-stable/pyschedcl/passes/feature_pass/build/thrud/lib/libThrud.so': /home/anirban/ResearchTools/Github/pyschedcl-stable/pyschedcl/passes/feature_pass/build/thrud/lib/libThrud.so: cannot open shared object file: No such file or directory
+  -load request ignored.
+opt: Unknown command line argument '-opencl-instcount'.  Try: 'opt -help'
+opt: Did you mean '-instcount'?
+opt: Unknown command line argument '-count-kernel-name'.  Try: 'opt -help'
+opt: Did you mean '-internalize'?

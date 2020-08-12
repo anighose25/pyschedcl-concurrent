@@ -1,0 +1,66 @@
+{
+	"src": "forward4.cl",
+	"name": "forward_4_by_n_outplane_smallercache",
+	"inputBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 1,
+		"size": "16*16*8"
+	},
+  {
+    "break": 1,
+    "type": "float",
+    "pos": 2,
+    "size": "2*2*8*10"
+  }
+  ],
+  "localArguments": [
+      {
+          "pos": 4,
+          "size": "16*16*2",
+          "type": "float"
+      },
+      {
+          "pos": 5,
+          "size": "2*2*8",
+          "type": "float"
+      }
+  ],
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 0,
+		"value": "2"
+	}
+  ],
+	"partition":1,
+	"workDimension": 2,
+	"globalWorkSize": [32,32],
+	"id": 1,
+  "outputBuffers": [
+      {
+          "break": 1,
+          "pos": 3,
+          "size": "15*15*10",
+          "type": "float"
+      }
+  ],
+	"macros_values":
+      {
+					 "gOutputSize" : 15,
+					 "gNumFilters": 10,
+					 "gEven": 0,
+					 "gFilterSizeSquared": 4,
+					 "gInputPlanes": 8,
+					 "gInputSizeSquared": 256,
+					 "gOutputSizeSquared": 225,
+					 "gPadZeros": 0,
+					 "gHalfFilterSize": 1,
+					 "gInputSize": 16,
+					 "gFilterSize": 2,
+					 "gPixelsPerThread":1,
+					 "gWorkgroupSize":32
+				 }
+
+
+}

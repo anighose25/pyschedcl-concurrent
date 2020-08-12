@@ -1,0 +1,1 @@
+{"bicgKernel10": {"write": {"device_start": -1, "host_queued_start": 1586198005.840277, "device_queued": -1, "device_end": -1, "host_queued_end": 1586198005.840532}, "device": "cpu", "nd_range": {"device_start": 2865780.030024364, "device_end": 2865780.030048718}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

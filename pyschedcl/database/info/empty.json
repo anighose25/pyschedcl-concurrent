@@ -1,0 +1,26 @@
+{
+	"src": "empty.cl",
+	"name": "empty",
+	"ioBuffers": [{
+		"break": 1,
+		"type": "float",
+		"pos": 0,
+		"size": "n1*w1"
+	}
+  	],
+	"varArguments": [
+
+  ],
+	"partition":5,
+	"workDimension": 1,
+	"globalWorkSize": "[1]",
+
+	"id": 1,
+  "outputBuffers": [
+
+  ],
+	"inputBuffers":[
+
+	]
+
+}

@@ -1,0 +1,1 @@
+{"coalesced_gemm0": {"write": {"host_queued": 1583904573.851647, "device_start": 4393526.12346333, "device_end": 4393526.123984364, "device_queued": 4393526.12265236}, "device": "cpu", "nd_range": {"device_start": 4393526.123999411, "device_end": 4393526.125140634}, "read": {"device_start": 4393526.125154572, "device_end": 4393526.1251934385}}}

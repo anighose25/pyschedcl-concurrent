@@ -1,0 +1,1 @@
+{"covar_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586203132.544997, "device_queued": -1, "device_end": -1, "host_queued_end": 1586203132.545262}, "device": "cpu", "nd_range": {"device_start": 2870906.734752178, "device_end": 2870906.739096581}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

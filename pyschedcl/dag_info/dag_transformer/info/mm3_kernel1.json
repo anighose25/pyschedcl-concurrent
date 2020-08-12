@@ -1,0 +1,46 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset*dataset"
+    },
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "dataset*dataset"
+    }
+  ],
+  "name": "mm3_kernel1",
+  "src": "3mm.cl",
+  "globalWorkSize": "[dataset,dataset]",
+  "outputBuffers": [],
+  "workDimension": 2,
+  "ioBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 2,
+      "size": "dataset*dataset"
+    }
+  ],
+  "varArguments": [
+    {
+      "type": "int",
+      "pos": 3,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 5,
+      "value": "dataset"
+    }
+  ]
+}

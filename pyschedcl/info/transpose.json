@@ -1,0 +1,47 @@
+{
+	"src": "transpos.cl",
+	"name": "transpose",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 2,
+		"size": "16"
+	}
+  ],
+	"varArguments": [
+	{
+		"type": "int",
+		"pos": 0,
+		"value": "4"
+	},
+	{
+		"type": "int",
+		"pos": 1,
+		"value": "4"
+	}
+	],
+	"partition":10,
+	"workDimension": 2,
+	"globalWorkSize": [4,4],
+	"localWorkSize":[2,2],
+	"id": 1,
+  "outputBuffers": [
+      {
+          "break": 0,
+          "pos": 3,
+          "size": "4*4",
+          "type": "float"
+			}
+  ],
+	"macros_values":
+      {
+					 "TRANSPOSEY" : 2,
+					 "TRANSPOSEX" : 2,
+					 "TS" : 2,
+					 "WPT":1,
+					 "RTS":2,
+					 "wt_size":16,
+      		 "It_size":16
+				 }
+
+}

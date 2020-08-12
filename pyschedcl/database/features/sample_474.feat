@@ -1,0 +1,95 @@
+0 -> float_input,dataset
+1 -> float_input,none
+2 -> float_output,dataset
+3 -> float_input,none
+4 -> int,none
+0:global_id(0)
+2:global_id(0),global_id(0)
+---
+AShr:            0
+Add:             0
+AddrSpaceCast:   0
+Alloca:          0
+And:             0
+AtomicCmpXchg:   0
+AtomicRMW:       0
+BitCast:         0
+Br:              6
+Call:            3
+ExtractElement:  0
+ExtractValue:    0
+FAdd:            0
+FCmp:            1
+FDiv:            0
+FMul:            0
+FPExt:           0
+FPToSI:          0
+FPToUI:          0
+FPTrunc:         0
+FRem:            0
+FSub:            0
+Fence:           0
+GetElementPtr:   3
+ICmp:            1
+IndirectBr:      0
+InsertElement:   0
+InsertValue:     0
+IntToPtr:        0
+Invoke:          0
+LShr:            0
+LandingPad:      0
+Load:            1
+Mul:             0
+Or:              0
+PHI:             1
+PtrToInt:        0
+Resume:          0
+Ret:             1
+SDiv:            0
+SExt:            0
+SIToFP:          1
+SRem:            0
+Select:          0
+Shl:             0
+ShuffleVector:   0
+Store:           2
+Sub:             0
+Switch:          0
+Trunc:           0
+UDiv:            0
+UIToFP:          0
+URem:            0
+Unreachable:     0
+UserOp1:         0
+UserOp2:         0
+VAArg:           0
+Xor:             0
+ZExt:            0
+args:            5
+barriers:        1
+blocks:          7
+condBranches:    3
+criticalEdges:   3
+divInsts:        14
+divRegionInsts:  20
+divRegions:      2
+edges:           9
+eightB:          0
+fourB:           3
+fps:             2
+insts:           20
+localLoads:      0
+localStores:     0
+mathFunctions:   0
+uncondBranches:  3
+uniformLoads:    0
+vector2:         0
+vector4:         0
+vectorOperands:  0
+instsPerBlock:   [ 4, 3, 2, 5, 3, 2, 1 ]
+phiArgs:         [ 2, 0, 0, 0, 0, 0, 0 ]
+ilpPerBlock:     [  ]
+mlpPerBlock:     [  ]
+avgLiveRange:    [ 2.5, 1, 0, 1.25, 1, 0, 0 ]
+aliveOut:        [ 1, 0, 0, 0, 0, 0, 0 ]
+...

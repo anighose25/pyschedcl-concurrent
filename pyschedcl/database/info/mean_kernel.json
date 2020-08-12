@@ -1,0 +1,40 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "(dataset)*(dataset)"
+    }
+  ],
+  "name": "mean_kernel",
+  "src": "covariance.cl",
+  "globalWorkSize": "[dataset]",
+  "outputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset"
+    }
+  ],
+  "workDimension": 1,
+  "ioBuffers": [],
+  "varArguments": [
+    {
+      "type": "float",
+      "pos": 2,
+      "value": "dataset-1"
+    },
+    {
+      "type": "int",
+      "pos": 3,
+      "value": "dataset-1"
+    },
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "dataset-1"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 26fd3d1f9420b6ba10d1d528b38f4f56)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 85f768e1fed6bb550776e3a4588f6b4d)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:root:DISPATCH : Dispatch function call for forward_3_by_n_outplane starts at 2019-04-06 10:09:20.877202
+DEBUG:root:DISPATCH_gpu : Evaluation of kernel arguments for forward_3_by_n_outplane on GPU
+DEBUG:root:DISPATCH_gpu : Creation of buffers for forward_3_by_n_outplane on GPU
+DEBUG:root:PARTITION : Creating Input Buffers gpu
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 110976
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Create_Input_Buffers_number_of_elements : 110976
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 450
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Create_Input_Buffers_number_of_elements : 450
+DEBUG:root:PARTITION : Creating Output Buffers gpu
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 172800
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu: forward_3_by_n_outplane Create_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu: forward_3_by_n_outplane Create_Output_Buffers_number_of_elements : 172800
+DEBUG:root:PARTITION : Creating IO Buffers gpu
+DEBUG:root:DISPATCH_gpu : Setting kernel arguments for forward_3_by_n_outplane on GPU
+DEBUG:root:DISPATCH_gpu :Calling enqueue_write_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Write Buffers gpu
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 110976
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Write_Input_Buffers_number_of_elements : 110976
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 450
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Write_Input_Buffers_number_of_elements : 450
+DEBUG:root:PARTITION : Number of write buffers 2
+DEBUG:root:DISPATCH_gpu : Calling enqueue_nd_range_kernel for GPU
+DEBUG:root:PARTITION: Coarsening Factor 1
+DEBUG:root:DISPATCH_gpu : Calling enqueue_read_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Read Buffers gpu
+DEBUG:root:PARTITION : forward_3_by_n_outplane get_slice_values -> Original Buffer Size: 172800
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Read_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : forward_3_by_n_outplane Enqueue_Read_Output_Buffers_number_of_elements : 172800
+DEBUG:root:PARTITION : Number of read buffers 1
+DEBUG:root:DISPATCH : forward_3_by_n_outplane ke.dispatch_end 2019-04-06 10:09:20.880468 
+DEBUG:root:DISPATCH : Evaluation of kernel arguments for forward_3_by_n_outplane 
+DEBUG:root:DISPATCH : Number of events 3
+DEBUG:root:DISPATCH : Dispatch function call for forward_3_by_n_outplane ends at 2019-04-06 10:09:20.880683
+DEBUG:root:CALLBACK_TRIGGERED : forward_3_by_n_outplane WRITE execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : forward_3_by_n_outplane gpu KERNEL event
+DEBUG:root:CALLBACK_PROBE : forward_3_by_n_outplane gpu READ event
+DEBUG:root:CALLBACK_RESET : forward_3_by_n_outplane Resetting bolt value by gpu WRITE event
+DEBUG:root:CALLBACK_TRIGGERED : forward_3_by_n_outplane KERNEL execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : forward_3_by_n_outplane gpu READ event
+DEBUG:root:CALLBACK_RESET : forward_3_by_n_outplane Resetting bolt value by gpu KERNEL event
+DEBUG:root:CALLBACK_TRIGGERED : forward_3_by_n_outplane READ execution finished for device gpu
+DEBUG:root:CALLBACK : {'create_buf_start': '1554525560.88', 'dispatch_id': '', 'create_buf_end': '1554525560.88', 'dispatch_start': '2019-04-06 10:09:20.877202', 'kernel_id': '1', 'write_end': '1554525560.88', 'dispatch_end': 'None', 'ndrange_start': '1554525560.88', 'ndrange_end': '1554525560.88', 'kernel_name': 'forward_3_by_n_outplane', 'read_end': '1554525560.88', 'read_start': '1554525560.88', 'write_start': '1554525560.88'}
+DEBUG:root:CALLBACK : Pushing info onto gpu0
+DEBUG:root:Releasing buffers of forward_3_by_n_outplane on gpu
+DEBUG:root:CALLBACK_RESET : forward_3_by_n_outplane Resetting bolt value by gpu READ event

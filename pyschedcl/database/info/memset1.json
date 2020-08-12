@@ -1,0 +1,17 @@
+{
+  "inputBuffers": [],
+  "name": "memset1",
+  "src": "memset.cl",
+  "globalWorkSize": "[dataset]",
+  "outputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset"
+    }
+  ],
+  "workDimension": 1,
+  "ioBuffers": [],
+  "varArguments": []
+}

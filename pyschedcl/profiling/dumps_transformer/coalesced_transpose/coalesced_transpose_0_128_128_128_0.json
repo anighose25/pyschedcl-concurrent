@@ -1,0 +1,1 @@
+{"coalesced_transpose0": {"write": {"device_start": -1, "host_queued_start": 1585477537.200916, "device_queued": -1, "device_end": -1, "host_queued_end": 1585477537.201176}, "device": "cpu", "nd_range": {"device_start": 2145311.390783001, "device_end": 2145311.3908364843}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

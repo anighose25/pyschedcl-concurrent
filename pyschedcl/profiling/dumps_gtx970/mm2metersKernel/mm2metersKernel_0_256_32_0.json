@@ -1,0 +1,1 @@
+{"mm2metersKernel0": {"write": {"device_start": -1, "host_queued_start": 1586204595.644528, "device_queued": -1, "device_end": -1, "host_queued_end": 1586204595.64479}, "device": "cpu", "nd_range": {"device_start": 2872369.8342784364, "device_end": 2872369.834330243}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

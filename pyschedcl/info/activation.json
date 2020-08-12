@@ -1,0 +1,35 @@
+{
+	"src": "activate.cl",
+	"name": "forwardNaive",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 2,
+		"size": "32"
+	}
+	],
+	"partition":0,
+	"workDimension": 2,
+	"globalWorkSize": [32,32],
+	"id": 1,
+	"varArguments": [
+		{
+			"type": "int",
+			"pos": 0,
+			"value": "32"
+		}
+		],
+
+  "outputBuffers": [
+      {
+          "break": 0,
+          "pos": 1,
+          "size": "32",
+          "type": "float"
+	  }
+  ],
+	"macros_values":
+      {
+				"TANH":1
+  		 }
+}

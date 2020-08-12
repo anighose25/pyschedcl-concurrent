@@ -1,0 +1,1 @@
+{"std_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586206038.95295, "device_queued": -1, "device_end": -1, "host_queued_end": 1586206038.953211}, "device": "cpu", "nd_range": {"device_start": 2873813.142699807, "device_end": 2873813.1427325653}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

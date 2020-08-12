@@ -1,0 +1,18 @@
+0  opt             0x0000000001180d82 llvm::sys::PrintStackTrace(_IO_FILE*) + 34
+1  opt             0x0000000001180934
+2  libpthread.so.0 0x00007f43aea92390
+3  libThrud.so     0x00007f43ad90d402 llvm::User::getNumOperands() const + 12
+4  libThrud.so     0x00007f43ad93374b llvm::VariadicOperandTraits<llvm::GetElementPtrInst, 1u>::operands(llvm::User const*) + 24
+5  libThrud.so     0x00007f43ad932889 llvm::GetElementPtrInst::getOperand(unsigned int) const + 27
+6  libThrud.so     0x00007f43ad92f260 FeatureCollector::getAccessExpressions(llvm::Function&, NDRange*, llvm::LoopInfo*, llvm::PostDominatorTree*) + 1896
+7  libThrud.so     0x00007f43ad9440a7
+8  opt             0x0000000000ea360f llvm::FPPassManager::runOnFunction(llvm::Function&) + 623
+9  opt             0x0000000000ea369b llvm::FPPassManager::runOnModule(llvm::Module&) + 43
+10 opt             0x0000000000ea5b35 llvm::legacy::PassManagerImpl::run(llvm::Module&) + 709
+11 opt             0x00000000005a0477 main + 3431
+12 libc.so.6       0x00007f43adc1c830 __libc_start_main + 240
+13 opt             0x00000000005c12f9 _start + 41
+Stack dump:
+0.	Program arguments: opt -instnamer -mem2reg -loop-simplify -load /home/anirban/ResearchTools/Github/pyschedcl-stable/pyschedcl/passes/build/thrud/lib/libThrud.so -structurizecfg -opencl-instcount -count-kernel-name A 
+1.	Running pass 'Function Pass Manager' on module '<stdin>'.
+2.	Running pass 'Collect opencl features' on function '@A'

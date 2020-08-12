@@ -1,0 +1,56 @@
+$py(mod='%')
+$py(op='gOutputSize')
+$py(
+def globalId(x,S,C):
+    return "const int globalId%d = get_group_id(0)*get_local_size(0)+(get_local_id(0)/%d)*%d*%d +get_local_id(0)%c%d+%d*%d;" % (x,S,S,C,mod,S,x,S)
+
+def pooling(x,S,C):
+    return """const int intraImageOffset%d = globalId%d %c gOutputSizeSquared;
+    const int outputRow%d = intraImageOffset%d / gOutputSize;
+    const int outputCol%d = intraImageOffset%d %c gOutputSize;
+
+    const int image2dIdx%d = globalId%d / gOutputSizeSquared;
+    const int plane%d = image2dIdx%d %c gNumPlanes;
+    const int n%d = image2dIdx%d / gNumPlanes;
+
+    if (n%d >= batchSize) {
+        return;
+    }
+
+    inputRow = outputRow%d * gPoolingSize;
+    inputCol = outputCol%d * gPoolingSize;
+    inputImageOffset = (n%d* gNumPlanes + plane%d) * gInputSizeSquared;
+    selector = 0;
+    poolInputOffset = inputImageOffset + inputRow * gInputSize + inputCol;
+    maxValue = input[ poolInputOffset ];
+    for (int dRow = 0; dRow < gPoolingSize; dRow++) {
+        for (int dCol = 0; dCol < gPoolingSize; dCol++) {
+            bool process = (inputRow + dRow < gInputSize) && (inputCol + dCol < gInputSize);
+            if (process) {
+                float thisValue = input[ poolInputOffset + dRow * gInputSize + dCol ];
+                if (thisValue > maxValue) {
+                    maxValue = thisValue;
+                    selector = dRow * gPoolingSize + dCol;
+                }
+            }
+        }
+    }
+    output[ globalId%d ] = maxValue;
+    selectors[ globalId%d ] = selector;""" % (x,x,mod, x,x,x,x, mod, x,x,x,x, mod, x,x,x, x,x,x,x, x,x)
+
+)
+$extend(globalId)
+$extend(pooling)
+
+kernel void forwardNaive(const int batchSize, global const float *input, global int *selectors, global float *output) 
+{
+$for(x in range(0,C))
+    $globalId(x,S,C)
+$endfor
+    int poolInputOffset,inputRow,inputCol,inputImageOffset,selector;
+    float maxValue;
+$for(x in range(0,C))
+    $pooling(x,S,C)
+$endfor    
+   
+}

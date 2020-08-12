@@ -1,0 +1,34 @@
+{
+  "inputBuffers": [
+    {
+      "break": 1,
+      "type": "float",
+      "pos": 0,
+      "size": "dataset*dataset"
+    }
+
+  ],
+  "name": "naive_copy",
+  "src": "transpose.cl",
+  "globalWorkSize": "[dataset,dataset]",
+  "outputBuffers": [
+    {
+      "break": 1,
+      "type": "float",
+      "pos": 1,
+      "size": "dataset*dataset"
+    }
+  ],
+  "workDimension": 2,
+  "ioBuffers": [
+
+  ],
+
+  "varArguments": [
+    {
+      "type": "int",
+      "pos": 2,
+      "value": "dataset"
+    }
+  ]
+}

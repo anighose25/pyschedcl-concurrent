@@ -1,0 +1,98 @@
+0 -> float
+1 -> float_input
+2 -> int
+3 -> int
+4 -> float_output
+5 -> float_io
+---
+AShr:            0
+Add:             3
+AddrSpaceCast:   0
+Alloca:          0
+And:             0
+AtomicCmpXchg:   0
+AtomicRMW:       0
+BitCast:         0
+Br:              19
+Call:            11
+ExtractElement:  0
+ExtractValue:    0
+FAdd:            2
+FCmp:            0
+FDiv:            0
+FMul:            1
+FPExt:           0
+FPToSI:          0
+FPToUI:          0
+FPTrunc:         0
+FRem:            0
+FSub:            0
+Fence:           0
+GetElementPtr:   8
+ICmp:            5
+IndirectBr:      0
+InsertElement:   0
+InsertValue:     0
+IntToPtr:        0
+Invoke:          0
+LShr:            0
+LandingPad:      0
+Load:            5
+Mul:             4
+Or:              0
+PHI:             11
+PtrToInt:        0
+Resume:          0
+Ret:             1
+SDiv:            0
+SExt:            0
+SIToFP:          0
+SRem:            0
+Select:          0
+Shl:             0
+ShuffleVector:   0
+Store:           3
+Sub:             0
+Switch:          0
+Trunc:           0
+UDiv:            0
+UIToFP:          0
+URem:            0
+Unreachable:     0
+UserOp1:         0
+UserOp2:         0
+VAArg:           0
+Xor:             0
+ZExt:            0
+args:            6
+barriers:        2
+blocks:          20
+condBranches:    8
+criticalEdges:   8
+divInsts:        33
+divRegionInsts:  48
+divRegions:      3
+edges:           27
+eightB:          0
+fourB:           16
+fps:             1
+insts:           73
+localLoads:      3
+localStores:     2
+mathFunctions:   0
+uncondBranches:  11
+uniformLoads:    1
+vector2:         0
+vector4:         0
+vectorOperands:  0
+instsPerBlock:   [ 2, 3, 4, 3, 4, 7, 4, 3, 4, 4, 7, 8, 3, 1, 2, 3, 5, 2, 
+                   3, 1 ]
+phiArgs:         [ 4, 6, 4, 0, 0, 0, 0, 2, 2, 4, 0, 0, 0, 0, 0, 0, 0, 0, 
+                   0, 0 ]
+ilpPerBlock:     [  ]
+mlpPerBlock:     [  ]
+avgLiveRange:    [ 0, 1, 1, 0, 1, 1.4, 0, 1, 1, 1, 1.25, 1.66667, 0, 0, 
+                   0, 1, 1.33333, 0, 1, 0 ]
+aliveOut:        [ 1, 1, 2, 0, 2, 1, 0, 1, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 
+                   1, 0 ]
+...

@@ -1,0 +1,264 @@
+INFO:root:Allocating device cpu
+INFO:root:Dispatching task 1
+INFO:root:EVENT: Free kernels: [8, 17]for task 1
+INFO:root:DISPATCH ALL :cpu 8 empty
+INFO:root:EVENT: Dispatching8 to device0,-1
+INFO:root:EVENT: number of finished parents for child 1 1
+INFO:root:EVENT: Adding free kernels [1] to [17] of task1
+INFO:root:DISPATCH ALL :cpu 17 empty
+INFO:root:EVENT: Dispatching17 to device1,-1
+INFO:root:EVENT: number of finished parents for child 16 1
+INFO:root:EVENT: number of finished parents for child 9 1
+INFO:root:EVENT: Adding free kernels [9] to [1] of task1
+INFO:root:DISPATCH ALL :cpu 1 coalesced_gemm
+INFO:root:EVENT: Dispatching1 to device0,-1
+INFO:root:DISPATCH ALL :cpu 9 coalesced_gemm
+INFO:root:EVENT: Dispatching9 to device1,-1
+INFO:root:EVENT: number of finished parents for child 13 1
+INFO:root:Chunks Left: 0
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 17 finished on device cpu
+INFO:root:EVENT: 8 finished on device cpu
+INFO:root:Successors being added[16, 9, 10, 11]
+INFO:root:Successors being added[0, 1, 2, 7]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 16 1
+INFO:root:EVENT: (notify_callback) number of finished parents for child 0 1
+INFO:root:EVENT: (notify_callback) number of finished parents for child 9 1
+INFO:root:Child ready0
+INFO:root:Child ready9
+INFO:root:EVENT: Adding free kernels [0] to [] of task0
+INFO:root:EVENT: Adding free kernels [9] to [] of task1
+INFO:root:Child being added to frontier Q0
+INFO:root:EVENT: (notify_callback) number of finished parents for child 1 1
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 1
+INFO:root:Child ready1
+INFO:root:EVENT: (notify_callback) number of finished parents for child 10 1
+INFO:root:Allocating device gpu
+INFO:root:EVENT: Adding free kernels [1] to [9] of task1
+INFO:root:Child ready10
+INFO:root:Dispatching task 0
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 1
+INFO:root:EVENT: Adding free kernels [10] to [0] of task0
+INFO:root:EVENT: (notify_callback) number of finished parents for child 2 1
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 0
+INFO:root:Child ready2
+INFO:root:EVENT: Free kernels: [0, 10]for task 0
+INFO:root:EVENT: (notify_callback) number of finished parents for child 11 1
+INFO:root:Child ready11
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 1 finished on device cpu
+INFO:root:Successors being added[3]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 3 1
+INFO:root:Child ready3
+INFO:root:DISPATCH ALL :gpu 0 coalesced_gemm
+INFO:root:EVENT: Dispatching0 to device-1,0
+None
+INFO:root:EVENT: number of finished parents for child 4 1
+INFO:root:DISPATCH ALL :gpu 10 coalesced_gemm
+INFO:root:EVENT: Dispatching10 to device-1,1
+None
+INFO:root:EVENT: number of finished parents for child 12 1
+INFO:root:EVENT: Adding free kernels [12] to [] of task0
+INFO:root:DISPATCH ALL :gpu 12 coalesced_transpose
+INFO:root:EVENT: Dispatching12 to device-1,2
+[<pyopencl.cffi_cl.Event object at 0x2accaf3a0b50>]
+INFO:root:EVENT: Adding free kernels [2] to [] of task0
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 0
+INFO:root:EVENT: Adding free kernels [11] to [2] of task0
+INFO:root:EVENT: (notify_callback) number of finished parents for child 7 1
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 0
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d1510>, <pyschedcl.Task object at 0x2acb911d10d0>]
+INFO:root:dispatching task: 1
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d1510>, <pyschedcl.Task object at 0x2acb911d10d0>, <pyschedcl.Task object at 0x2acb911d10d0>]
+INFO:root:EVENT: Free kernels: [9, 1]for task 1
+INFO:root:DISPATCH ALL :cpu 9 coalesced_gemm
+INFO:root:dispatching task: 1
+INFO:root:EVENT: Dispatching9 to device0,-1
+INFO:root:EVENT: number of finished parents for child 13 2
+INFO:root:EVENT: Adding free kernels [13] to [1] of task1
+INFO:root:DISPATCH ALL :cpu 1 coalesced_gemm
+INFO:root:EVENT: Dispatching1 to device1,-1
+INFO:root:DISPATCH ALL :cpu 13 coalesced_gemm
+INFO:root:EVENT: Dispatching13 to device0,-1
+INFO:root:EVENT: Adding free kernels [3] to [2, 11] of task0
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 0
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d10d0>]
+INFO:root:dispatching task: 0
+INFO:root:EVENT: Free kernels: [2, 11, 3]for task 0
+INFO:root:EVENT: number of finished parents for child 14 1
+INFO:root:EVENT: Adding free kernels [14] to [] of task1
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 12 finished on device gpu
+INFO:root:Successors being added[13]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 13 3
+INFO:root:Child tasks to be dispatched: []
+INFO:root:DISPATCH ALL :gpu 2 coalesced_gemm
+INFO:root:EVENT: Dispatching2 to device-1,0
+INFO:root:DISPATCH ALL :cpu 14 softmax
+INFO:root:EVENT: Dispatching14 to device1,-1
+INFO:root:EVENT: number of finished parents for child 15 1
+INFO:root:dispatching task: 0
+None
+INFO:root:EVENT: number of finished parents for child 6 1
+INFO:root:Chunks Left: -1
+INFO:root:DISPATCH ALL :gpu 11 coalesced_gemm
+INFO:root:EVENT: Dispatching11 to device-1,1
+None
+INFO:root:DISPATCH ALL :gpu 3 coalesced_transpose
+INFO:root:EVENT: Dispatching3 to device-1,2
+None
+INFO:root:EVENT: number of finished parents for child 4 2
+INFO:root:EVENT: Adding free kernels [4] to [] of task0
+INFO:root:DISPATCH ALL :gpu 4 coalesced_gemm
+INFO:root:EVENT: Dispatching4 to device-1,0
+[<pyopencl.cffi_cl.Event object at 0x2accb29b4e50>]
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 11 finished on device gpu
+INFO:root:Successors being added[15]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 15 2
+INFO:root:Child ready15
+INFO:root:EVENT: Adding free kernels [15] to [] of task1
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 1
+INFO:root:EVENT: Free kernels: [15]for task 1
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d1510>]
+INFO:root:dispatching task: 1
+INFO:root:DISPATCH ALL :cpu 15 coalesced_gemm
+INFO:root:EVENT: Dispatching15 to device0,-1
+INFO:root:EVENT: number of finished parents for child 16 2
+INFO:root:EVENT: Adding free kernels [16] to [] of task1
+INFO:root:DISPATCH ALL :cpu 16 coalesced_gemm
+INFO:root:EVENT: Dispatching16 to device1,-1
+INFO:root:dispatching task: 0
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 4 finished on device gpu
+INFO:root:Successors being added[5]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 5 1
+INFO:root:Child ready5
+INFO:root:EVENT: Adding free kernels [5] to [] of task1
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 1
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d1510>]
+INFO:root:dispatching task: 1
+INFO:root:EVENT: Free kernels: [5]for task 1
+INFO:root:DISPATCH ALL :cpu 5 softmax
+INFO:root:EVENT: Dispatching5 to device0,-1
+INFO:root:EVENT: Free kernels: []for task 1
+free devices  [1, 0]
+ready queue deque([])
+INFO:root:Task1 finished on device cpu State of ready queue :- {'gpu': deque([]), 'cpu': deque([1, 0])}
+free devices  [1, 0]
+ready queue deque([1, 0])
+INFO:root:Task1 finished on device cpu State of ready queue :- {'gpu': deque([]), 'cpu': deque([1, 0, 1, 0])}
+INFO:root:Chunks Left: 0
+INFO:root:EVENT: 5 finished on device cpu
+INFO:root:Successors being added[6]
+INFO:root:EVENT: (notify_callback) number of finished parents for child 6 2
+INFO:root:Child ready6
+INFO:root:EVENT: Adding free kernels [6] to [] of task0
+INFO:root:Child being added to child_tasks_to_be_dispatched list: 0
+INFO:root:Child tasks to be dispatched: [<pyschedcl.Task object at 0x2acb911d10d0>]
+INFO:root:EVENT: Free kernels: [6]for task 0
+INFO:root:dispatching task: 0
+INFO:root:DISPATCH ALL :gpu 6 coalesced_gemm
+INFO:root:EVENT: Dispatching6 to device-1,1
+[<pyopencl.cffi_cl.Event object at 0x2accb29b4750>]
+INFO:root:EVENT: number of finished parents for child 7 2
+INFO:root:EVENT: Adding free kernels [7] to [] of task0
+INFO:root:DISPATCH ALL :gpu 7 coalesced_gemm
+INFO:root:EVENT: Dispatching7 to device-1,2
+[<pyopencl.cffi_cl.Event object at 0x2accb29848d0>]
+free devices  [0	 	 Total Time measured by the scheduler -  0.215768814087
+INFO:root:EVENT: Free kernels: []for task 0
+, 1, 2]
+ready queue deque([])
+INFO:root:Task0 finished on device gpu State of ready queue :- {'gpu': deque([0, 1, 2]), 'cpu': deque([1, 0, 1, 0])}
+INFO:root:dispatching task: 0
+free devices  [0, 1, 2]
+INFO:root:EVENT: Free kernels: []for task 0
+ready queue deque([0, 1, 2])
+INFO:root:Task0 finished on device gpu State of ready queue :- {'gpu': deque([0, 1, 2, 0, 1, 2]), 'cpu': deque([1, 0, 1, 0])}
+INFO:root:EVENT: Free kernels: []for task 0
+free devices  [0, 1, 2]
+ready queue deque([0, 1, 2, 0, 1, 2])
+INFO:root:Task0 finished on device gpu State of ready queue :- {'gpu': deque([0, 1, 2, 0, 1, 2, 0, 1, 2]), 'cpu': deque([1, 0, 1, 0])}
+free devices  [0, 1, 2]
+ready queue deque([0, 1, 2, 0, 1, 2, 0, 1, 2])
+INFO:root:Task0 finished on device gpu State of ready queue :- {'gpu': deque([0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2]), 'cpu': deque([1, 0, 1, 0])}
+dag number :  0
+	 Kernel  coalesced_gemm   0   gpu
+		 Write event | Start time  0.0  | End time  0.000370740890503
+		 Write event | Start time  0.000524759292603  | End time  0.000699043273926
+		 ND range | Start time  0.000704050064087  | End time  0.0059552192688
+	 Kernel  coalesced_gemm   1   cpu
+		 ND range | Start time  0.0047845877707  | End time  0.0188952386379
+		 ND range | Start time  0.0611232286319  | End time  0.0697647044435
+		 Read event | Start time  0.0189046803862  | End time  0.019213559106
+		 Read event | Start time  0.0697953430936  | End time  0.0715048899874
+	 Kernel  coalesced_gemm   2   gpu
+		 Write event | Start time  0.0633475780487  | End time  0.063695192337
+		 Write event | Start time  0.0638983249664  | End time  0.0640726089478
+		 ND range | Start time  0.0640971660614  | End time  0.0694828033447
+	 Kernel  coalesced_transpose   3   gpu
+		 Write event | Start time  0.064435005188  | End time  0.0647976398468
+		 ND range | Start time  0.0648105144501  | End time  0.0692687034607
+	 Kernel  coalesced_gemm   4   gpu
+		 ND range | Start time  0.0694878101349  | End time  0.0868294239044
+		 Read event | Start time  0.0868418216705  | End time  0.0876739025116
+	 Kernel  softmax   5   cpu
+		 Write event | Start time  0.145953479223  | End time  0.147625944577
+		 ND range | Start time  0.147635943256  | End time  0.149060874246
+		 Read event | Start time  0.14908485394  | End time  0.150984043255
+	 Kernel  coalesced_gemm   6   gpu
+		 Write event | Start time  0.13362622261  | End time  0.134337902069
+		 ND range | Start time  0.134344339371  | End time  0.146980762482
+	 Kernel  coalesced_gemm   7   gpu
+		 Write event | Start time  0.134564876556  | End time  0.134738683701
+		 ND range | Start time  0.146988868713  | End time  0.152025938034
+		 Read event | Start time  0.152032136917  | End time  0.152356863022
+	 Kernel  empty   8   cpu
+		 Write event | Start time  6.36093318462e-07  | End time  0.00160372722894
+		 Write event | Start time  0.00161840673536  | End time  0.00241161789745
+		 Write event | Start time  0.00241477973759  | End time  0.00331245269626
+		 Write event | Start time  0.00331494770944  | End time  0.00366072822362
+		 Write event | Start time  0.00366226769984  | End time  0.0038705393672
+		 ND range | Start time  0.00387933291495  | End time  0.0038843434304
+		 Read event | Start time  0.00389359984547  | End time  0.00415831524879
+		 Read event | Start time  0.00416019093245  | End time  0.00445103272796
+		 Read event | Start time  0.0044554034248  | End time  0.00471945945174
+	 Kernel  coalesced_gemm   9   cpu
+		 ND range | Start time  0.00423715543002  | End time  0.0130950752646
+		 ND range | Start time  0.0610966254026  | End time  0.0705444170162
+	 Kernel  coalesced_gemm   10   gpu
+		 Write event | Start time  0.000702857971191  | End time  0.00106549263
+		 Write event | Start time  0.00119662284851  | End time  0.00137042999268
+		 ND range | Start time  0.00138258934021  | End time  0.0108382701874
+	 Kernel  coalesced_gemm   11   gpu
+		 Write event | Start time  0.0640766620636  | End time  0.0644307136536
+		 Write event | Start time  0.0649464130402  | End time  0.0651230812073
+		 ND range | Start time  0.0651326179504  | End time  0.0744562149048
+		 Read event | Start time  0.074462890625  | End time  0.0747892856598
+	 Kernel  coalesced_transpose   12   gpu
+		 ND range | Start time  0.0108454227448  | End time  0.0108845233917
+		 Read event | Start time  0.0108878612518  | End time  0.011212348938
+	 Kernel  coalesced_gemm   13   cpu
+		 Write event | Start time  0.0705637587234  | End time  0.0719587542117
+		 ND range | Start time  0.071966140531  | End time  0.0860466165468
+	 Kernel  softmax   14   cpu
+		 ND range | Start time  0.0860682055354  | End time  0.0886895945296
+	 Kernel  coalesced_gemm   15   cpu
+		 Write event | Start time  0.124185269699  | End time  0.12581442669
+		 ND range | Start time  0.125824520364  | End time  0.133350228891
+	 Kernel  coalesced_gemm   16   cpu
+		 ND range | Start time  0.133373113349  | End time  0.137134880759
+		 Read event | Start time  0.137141748331  | End time  0.137473201379
+	 Kernel  empty   17   cpu
+		 Write event | Start time  0.0  | End time  0.00180976092815
+		 Write event | Start time  0.00182063225657  | End time  0.00253296364099
+		 Write event | Start time  0.00253550801426  | End time  0.00269877165556
+		 Write event | Start time  0.00270090997219  | End time  0.00342449266464
+		 Write event | Start time  0.00342732388526  | End time  0.00365059729666
+		 ND range | Start time  0.0036696465686  | End time  0.0036821141839
+		 Read event | Start time  0.00369927193969  | End time  0.00392680428922
+		 Read event | Start time  0.00392872840166  | End time  0.00419410038739
+
+
+saving to thread.json

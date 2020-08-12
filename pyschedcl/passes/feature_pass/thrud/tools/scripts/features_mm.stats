@@ -1,0 +1,35 @@
+MLP Computation 116: Computing number of loads 
+MLP Computation 119 Computing average
+
+MLP Computation 116: Computing number of loads 
+  %tmp7 = load float addrspace(1)* %arrayidx, align 4
+MLP Computation 116: Entering Transformation 
+  %mul6 = fmul float %tmp7, %tmp12
+MLP Computation 94: Computing Distance
+  %mul6 = fmul float %tmp7, %tmp12
+MLP Computation 68: Entering getRegionBlocks 
+MLP Computation 70: Getting stack top
+MLP Computation 73: Popping first block
+MLP Computation 75: Don't put defBlock Predecessors
+MLP Computation 79 Entering after check 
+0  opt             0x00000000012f4a72 llvm::sys::PrintStackTrace(_IO_FILE*) + 34
+1  opt             0x00000000012f4694
+2  libpthread.so.0 0x0000003cb520f7e0
+3  libThrud.so     0x00002b288088cabb
+4  libThrud.so     0x00002b288088c89a getMLP(llvm::BasicBlock*) + 323
+5  libThrud.so     0x00002b2880844978 FeatureCollector::computeMLP(llvm::BasicBlock*) + 28
+6  libThrud.so     0x00002b288085b7e8
+7  libThrud.so     0x00002b288085bb32
+8  libThrud.so     0x00002b288085baeb
+9  libThrud.so     0x00002b288085ba5e
+10 libThrud.so     0x00002b28808568cf
+11 opt             0x0000000000fe737f llvm::FPPassManager::runOnFunction(llvm::Function&) + 655
+12 opt             0x0000000000fe785b llvm::FPPassManager::runOnModule(llvm::Module&) + 43
+13 opt             0x0000000000fe7b9d llvm::legacy::PassManagerImpl::run(llvm::Module&) + 797
+14 opt             0x00000000005ab1bc main + 3500
+15 libc.so.6       0x0000003cb4a1ed1d __libc_start_main + 253
+16 opt             0x000000000058d589
+Stack dump:
+0.	Program arguments: opt -instnamer -mem2reg -load /home/anirban/Tools/Compilers/llvm-analysis-tools/feature_extraction/build/thrud/lib/libThrud.so -structurizecfg -opencl-loop-instcount -count-loop-kernel-name mm 
+1.	Running pass 'Function Pass Manager' on module '<stdin>'.
+2.	Running pass 'Collect opencl features in loops' on function '@mm'

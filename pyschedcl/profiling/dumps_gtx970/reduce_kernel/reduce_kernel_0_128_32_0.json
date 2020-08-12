@@ -1,0 +1,1 @@
+{"reduce_kernel0": {"write": {"device_start": -1, "host_queued_start": 1586201207.840403, "device_queued": -1, "device_end": -1, "host_queued_end": 1586201207.840665}, "device": "cpu", "nd_range": {"device_start": 2868982.0301571433, "device_end": 2868982.030172247}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

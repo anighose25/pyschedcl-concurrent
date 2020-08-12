@@ -1,0 +1,1 @@
+{"0": {"write": {"host_queued": 1581921591.176886, "device_start": 1581909540.5781417, "device_end": 1581909540.578165, "device_queued": 1581909540.5781105}, "device": "gpu", "nd_range": {"device_start": 1581909540.5781841, "device_end": 1581909540.578234}, "read": {"device_start": 1581909540.5782468, "device_end": 1581909540.57825}}}

@@ -1,0 +1,46 @@
+{
+  "inputBuffers": [
+    {
+    "type": "float",
+    "pos": 0,
+    "break": 0,
+    "size" : "dataset*dataset*dataset"
+  }
+                  ],
+  "name": "Convolution3D_kernel",
+  "src": "3DConvolution.cl",
+  "globalWorkSize": "[dataset,dataset]",
+  "outputBuffers": [
+    {
+      "break": 0,
+      "type": "float",
+      "pos": 1,
+      "size": "dataset*dataset*dataset"
+    }
+  ],
+  "workDimension": 2,
+  "ioBuffers": [],
+  "varArguments": [
+
+    {
+      "type": "int",
+      "pos": 2,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 3,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 4,
+      "value": "dataset"
+    },
+    {
+      "type": "int",
+      "pos": 5,
+      "value": "0"
+    }
+  ]
+}

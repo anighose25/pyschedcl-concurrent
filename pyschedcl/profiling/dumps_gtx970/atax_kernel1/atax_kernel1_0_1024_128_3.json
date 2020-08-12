@@ -1,0 +1,1 @@
+{"atax_kernel10": {"write": {"device_start": -1, "host_queued_start": 1586234283.752761, "device_queued": -1, "device_end": -1, "host_queued_end": 1586234283.753049}, "device": "cpu", "nd_range": {"device_start": 2902057.9425408873, "device_end": 2902057.943154056}, "cmdq": 0, "read": {"device_start": -1, "device_end": -1}}}

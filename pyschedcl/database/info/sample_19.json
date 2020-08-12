@@ -1,0 +1,10 @@
+{
+  "inputBuffers": [], 
+  "name": "A", 
+  "src": "sample_19.cl", 
+  "globalWorkSize": "[dataset]", 
+  "outputBuffers": [], 
+  "workDimension": 1, 
+  "ioBuffers": [], 
+  "varArguments": []
+}

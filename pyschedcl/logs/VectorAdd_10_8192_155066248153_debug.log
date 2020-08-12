@@ -1,0 +1,71 @@
+DEBUG:root:Number of GPUs : 1
+DEBUG:root:[<pyopencl.Device 'Tesla K40m' on 'NVIDIA CUDA' at 0x24cbad0>]
+DEBUG:root:Number of CPUs : 1
+DEBUG:root:[<pyopencl.Device 'Intel(R) Xeon(R) CPU E5-2650 v4 @ 2.20GHz' on 'Intel(R) OpenCL' at 0x24a1938>]
+DEBUG:root:Building Kernel...
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 210e36568316fcccfef45586a203ccb6)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:pyopencl.cache:build program: binary cache hit (key: 4a5e0266ca1576143ae9164d9769c151)
+DEBUG:pyopencl.cffi_cl:build program: start
+DEBUG:pyopencl.cffi_cl:build program: completed, success
+DEBUG:root:Loading Kernel Data...
+DEBUG:root:Dispatching Kernel...
+DEBUG:root:DISPATCH : Dispatch function call for VectorAdd starts at 2019-02-20 17:04:41.550999
+DEBUG:root:DISPATCH_gpu : Evaluation of kernel arguments for VectorAdd on GPU
+DEBUG:root:DISPATCH_gpu : Creation of buffers for VectorAdd on GPU
+DEBUG:root:PARTITION : Creating Input Buffers gpu
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : VectorAdd Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : VectorAdd Create_Input_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : VectorAdd Create_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : VectorAdd Create_Input_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : Creating Output Buffers gpu
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu: VectorAdd Create_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu: VectorAdd Create_Output_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : Creating IO Buffers gpu
+DEBUG:root:DISPATCH_gpu : Setting kernel arguments for VectorAdd on GPU
+DEBUG:root:DISPATCH_gpu :Calling enqueue_write_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Write Buffers gpu
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Write_Input_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Write_Input_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Write_Input_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : Number of write buffers 2
+DEBUG:root:DISPATCH_gpu : Calling enqueue_nd_range_kernel for GPU
+DEBUG:root:DISPATCH_gpu : Calling enqueue_read_buffers for GPU
+DEBUG:root:PARTITION : Enqueuing Read Buffers gpu
+DEBUG:root:PARTITION : VectorAdd get_slice_values -> Original Buffer Size: 8192
+DEBUG:root:PARTITION: get_slice_values -> multiple_round -> partition_round (if exact=1) returns: 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Read_Output_Buffers_element_offset : 0
+DEBUG:root:PARTITION_gpu : VectorAdd Enqueue_Read_Output_Buffers_number_of_elements : 8192
+DEBUG:root:PARTITION : Number of read buffers 1
+DEBUG:root:DISPATCH : VectorAdd ke.dispatch_end 2019-02-20 17:04:41.554134 
+DEBUG:root:DISPATCH : Evaluation of kernel arguments for VectorAdd 
+DEBUG:root:DISPATCH : Number of events 3
+DEBUG:root:DISPATCH : Dispatch function call for VectorAdd ends at 2019-02-20 17:04:41.554298
+DEBUG:root:Waiting for events... 
+
+DEBUG:root:CALLBACK_TRIGGERED : VectorAdd WRITE execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : VectorAdd gpu KERNEL event
+DEBUG:root:CALLBACK_PROBE : VectorAdd gpu READ event
+DEBUG:root:CALLBACK_RESET : VectorAdd Resetting bolt value by gpu WRITE event
+DEBUG:root:CALLBACK_TRIGGERED : VectorAdd KERNEL execution finished for device gpu
+DEBUG:root:CALLBACK_PROBE : VectorAdd gpu READ event
+DEBUG:root:CALLBACK_RESET : VectorAdd Resetting bolt value by gpu KERNEL event
+DEBUG:root:CALLBACK_TRIGGERED : VectorAdd READ execution finished for device gpu
+DEBUG:root:CALLBACK : {'create_buf_start': '1550662481.55', 'dispatch_id': '', 'create_buf_end': '1550662481.55', 'dispatch_start': '2019-02-20 17:04:41.550999', 'kernel_id': '8349678a-3503-11e9-9393-a0000220fe80', 'write_end': '1550662481.56', 'dispatch_end': 'None', 'ndrange_start': '1550662481.55', 'ndrange_end': '1550662481.56', 'kernel_name': 'VectorAdd', 'read_end': '1550662481.56', 'read_start': '1550662481.55', 'write_start': '1550662481.55'}
+DEBUG:root:CALLBACK : Pushing info onto gpu0
+DEBUG:root:Releasing buffers of VectorAdd on gpu
+DEBUG:root:Releasing host arrays
+DEBUG:root:CALLBACK_RESET : VectorAdd Resetting bolt value by gpu READ event
+DEBUG:root:HOST_EVENT gpu 0 8349678a-3503-11e9-9393-a0000220fe80,VectorAdd 1550662481.55287408828735351562 1550662481.55574202537536621094 1550662481.55374193191528320312 1550662481.55614399909973144531 1550662481.55386805534362792969 1550662481.55642199516296386719

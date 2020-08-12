@@ -1,0 +1,54 @@
+{
+	"src": "PoolingBackwardGpuNaive.cl",
+	"name": "backward_pooling",
+	"inputBuffers": [{
+		"break": 0,
+		"type": "float",
+		"pos": 1,
+		"size": "32 * 32 * 5"
+	},
+	{
+		"break": 0,
+		"type": "int",
+		"pos": 2,
+		"size": "32 * 32 * 5"
+	}
+	],
+	"partition":0,
+	"workDimension": 2,
+	"globalWorkSize": [32,32],
+	"id": 1,
+	"varArguments": [
+		{
+			"type": "int",
+			"pos": 0,
+			"value": "5"
+		}
+	],
+
+  "ioBuffers": [
+      {
+          "break": 1,
+          "pos": 3,
+          "size": "32 * 32 ",
+          "type": "float"
+      }
+  ],
+	"macros_values":
+      {
+				"gOutputSize" : 15,
+				"gNumFilters": 10,
+				"gEven": 0,
+				"gFilterSizeSquared": 4,
+				"gInputPlanes": 8,
+				"gInputSizeSquared": 256,
+				"gOutputSizeSquared": 225,
+				"gPadZeros": 0,
+				"gHalfFilterSize": 1,
+				"gInputSize": 16,
+				"gFilterSize": 2,
+				"gMargin": 1,
+				"gPoolingSize": 2,
+				"gNumPlanes": 5
+  		 }
+}
