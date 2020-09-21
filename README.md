@@ -1,5 +1,5 @@
 # pyschedcl-concurrent
-A Scheduling Framework that leverages concurrency in data parallel systems. This is a separate branch of the original codebase (PySchedCL)[https://github.com/anighose25/pyschedcl] with support for DAG scheduling and concurrency aware cluster scheduling. 
+A Scheduling Framework that leverages concurrency in data parallel systems. This is a separate branch of the original codebase [PySchedCL](https://github.com/anighose25/pyschedcl) with support for DAG scheduling and concurrency aware cluster scheduling. 
 
 Overview
 ============
