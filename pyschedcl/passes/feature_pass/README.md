@@ -56,7 +56,7 @@ Alberto Magni, Christophe Dubach, Michael O'Boyle
 
 The papers used an older version of the pass for LLVM 3.4.
 
-For any question please contact [Anirban Ghose][email/anighose].
+For any questions pertaining to PySchedCL, please contact [Anirban Ghose][email/anighose].
 
 [email/anighose]: anighose25@gmail.com
 [www/llvmProject]: http://llvm.org/docs/Projects.html
