@@ -1,5 +1,10 @@
-LLVM Thread Coarsening Pass for OpenCL
-======================================
+LLVM Compiler Passes for extracting JSON specification of OpenCL Kernels
+=========================================================================
+
+Disclaimer
+----------
+This repository is an extension of Alberto Magni's original work that involved the thread coarsening pass. All rights of the original work as retained in the initial commit, remain with the author. Commits pertaining to compiler passes that extract information from PySchedCL's design frontend are part of our work.
+
 
 Content
 -------
@@ -37,10 +42,10 @@ and then rebase both to the specified versions.
   Make sure to update the paths in LIB\_THRUD, OCL\_HEADER, LD\_PRELOAD and PREFIX
   to point to the correct locations depending on your installation.
 
-Publications
-------------
+Publications from the original author
+--------------------------------------
 
-The coarsening pass has been used for the following publications:
+The coarsening pass implementation by the original author has been used for the following publications:
 
 * [SC13] A Large-Scale Cross-Architecture Evaluation of Thread-Coarsening
 Alberto Magni, Christophe Dubach, Michael O'Boyle 
@@ -51,8 +56,8 @@ Alberto Magni, Christophe Dubach, Michael O'Boyle
 
 The papers used an older version of the pass for LLVM 3.4.
 
-For any question please contact [Alberto Magni][email/alberto].
+For any question please contact [Anirban Ghose][email/anighose].
 
-[email/alberto]: a.magni@sms.ed.ac.uk
+[email/anighose]: anighose25@gmail.com
 [www/llvmProject]: http://llvm.org/docs/Projects.html
 [www/llvmGit]: http://llvm.org/docs/GettingStarted.html#git-mirror 
