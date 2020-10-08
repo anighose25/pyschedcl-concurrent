@@ -2,22 +2,37 @@ import os
 import sys
 
 def make_ffc_kernel(kernel_number,m1,n1,p1,partition,TS=32,wpt=1):
+    '''
+    Create a Tiled Matrix Multiplication Kernel
+    '''
     return "{} FFC_sans_bias.json {}\"m1\":{},\"p1\":{},\"n1\":{},\"TS\":{},\"wpt\":{},\"n_chunks\":1,\"partition\":{}{}\n".\
     format(kernel_number,"{",m1,p1,n1,TS,wpt,partition,"}")
 
 def make_coalesced_transpose_kernel(kernel_number,m1,n1,partition):
+    '''
+    Create a Matrix Transpose Kernel
+    '''
     return "{} coalesced_transpose.json {}\"m1\":{},\"n1\":{},\"n_chunks\":1,\"partition\":{}{}\n".\
     format(kernel_number,"{",m1,n1,partition,"}")
 
 def make_naive_softmax(kernel_number,m1,n1,partition):
+    '''
+    Create a Softmax Kernel
+    '''
     return "{} softmax.json {}\"r1\":{},\"c1\":{},\"n_chunks\":1,\"partition\":{}{}\n".\
     format(kernel_number,"{",m1,n1,partition,"}")
 
 def make_empty_kernel(kernel_number,n1,w1,q1,partition):
+    '''
+    Create an empty kernel, which is just a proxy for copying input to the transformer to the GP
+    '''
     return "{} empty.json {}\"n1\":{},\"w1\":{},\"q1\":{},\"n_chunks\":1,\"partition\":{}{}\n".\
     format(kernel_number,"{",n1,w1,q1,partition,"}")
 
 def make_one_head(base=0,N=64,W=512,Q=64,partition=10):
+    '''
+    Create one head of a transformer
+    '''
     kernel_defs = [None]*9
     deps = []
     for i in range(3):
