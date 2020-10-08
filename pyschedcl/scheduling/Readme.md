@@ -1,5 +1,5 @@
 # create_transformer.py 
-This script is used to create a Transformer DAG specification file for Pyschedcl. Note that the size of the individual kernels is the 2's exponent of the size parameter below. Individual functions of the sciprt are documented within the file itself.
+This script is used to create a Transformer DAG specification file for Pyschedcl. Note that the size of the individual kernels is the 2's exponent of the size parameter below. Individual functions of the script are documented within the file itself.
 ```
 python create_transfomer.py <size> <num_heads_on_cpu> <total_num_heads>
 ```
