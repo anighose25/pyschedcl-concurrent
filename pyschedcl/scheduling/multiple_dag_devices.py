@@ -97,7 +97,7 @@ def random_selector(Q,start_sched):
 
     if all_done():
         total_time_in_multiple_dag_devices = time.time()-start_sched
-        print "\t \t Total Time measured by the scheduler - ",total_time_in_multiple_dag_devices
+        print("\t \t Total Time measured by the scheduler - ",total_time_in_multiple_dag_devices)
         fw.frontier_Q_lock.release()
         return -1
         #fw.frontier_Q_lock.release()
@@ -122,7 +122,7 @@ if __name__ == '__main__':
 
 
     info_file = args.file
-    print info_file
+    print(info_file)
 
     cmd_qs, ctxs, gpus, cpus = fw.host_initialize(int(args.nGPU), int(args.nCPU),use_mul_queues = True)
 
@@ -257,14 +257,14 @@ if __name__ == '__main__':
     timestamps = {}
 
     for dag in all_dags:
-        print "dag number : ",dag.id
+        print("dag number : ",dag.id)
 
         for kernel_id,kernel in dag.kernels.items():
             timestamps[kernel.name+str(kernel_id)] = {}
             dev = kernel.task_object.device
             fin = ref[dev]
             kernel_timestamps = timestamps[kernel.name+str(kernel_id)]
-            print "\t Kernel ",kernel.name, " ",kernel.id, " ",dev
+            print("\t Kernel ",kernel.name, " ",kernel.id, " ",dev)
             kernel_timestamps["write"] = {"host_queued_start":kernel.host_events[0].write_start,\
             "host_queued_end":kernel.host_events[0].write_end,"device_queued":-1,"device_start":-1,"device_end":-1}
             kernel_timestamps["device"] = dev
@@ -292,7 +292,7 @@ if __name__ == '__main__':
                     kernel_timestamps["write"]["device_end"] = max(end_time,kernel_timestamps["write"]["device_end"])
 
 
-                print "\t\t Write event | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev]
+                print("\t\t Write event | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev])
                 #kernel_timestamps["write"].append([start_time-ref[dev],end_time-ref[dev]])
 
                 if st == None:
@@ -307,7 +307,7 @@ if __name__ == '__main__':
                 ev.wait()
                 start_time = ev.profile.START*1e-9
                 end_time =   ev.profile.END*1e-9
-                print "\t\t ND range | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev]
+                print("\t\t ND range | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev])
                 #kernel_timestamps["nd_range"].append([start_time-ref[dev],end_time-ref[dev]])
                 if st==None:
                     st = start_time
@@ -331,7 +331,7 @@ if __name__ == '__main__':
                 ev.wait()
                 start_time = ev.profile.START*1e-9
                 end_time =   ev.profile.END*1e-9
-                print "\t\t Read event | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev]
+                print("\t\t Read event | Start time ",start_time-ref[dev], " | End time ", end_time-ref[dev])
                 #kernel_timestamps["read"].append([start_time-ref[dev],end_time-ref[dev]])
                 if st==None:
                     st = start_time
@@ -437,25 +437,31 @@ if __name__ == '__main__':
     #
     # #print timestamps
 
-    print "\n"
+    print("\n")
     #print json.dumps(timestamps,sort_keys=True,indent=2)
     #print timestamps
     if args.full_dump_path == "None":
         if args.use_thread:
-            with open("./scheduling/dumps/thread.json","wb") as f:
-                print "saving to thread.json"
-                json.dump(timestamps,f)
+            with open("./scheduling/dumps/thread.json","w") as f:
+                print("saving to thread.json")
+                s = json.dumps(timestamps)
+                f.write(s)
+                # json.dump(timestamps,f)
 
         else:
-            with open("./scheduling/dumps/non_thread.json","wb") as f:
-                print "saving to non_thread.json"
-                json.dump(timestamps,f)
+            with open("./scheduling/dumps/non_thread.json","w") as f:
+                print("saving to non_thread.json")
+                s = json.dumps(timestamps)
+                f.write(s)
+                # json.dump(timestamps,f)
 
 
     else:
-        with open(args.full_dump_path,"wb") as f:
-            print "saving to ",args.full_dump_path
-            json.dump(timestamps,f)
+        with open(args.full_dump_path,"w") as f:
+            print("saving to ",args.full_dump_path)
+            s = json.dumps(timestamps)
+            f.write(s)
+            # json.dump(timestamps,f)
 
 
     time.sleep(2)

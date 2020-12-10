@@ -1,3 +1,3 @@
-0 naive_kernel.json {"dataset":1024,"n_chunks":1,"n_chunks":1,"localWorkSize":4,"partition":0}
+0 expanded_pooling_layers.json {"channel":96,"height":27,"width":27,"inputSize":9292800,"outputSize":2239488,"partition":0}
 ---
 ---

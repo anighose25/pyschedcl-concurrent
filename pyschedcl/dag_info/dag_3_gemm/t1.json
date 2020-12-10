@@ -1,67 +1,108 @@
 [
   {
-    "localWorkSize": [
-      4, 
-      4, 
-      4
-    ], 
     "inputBuffers": [
       {
-        "break": 0, 
-        "type": "float", 
-        "pos": 2, 
-        "size": "1024*1024*1024"
+        "break": 0,
+        "type": "uchar",
+        "pos": 0,
+        "size": "9292800"
       }
-    ], 
-    "partition": 0, 
-    "name": "naive_kernel", 
-    "src": "stencil.cl", 
-    "globalWorkSize": "[1024,1024,1024]", 
+    ],
+    "name": "pooling_layer_optimized_3",
+    "src": "pooling_layer.cl",
+    "globalWorkSize": "[96, 27, 27]",
+    "workDimension": 3,
+    "partition": 0,
     "outputBuffers": [
       {
-        "break": 0, 
-        "type": "float", 
-        "pos": 3, 
-        "size": "1024*1024*1024"
+        "break": 0,
+        "type": "uchar",
+        "pos": 8,
+        "size": "2239488"
       }
-    ], 
-    "depends": [], 
-    "task": 1, 
-    "workDimension": 3, 
-    "symbolicVariables": {
-      "localWorkSize": 4, 
-      "n_chunks": 1, 
-      "partition": 0, 
-      "dataset": 1024
-    }, 
-    "id": 0, 
-    "ioBuffers": [], 
+    ],
     "varArguments": [
       {
-        "type": "float", 
-        "pos": 0, 
-        "value": "0.1"
-      }, 
+        "type": "uint",
+        "pos": 1,
+        "value": 1
+      },
       {
-        "type": "float", 
-        "pos": 1, 
-        "value": "0.1"
-      }, 
+        "type": "uint",
+        "pos": 2,
+        "value": 1
+      },
       {
-        "type": "int", 
-        "pos": 4, 
-        "value": "1024-1"
-      }, 
+        "type": "uint",
+        "pos": 3,
+        "value": 1
+      },
       {
-        "type": "int", 
-        "pos": 5, 
-        "value": "1024-1"
-      }, 
+        "type": "uint",
+        "pos": 4,
+        "value": 1
+      },
       {
-        "type": "int", 
-        "pos": 6, 
-        "value": "1024-1"
+        "type": "uint",
+        "pos": 5,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 6,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 7,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 9,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 10,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 11,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 12,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 13,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 14,
+        "value": 1
+      },
+      {
+        "type": "uint",
+        "pos": 15,
+        "value": 1
       }
-    ]
+    ],
+    "id": 0,
+    "symbolicVariables": {
+      "channel": 96,
+      "height": 27,
+      "width": 27,
+      "inputSize": 9292800,
+      "outputSize": 2239488,
+      "partition": 0
+    },
+    "depends": [],
+    "task": 1
   }
 ]
