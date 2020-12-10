@@ -1,0 +1,95 @@
+{
+  "inputBuffers": [
+    {
+      "break": 0, 
+      "type": "uchar", 
+      "pos": 0, 
+      "size": "inputSize"
+    }
+  ], 
+  "name": "pooling_layer_optimized_3", 
+  "src": "pooling_layer.cl", 
+  "globalWorkSize": "[channel, height, width]",  
+  "workDimension": 3,
+  "partition": 0,
+  "outputBuffers": [
+    {
+      "break": 0, 
+      "type": "uchar", 
+      "pos": 8, 
+      "size": "outputSize"
+    }
+  ], 
+  "varArguments": [
+    {
+      "type": "uint", 
+      "pos": 1, 
+      "value": 1
+    }, 
+    {
+      "type": "uint", 
+      "pos": 2, 
+      "value": 1
+    }, 
+    {
+      "type": "uint", 
+      "pos": 3, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 4, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 5, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 6, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 7, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 9, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 10, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 11, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 12, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 13, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 14, 
+      "value": 1
+    },
+    {
+      "type": "uint", 
+      "pos": 15, 
+      "value": 1
+    }
+  ]
+}

@@ -10,20 +10,23 @@ kernel_info = "./database/info/"
 
 all_kernels = os.listdir(kernel_info)
 
-#print(all_kernels)
+batch = 32
+channel = 96
+in_height = 55
+in_width = 55
+out_height = 27
+out_width = 27
+
+inputSize = batch*channel*in_height*in_width
+outputSize = batch*channel*out_height*out_width
 
 lims = [1024,32,8]
-GLOBAL_WORK_SIZES = [1024]
+GLOBAL_WORK_SIZES = [outputSize]
 local_work_sizes = [4,8,16,32,64,128,256,512]
 total_runs = 5
-#all_kernels = all_kernels[16:]
-#all_kernels = ["FFC.json"]
-#print all_kernels
-#all_kernels = all_kernels[2:]
-#all_kernels= ["FFC.json"]
-# all_kernels = all_kernels[3:]
-# print all_kernels
-all_kernels = [k +".json" for k in ['MatVecMulCoalesced1', 'MatVecMulCoalesced2', 'MatVecMulUncoalesced1', 'atax_kernel1', 'atax_kernel2', 'bicgKernel1', 'covar_kernel', 'fdtd_kernel1', 'fdtd_kernel2', 'fdtd_kernel3', 'gesummv_kernel', 'mean_kernel', 'mm', 'mm2_kernel1', 'mm2metersKernel', 'mm3_kernel1', 'mt', 'mvt_kernel1', 'naive_copy', 'naive_kernel', 'naive_transpose', 'reduce_kernel', 'std_kernel']]
+
+
+all_kernels = [k +".json" for k in ["expanded_pooling_layers"]]
 print(all_kernels)
 # sys.exit(-1)
 for kernel in all_kernels:
@@ -53,12 +56,12 @@ for kernel in all_kernels:
                     if not os.path.exists(dump_folder_name):
                         os.makedirs(dump_folder_name)
                     print(dump_file_name)
-                    to_write = "0 {} {}\"dataset\":{},\"n_chunks\":1,\"n_chunks\":1,\"localWorkSize\":{},\"partition\":{}{}\n---\n---\n".\
-                    format(kernel,"{",global_work_size,local_work_size,partition,"}")
-                    if kernel == "FFC.json" or kernel == "coalesced_gemm.json":
-                        to_write = "0 {} {}\"m1\":{},\"p1\":{},\"n1\":{},\"n_chunks\":1,\"wpt\":1,\"localWorkSize\":{},\"TS\":{},\"partition\":{}{}\n---\n---\n".\
-                        format(kernel,"{",global_work_size,global_work_size,global_work_size,local_work_size,local_work_size,partition,"}")
+                    # to_write = "0 {} {}\"dataset\":{},\"inputSize\":{},\"outputSize\":{},\"localWorkSize\":{},\"partition\":{}{}\n---\n---\n".\
+                    # format(kernel,"{",global_work_size, inputSize, outputSize, local_work_size, partition,"}")
 
+                    to_write = "0 {} {}\"channel\":{},\"height\":{},\"width\":{},\"inputSize\":{},\"outputSize\":{},\"partition\":{}{}\n---\n---\n".\
+                    format(kernel,"{", channel, out_height, out_width, inputSize, outputSize, partition,"}")
+                    
                     with open("./dag_info/dag_3_gemm/dag.graph","w") as f:
                         f.write(to_write)
                     print(to_write)

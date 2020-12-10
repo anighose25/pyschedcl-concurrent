@@ -1,0 +1,1 @@
+{"pooling_layer_optimized_30": {"write": {"host_queued_start": 1607622947.9715426, "host_queued_end": 1607622947.9720793, "device_queued": -1, "device_start": -1, "device_end": -1}, "device": "cpu", "cmdq": 0, "nd_range": {"device_start": 41750.647100040005, "device_end": 41750.647908683}, "read": {"device_start": -1, "device_end": -1}}}

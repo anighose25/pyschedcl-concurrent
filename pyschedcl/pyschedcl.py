@@ -6,7 +6,7 @@ import collections
 import os
 from copy import deepcopy
 import threading
-import mutex
+# import mutex
 import logging
 import numpy as np
 import constant_pyschedcl as cons
@@ -65,7 +65,7 @@ est_cpu = 0.0
 est_gpu = 0.0
 device_history = {"gpu": [], "cpu": []}
 ready_queue = {"gpu": collections.deque(), "cpu": collections.deque()}
-cs = mutex.mutex()
+# cs = mutex.mutex()
 user_defined = dict()
 dump_output = False
 just_for_testing_num_chunks = 1
@@ -185,7 +185,7 @@ def replace(dictionary, a, b):
             #print dictionary[key],type(dictionary[key])
             if type(dictionary[key]) == dict:
                 replace(dictionary[key],a,b)
-            elif type(dictionary[key]) in [str,unicode]:
+            elif type(dictionary[key]) in [str]: #,unicode]:
                 #print "before replacement : ",dictionary[key]
                 dictionary[key] = dictionary[key].replace(a,b)
                 #print "after replacement : ",dictionary[key]
@@ -229,7 +229,7 @@ def create_dag(info_folder,dag_file,output_file,partition=-1):
     json_dictionary = {}
     dag_json = []
 
-    print adj_list
+    print(adj_list)
 
     for f in listdir(info_folder):
         if f.endswith('.json') and (f in task_map.values()):
@@ -377,8 +377,8 @@ def dump_device_history():
                     debug_strs.append(debug_str)
                     finishing_timestamps[dev]=round(float(Decimal(read_end)-Decimal(write_start)),4)
     profile_time = max_timestamp - min_timestamp
-    print "span_time " + str(profile_time)
-    print finishing_timestamps
+    print("span_time " + str(profile_time))
+    print(finishing_timestamps)
     # return debug_strs
     return finishing_timestamps
 
@@ -595,10 +595,10 @@ def notify_callback(kernel, device, dev_no, event_type, events, host_event_info,
                     if dump_output:
                         import pickle
                         filename = SOURCE_DIR + "output/" + kernel.name + "_" + str(kernel.partition) + "_" + str(kernel.dataset) + ".pickle"
-                        print "Dumping Pickle"
+                        print("Dumping Pickle")
                         with open(filename, 'wb') as handle:
                             pickle.dump(kernel.data['output'], handle, protocol=pickle.HIGHEST_PROTOCOL)
-                        print "Dumped Pickle"
+                        print("Dumped Pickle")
                     #kernel.release_host_arrays()
 
                 global ready_queue
@@ -990,7 +990,7 @@ class Kernel(object):
         self.work_dimension = src['workDimension']
         self.global_work_size = src['globalWorkSize']
         
-        if type(self.global_work_size) in [str, unicode]:
+        if type(self.global_work_size) in [str]: #, unicode]:
             self.global_work_size = eval(self.global_work_size)
         if type(self.global_work_size) is int:
             self.global_work_size = [self.global_work_size]
@@ -1010,7 +1010,7 @@ class Kernel(object):
         else:
             self.global_chunk=[]
 
-        if type(self.local_work_size) in [str, unicode]:
+        if type(self.local_work_size) in [str]: #, unicode]:
             self.local_work_size = eval(self.local_work_size)
         elif type(self.local_work_size) is int:
             self.local_work_size = [self.local_work_size]
@@ -1047,10 +1047,10 @@ class Kernel(object):
             self.vargs = []
         if 'cpuArguments' in src:
             self.cpu_args = src['cpuArguments']
-            print "Ignoring CPU Arguments"
+            print("Ignoring CPU Arguments")
         if 'gpuArguments' in src:
             self.gpu_args = src['gpuArguments']
-            print "Ignoring GPU Arguments"
+            print("Ignoring GPU Arguments")
         if 'localArguments' in src:
             self.local_args = src['localArguments']
             for i in range(len(self.local_args)):
@@ -1061,10 +1061,9 @@ class Kernel(object):
         self.kernel_objects = dict()
         for btype in ['input', 'output', 'io']:
             for i in range(len(self.buffer_info[btype])):
-                if type(self.buffer_info[btype][i]['size']) in [str, unicode]:
+                if type(self.buffer_info[btype][i]['size']) in [str]: #, unicode]:
                     self.buffer_info[btype][i]['size'] = eval(self.buffer_info[btype][i]['size'])
-                if 'chunk' in self.buffer_info[btype][i] and type(self.buffer_info[btype][i]['chunk']) in [str,
-                                                                                                           unicode]:
+                if 'chunk' in self.buffer_info[btype][i] and type(self.buffer_info[btype][i]['chunk']) in [str]: #, unicode]:
                     self.buffer_info[btype][i]['chunk'] = eval(self.buffer_info[btype][i]['chunk'])
                 self.buffer_info[btype][i]['create'] = True
                 self.buffer_info[btype][i]['enq_write'] = True
@@ -1277,7 +1276,7 @@ class Kernel(object):
 
         if self.vargs:
             for i in range(len(self.vargs)):
-                if type(self.vargs[i]['value']) in [str, unicode]:
+                if type(self.vargs[i]['value']) in [str]: #, unicode]:
                     self.variable_args[i]['value'] = eval(self.vargs[i]['value'])
 
 
@@ -1289,6 +1288,8 @@ class Kernel(object):
 
         """
         multiples = [1]
+        print(self.local_work_size)
+        print(self.global_work_size)
         if self.work_dimension == 1:
             if not self.local_work_size:
                 multiples = [1]
@@ -1398,9 +1399,9 @@ class Kernel(object):
         for btype in ['input', 'io','output']:
             if btype in self.data.keys():
                 for data_buf in self.data[btype]:
-                    print btype, type(data_buf), data_buf.shape, data_buf.dtype
+                    print(btype, type(data_buf), data_buf.shape, data_buf.dtype)
         for local_data_buf in self.local_args:
-            print "local", local_data_buf['size']
+            print("local", local_data_buf['size'])
 
     def random_data(self, low=0, hi=4096):
         """
@@ -1813,7 +1814,7 @@ class Kernel(object):
         if 'C' in kwargs:
             coarsening_factor = kwargs['C']
             logging.debug("PARTITION: Coarsening Factor %d" % coarsening_factor)
-            print "PYSCHEDCL", global_work_size,local_work_size, coarsening_factor
+            print("PYSCHEDCL", global_work_size,local_work_size, coarsening_factor)
             global_work_size[0]/=coarsening_factor
             if local_work_size :
                 local_work_size[0]/=coarsening_factor
@@ -1826,7 +1827,7 @@ class Kernel(object):
         ev = None
         kwargs['host_event'].ndrange_start = time.time()
         if self.local_work_size:
-            print "Dispatching",global_work_size,local_work_size,global_work_size[0]/local_work_size[0]
+            print("Dispatching",global_work_size,local_work_size,global_work_size[0]/local_work_size[0])
             ev = cl.enqueue_nd_range_kernel(queue, self.kernel_objects[obj], global_work_size,
                                             local_work_size, wait_for=depends[0],global_work_offset = global_work_offset)
         else:
@@ -2323,7 +2324,8 @@ class Kernel(object):
         # else:
         #     deps = {key: cl.UserEvent(ctxs[key]) for key in ['cpu', 'gpu']}
         #
-        user_deps = {key: cl.UserEvent(ctxs[key]) for key in ['cpu', 'gpu']}
+        user_deps = {'cpu': cl.UserEvent(ctxs['cpu'])}
+        # user_deps = {key: cl.UserEvent(ctxs[key]) for key in ['cpu', 'gpu']}
 
 
         gdone, cdone = [], []
@@ -2761,7 +2763,7 @@ def query_for_resources():
             if cl.device_type.to_string(dev.type) == "GPU":
                 gpu_platforms.add(platform.get_info(cl.platform_info.NAME))
                 num_gpu_devices += 1
-            if cl.device_type.to_string(dev.type) == "CPU":
+            if "CPU" in cl.device_type.to_string(dev.type):
                 cpu_platforms.add(platform.get_info(cl.platform_info.NAME))
                 num_cpu_devices += 1
 
@@ -2789,7 +2791,7 @@ def host_initialize(num_gpus, num_cpus,use_mul_queues = False ,local=False):
 
     """
     _,_,cpu_platforms,gpu_platforms = query_for_resources()
-    gpu_platform = gpu_platforms[0]
+    # gpu_platform = gpu_platforms[0]
     cpu_platform = cpu_platforms[0]
 
     global nGPU
@@ -3185,7 +3187,7 @@ class Task(object):
             for dev_number in self.free_devices:
                 ready_queue[self.device].append(dev_number)
 
-            print "Task" , str(self.id) ," finished " ," State of ready queue :- ", ready_queue
+            print("Task" , str(self.id) ," finished " ," State of ready queue :- ", ready_queue)
 
             if device == 'gpu':
                 global nGPU
@@ -3359,7 +3361,7 @@ class Task(object):
 
             succesors = dag.get_kernel_children_ids(kernel.id)
             read_cb = True
-            if len(succesors) == 0:
+            if len(list(succesors)) == 0:
                 read_cb = False
 
             #read_cb=True
@@ -3417,7 +3419,7 @@ class Task(object):
         #testing uncomment these two loops later
 
         for dep in user_deps:
-            for key in ["gpu","cpu"]:
+            for key in ["cpu"]:
                 dep[key].set_status(cl.command_execution_status.COMPLETE)
 
 
@@ -3758,7 +3760,7 @@ class TaskDAG(object):
 
     def print_dag_info(self):
         for i in self.skeleton.nodes():
-            print "Kernel", self.kernels[i].id 
+            print("Kernel", self.kernels[i].id)
 
     def get_kernel(self,kid):
         return self.kernels[kid]
@@ -3821,7 +3823,7 @@ class TaskDAG(object):
         cpu_time = sum([x for _,x in cpu_queue])
         gpu_time = sum([x for _,x in gpu_queue])
         total_time = max(cpu_time, gpu_time)
-        print cpu_queue,gpu_queue,cpu_time,gpu_time
+        print(cpu_queue,gpu_queue,cpu_time,gpu_time)
         if gpu_time > cpu_time:
             while True:
                 if not gpu_queue:
@@ -3880,40 +3882,40 @@ class TaskDAG(object):
 
     def print_information(self):
 
-        print self.skeleton.nodes()
-        print self.skeleton.edges()
+        print(self.skeleton.nodes())
+        print(self.skeleton.edges())
         for t in self.kernels:
-            print str(t) + " " + self.kernels[t].name
+            print(str(t) + " " + self.kernels[t].name)
         for node in self.G.nodes():
-            print node.get_kernel_ids(), node.get_kernel_names()
+            print(node.get_kernel_ids(), node.get_kernel_names())
             # print node.rank_values[rank_name]
             # print "Ex Time: " + str(node.projected_ex_time)
         for edge in self.G.edges():
             u, v = edge
-            print u.get_kernel_ids(),
-            print "--->",
-            print v.get_kernel_ids()
+            print(u.get_kernel_ids()),
+            print("--->"),
+            print(v.get_kernel_ids())
 
     def print_task_information(self):
 
         counter = 0
         for node in self.G.nodes():
-            print counter, node.get_kernel_ids(), node.get_kernel_names()
+            print(counter, node.get_kernel_ids(), node.get_kernel_names())
             counter +=1
             # print node.rank_values[rank_name]
             # print "Ex Time: " + str(node.projected_ex_time)
         for edge in self.G.edges():
             u, v = edge
-            print u.get_kernel_ids(),
-            print "--->",
-            print v.get_kernel_ids()
+            print(u.get_kernel_ids()),
+            print("--->"),
+            print(v.get_kernel_ids())
 
     def print_kernel_information(self):
         for node in self.skeleton.nodes():
-            print node, self.kernels[node].name,self.kernels[node].exec_time
+            print(node, self.kernels[node].name,self.kernels[node].exec_time)
         for edge in self.skeleton.edges():
             u,v =edge
-            print u,v,self.skeleton[u][v]['weight'],"bytes",self.skeleton[u][v]['time'],"seconds"
+            print(u,v,self.skeleton[u][v]['weight'],"bytes",self.skeleton[u][v]['time'],"seconds")
 
     def merge_tasks(self, t1, t2, device_bias):
         """
@@ -4132,7 +4134,7 @@ class TaskDAG(object):
         for node in nx.algorithms.topological_sort(self.skeleton):
             pred = self.skeleton.predecessors(node)
             if not pred:
-                print "node value",node
+                print("node value",node)
                 node_level[node] = 0
             else:
                 node_level[node] = max(map(lambda x: node_level[x], pred)) + 1
@@ -4243,7 +4245,7 @@ class TaskDAG(object):
         task_device_bias_map = {}
         task_device_times_map = {}
         get_task_device_times(levels[0],task_device_times_map,task_device_bias_map)
-        print task_device_times_map
+        print(task_device_times_map)
         for node in levels[0]:
             cpu_time, gpu_time = task_device_times_map[node]
             # heapq.heappush(gpu_queue,(node, gpu_time))
@@ -4332,7 +4334,7 @@ class TaskDAG(object):
 
             else:
                 for node in level:
-                    print "getting device preference of", node
+                    print("getting device preference of", node)
 
                     device_preference = self.get_device_preference(node, device_bias)
         
@@ -4793,7 +4795,7 @@ class CLTrainer:
         from sklearn.feature_selection import chi2
 
         self.sample_features = SelectKBest(chi2, k=num_features).fit_transform(self.sample_features, self.sample_targets)
-        print "Reduced sample features shape", self.sample_features.shape
+        print("Reduced sample features shape", self.sample_features.shape)
 
     def split_dataset(self, train_percentage):
         from sklearn.model_selection import train_test_split
@@ -4806,13 +4808,13 @@ class CLTrainer:
 
         predictions = self.model.predict(test_x)
 
-        print "Training Accuracy: ", accuracy_score(train_y, self.model.predict(train_x))
-        print "Testing Accuracy: ", accuracy_score(test_y, predictions)
+        print("Training Accuracy: ", accuracy_score(train_y, self.model.predict(train_x)))
+        print("Testing Accuracy: ", accuracy_score(test_y, predictions))
 
     def model_cv_accuracy(self):
         from sklearn.model_selection import cross_val_score
         scores = cross_val_score(self.model, self.sample_features, self.sample_targets, cv=5)
-        print "Cross Validation Accuracy: ", scores.mean(), "+/-", scores.std()*2
+        print("Cross Validation Accuracy: ", scores.mean(), "+/-", scores.std()*2)
 
     def model_cv_accuracy_with_feature_selection(self, num_features):
         from sklearn.model_selection import cross_val_score
@@ -4823,7 +4825,7 @@ class CLTrainer:
         for num_feat in range(2, num_features):
             reduced_features = SelectKBest(chi2, k=num_features).fit_transform(self.sample_features, self.sample_targets)
             scores = cross_val_score(self.model, reduced_features, self.sample_targets, cv=10)
-            print "Cross Validation Accuracy for ",num_feat, "features", scores.mean(), "+/-", scores.std()*2
+            print("Cross Validation Accuracy for ",num_feat, "features", scores.mean(), "+/-", scores.std()*2)
 
     def model_accuracy_with_smote(self):
         from imblearn.over_sampling import SMOTE
@@ -4857,7 +4859,7 @@ class CLTrainer:
         y_res = np.delete(y_res,delete_indices,0)
 
         scores = cross_val_score(self.model, x_res, y_res, cv=10)
-        print "Cross Validation Accuracy: ", scores.mean(), "+/-", scores.std()*2
+        print("Cross Validation Accuracy: ", scores.mean(), "+/-", scores.std()*2)
 
 
     def train_classifier(self,classifier_name):
@@ -4931,7 +4933,7 @@ def plot_gantt_chart_graph(device_history, filename):
 
     def save_png(fig, filename):
         fig.savefig(filename)
-        print "GANTT chart is saved at %s" % filename
+        print("GANTT chart is saved at %s" % filename)
 
     def get_N_HexCol(N=5):
 
